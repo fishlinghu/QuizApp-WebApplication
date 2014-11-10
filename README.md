@@ -30,8 +30,8 @@ Project on Google App Engine
 
 #Wireframes
 ## Homepage
-![Home](/img/wiregrames/home.jpg?raw=true "Home")
+![Home](/img/wireframes/home.jpg?raw=true "Home")
 ## Match
-![Match](/img/wiregrames/question.jpg?raw=true "Match")
+![Match](/img/wireframes/question.jpg?raw=true "Match")
 ## Results
-![Results](/img/wiregrames/results.jpg?raw=true "Results")
+![Results](/img/wireframes/results.jpg?raw=true "Results")
