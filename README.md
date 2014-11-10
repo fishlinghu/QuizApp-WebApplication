@@ -12,9 +12,18 @@ Contributors:
 
 Project on Google App Engine
 
-Back end
+#Back end
+##People
+* Cliff Li
+* Rasmus Valling
+
+##Tools
 * Django
 
-Fron end
+#Front end
+##People
+* Julian Yon
+
+##Tools
 * jQuery
 * Bootstrap
