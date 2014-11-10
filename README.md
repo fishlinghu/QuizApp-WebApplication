@@ -12,6 +12,14 @@ Contributors:
 
 Project on Google App Engine
 
+#Tasks for next time
+## Front end
+Layout of the wireframes using bootstrap.
+
+## Back end
+Create a Django project.
+Deploy project into Google App Engine.
+
 #Back end
 ##People
 * Cliff Li
