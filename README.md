@@ -24,6 +24,7 @@ Deploy project into Google App Engine.
 ##People
 * Cliff Li
 * Rasmus Valling
+* Jiyun Kim
 
 ##Tools
 * Django
@@ -31,6 +32,7 @@ Deploy project into Google App Engine.
 #Front end
 ##People
 * Julian Yon
+* Norman Ong
 
 ##Tools
 * jQuery
