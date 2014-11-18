@@ -1,0 +1,31 @@
+application: kysecondapp
+
+version: 1
+#This is version number 1 of this application's code. 
+#If you adjust this before uploading new versions of your application software,
+#App Engine will retain previous versions, 
+#and let you roll back to a previous version using the administrative console.
+
+runtime: python27
+
+api_version: 1
+
+threadsafe: true
+#This application is threadsafe so the same instance can 
+#handle several simultaneous requests. 
+#Threadsafe is an advanced feature and may result in erratic behavior 
+#if your application is not specifically designed to be threadsafe.
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+- url: /.*
+  script: guestbook.application
+#Every request to a URL whose path matches the regular expression /.* (all URLs)
+#should be handled by the application object in the helloworld module.
