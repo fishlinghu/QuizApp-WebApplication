@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import webapp2
 
 class Handler(webapp2.RequestHandler):
