@@ -1,0 +1,32 @@
+USER MANAGEMENT SYSTEM
+<name>.appspot.com/login - page
+<name>.appspot.com/logout - action redirect homepage
+<name>.appspot.com/register
+BASIC FUNCTIONALITY
+<name>.appspot.com/ - homepage
+<name>.appspot.com/quiz - game page
+<name>.appspot.com/results - results page
+
+app.yaml - configuration file
+main.py - initialize app and send it all requests
+
+static - folder contains all the static files served directly by GAE
+    js - javascript files
+    css - css files
+    img - image files
+
+templates - project level templates
+
+quizapp - folder of all of the application specific files
+    urls.py - contains a list of mappings from urls to handlers
+    models - folder of all of the models used
+        models.py - all of the model classes used
+    templates - folder of all the jinja2 templates
+    tests - folder of all of the tests 
+        tests.py - contains the tests run on the app
+    views - folder of all of the handlers
+        views.py - contains the handlers for the app
+
+helpful links:
+    https://github.com/droot/gae-boilerplate
+    https://stackoverflow.com/questions/48458/project-structure-for-google-app-engine
