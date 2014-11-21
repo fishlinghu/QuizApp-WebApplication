@@ -10,6 +10,10 @@ BASIC FUNCTIONALITY
 app.yaml - configuration file
 main.py - initialize app and send it all requests
 
+lib - all of the third party libraries used in the project
+
+tools - scripts related to the project
+
 static - folder contains all the static files served directly by GAE
     js - javascript files
     css - css files
