@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from quizapp.views import views
+from quizapp.views.homepage import HomepageHandler
+from quizapp.views.quiz import QuizHandler 
+from quizapp.views.results import ResultsHandler 
 
 routes = [
-    ('/', views.Handler),
+    ('/', HomepageHandler),
+    ('/quiz', QuizHandler),
+    ('/results', ResultsHandler),
 ]
