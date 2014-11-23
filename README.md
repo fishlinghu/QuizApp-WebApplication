@@ -5,6 +5,9 @@ Google Appengine Account details
 account: comp3207.team.n@gmail.com
 password: kimliongvallingyon
 
+Application address
+    http://quizapp-comp3207.appspot.com/
+
 COMP3207 Group Project
 
 Contributors:
