@@ -1,6 +1,10 @@
 QuizApp
 =======
 
+Google Appengine Account details
+account: comp3207.team.n@gmail.com
+password: kimliongvallingyon
+
 COMP3207 Group Project
 
 Contributors:
