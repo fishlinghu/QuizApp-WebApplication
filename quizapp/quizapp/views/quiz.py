@@ -5,5 +5,4 @@ from views import Handler
 
 class QuizHandler(Handler):
     def get(self):
-        self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Quiz page')
+        self.write_plain('Quiz page')

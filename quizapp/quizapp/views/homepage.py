@@ -5,5 +5,4 @@ from views import Handler
 
 class HomepageHandler(Handler):
     def get(self):
-        self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Homepage')
+        self.write_plain('Homepage')
