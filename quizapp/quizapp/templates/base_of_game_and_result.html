@@ -36,7 +36,10 @@
 	{% endblock %}
   </head>
 
-  <body> 
+  <body>
+  	{% block content %}
+  	{{ super() }}
+  	{% block left %}
 	<div class="col-md-2">
 		<div class="well sidebar">
 			<ul class="nav nav-stacked">
@@ -53,7 +56,9 @@
 			</div>
 		</div>
 	</div>
+	{% endblock %}
 	
+	{%block middle %}
 	<div class="col-md-8 main-inner">
 		<div class="panel panel-default" style="text-align:center">
 			<div class="progress">
@@ -76,7 +81,9 @@
 			</div>
 		</div>
 	</div>
-
+	{% endblock %}
+	
+	{% block right %}
 	<div class="col-md-2">
 		<div class="well sidebar">
 			<ul class="nav nav-stacked">
@@ -100,6 +107,8 @@
 			</div>
 		</div>
 	</div>
+	{% endblock %}
+	{% endblock %}
 	{% block script %}
 	{{ super() }}
 	{% endblock %}

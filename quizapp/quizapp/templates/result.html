@@ -28,15 +28,14 @@
   </head>
 
   <body>
- 	<div class="col-md-2 well sidebar">
-		<ul class="nav nav-stacked">
-			<li class="active"><a href="#">Name</a></li>
-			<li><a href="#">Level</a></li>
-			<li><a href="#">Description</a></li>
-			<li><a href="#">Achievements</a></li>
-		</ul>
-	</div>
+  	{% block content %}
+  	{{ super() }}
+  	
+  	{% block left %}
+  	{{ super() }}
+  	{% endblock %}
 
+	{% block middle %}
 	<div class="col-md-8 main-inner">
 		<div class="panel panel-default" style="text-align:center">
 			<h1>6-1</h1>
@@ -52,15 +51,14 @@
 			<h3>Wiki Link</h3>
 		</div>
 	</div>
+	{% endblock %}
 
-	<div class="col-md-2 well sidebar">
-		<ul class="nav nav-stacked">
-			<li class="active"><a href="#">Name</a></li>
-			<li><a href="#">Level</a></li>
-			<li><a href="#">Description</a></li>
-			<li><a href="#">Achievements</a></li>
-		</ul>
-	</div>
+	{% block right %}
+	{{ super() }}
+	{% endblock %}
+	
+	{% endblock %}
+
 	{% block script %}
 	{{ super() }}
 	{% endblock %}
