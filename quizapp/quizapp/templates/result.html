@@ -6,9 +6,6 @@
   	{% block head %}
   	{{ super() }}
     <style>
-		body {
-			padding: 20px
-		}
 		.btn-inner {
 			width: 200px;
 			margin-top:10px;
@@ -28,9 +25,6 @@
   </head>
 
   <body>
-  	{% block content %}
-  	{{ super() }}
-  	
   	{% block left %}
   	{{ super() }}
   	{% endblock %}
@@ -55,8 +49,6 @@
 
 	{% block right %}
 	{{ super() }}
-	{% endblock %}
-	
 	{% endblock %}
 
 	{% block script %}

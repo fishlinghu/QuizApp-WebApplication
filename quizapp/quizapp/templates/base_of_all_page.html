@@ -30,7 +30,7 @@ This bar should appear in every page, so this is a base template for every html 
     {% endblock %}
 </head>
 <body>
-	{% block content %}
+	{% block page %}
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -40,15 +40,17 @@ This bar should appear in every page, so this is a base template for every html 
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          QuizApp
+			<a class="navbar-brand" href="#">QuizApp</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li>Logout</li>
+            <li><a href="#">Logout</a></li>
           </ul>
         </div>
       </div>
     </nav>
+    {% block content %}
+    {% endblock %}
 	{% endblock %}
 	{% block script %}
 	<!-- Le javascript
