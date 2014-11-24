@@ -4,5 +4,8 @@
 from views import Handler
 
 class ResultsHandler(Handler):
+    def render_result(self, **kw):
+        self.render("result.html", **kw)
+
     def get(self):
-        self.write_plain('Results')
+        self.render_result()

@@ -4,5 +4,9 @@
 from views import Handler
 
 class QuizHandler(Handler):
+    def render_quiz(self, **kw):
+        self.render("game.html", **kw)
+
     def get(self):
-        self.write_plain('Quiz page')
+        self.response.headers['Content-Type'] = 'text/html'
+        self.render_quiz()
