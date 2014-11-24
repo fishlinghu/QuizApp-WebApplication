@@ -29,7 +29,8 @@
 		.main-inner {
 			text-align:center;
 			padding-left:20px;
-			padding-right:20px
+			padding-right:20px;
+			padding-bottom:20px
 		}
 		.well-menu {
 			width:500px;
@@ -59,21 +60,31 @@
 
 	<div class="col-md-10 main-inner">
 		<div class="panel panel-default" style="text-align:center">
-			<h1>Topics</h1>
+			<div class="well well-menu">
+				<a class="btn btn-default btn-inner" href="game.html">
+					<span class="glyphicon glyphicon-tower" aria-hidden="true"></span>
+					Play
+				</a>
+				<button type="button" class="btn btn-default btn-inner">
+					<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+					Challenge
+				</button>
+				<br>
+				<button type="button" class="btn btn-default btn-inner">
+					<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+					Chat
+				</button>
+				<button type="button" class="btn btn-default btn-inner">
+					<span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+					Ranking
+				</button>
+			</div>
 			
 			<div>
 				<button type="button" class="btn btn-default btn-topic">Sports</button>
 				<button type="button" class="btn btn-default btn-topic">Technology</button>
 				<button type="button" class="btn btn-default btn-topic">Music</button>
 				<button type="button" class="btn btn-default btn-topic">Languages</button>
-			</div>
-			
-			<div class="well well-menu">
-				<a class="btn btn-default btn-inner" href="game.html">Play</a>
-				<button type="button" class="btn btn-default btn-inner">Challenge</button>
-				<br>
-				<button type="button" class="btn btn-default btn-inner">Chat</button>
-				<button type="button" class="btn btn-default btn-inner">Ranking</button>
 			</div>
 		</div>
 	</div>
@@ -90,7 +101,7 @@
 			<li id="collapseMessages" class="collapse" data-toggle="false" style="height:0px">
 				You have no new messages
 			</li>
-			<li><a href="#">Achievements <span class="badge">2</span></a></li>
+			<li><a href="#">Achievements</a></li>
 			<li><a href="#">Settings</a></li>
 		</ul>
 	</div>

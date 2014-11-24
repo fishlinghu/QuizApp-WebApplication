@@ -1,0 +1,68 @@
+{% extends "base_of_game_and_result.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	{% block title %}Results{% endblock %}
+  	{% block head %}
+  	{{ super() }}
+    <style>
+		body {
+			padding: 20px
+		}
+		.btn-inner {
+			width: 200px;
+			margin-top:10px;
+			margin-bottom:10px;
+			margin-left:10px;
+			margin-right:10px
+		}
+		.main-inner {
+			padding-left:20px;
+			padding-right:20px
+		}
+		.sidebar {
+			text-align:center
+		}
+	</style>
+	{% endblock %}
+  </head>
+
+  <body>
+ 	<div class="col-md-2 well sidebar">
+		<ul class="nav nav-stacked">
+			<li class="active"><a href="#">Name</a></li>
+			<li><a href="#">Level</a></li>
+			<li><a href="#">Description</a></li>
+			<li><a href="#">Achievements</a></li>
+		</ul>
+	</div>
+
+	<div class="col-md-8 main-inner">
+		<div class="panel panel-default" style="text-align:center">
+			<h1>6-1</h1>
+		
+			<button type="button" class="btn btn-default btn-inner">Challenge</button>
+			<button type="button" class="btn btn-default btn-inner">Play Another</button>
+			<br>
+			<button type="button" class="btn btn-default btn-inner">Chat</button>
+			<button type="button" class="btn btn-default btn-inner">Ranking</button>
+		
+			<h1>Question 1</h1>
+			<h3>Description</h3>
+			<h3>Wiki Link</h3>
+		</div>
+	</div>
+
+	<div class="col-md-2 well sidebar">
+		<ul class="nav nav-stacked">
+			<li class="active"><a href="#">Name</a></li>
+			<li><a href="#">Level</a></li>
+			<li><a href="#">Description</a></li>
+			<li><a href="#">Achievements</a></li>
+		</ul>
+	</div>
+	{% block script %}
+	{{ super() }}
+	{% endblock %}
+  </body>
+</html>
