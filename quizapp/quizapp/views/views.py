@@ -24,6 +24,7 @@ class Handler(webapp2.RequestHandler):
         return t.render(params)
 
     def render(self, template, **kw):
+        self.response.headers['Content-Type'] = 'text/html'
         self.write(self.render_str(template, **kw))
 
     def get(self):
