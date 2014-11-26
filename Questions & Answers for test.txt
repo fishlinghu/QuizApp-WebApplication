@@ -1,0 +1,104 @@
+Category: Alcohol
+Question: From what is the liqueur kirsch made?
+Answer: cherries
+Wrong: lemon, kiwi, banana, grapes
+
+Category: Alcohol
+Question: From which plant is tequila derived?
+Answer: cactus
+Wrong: jack daniel, smiroff, red label, guiness
+
+Category: Alcohol
+Question: Which drug kills more people below the age of 21 than any other?
+Answer: alcohol
+Wrong: cocaine, marijuana, nicotine, nurofen
+
+Category: Animal Kingdom
+Question: As what is a camelopard also known?
+Answer: giraffe
+Wrong: lion, monkey, pig, horse
+
+Category: Animal Kingdom
+Question: How many teeth does a walrus have?
+Answer: eighteen
+Wrong: one, five, ten, seventenn
+
+Category: Animal Kingdom
+Question: Some animals always grow new teeth to replace the old. Name one of them!
+Answer: shark
+Wrong: tiger, dog, cat, dolphine
+
+Category: Computers
+Question: What was the first version of Microsoft Windows?
+Answer: Windows #286#
+Wrong: Windows #86#, Windows #186#, Windows #386#, Windows #486# 
+
+Category: Computers
+Question: What country did the operating system 'Linux' come from?
+Answer: Finland
+Wrong: German, Italy, United Kingdom, America
+
+Category: Computers
+Question: What does 'IBM' stand for?
+Answer: International Business Machines
+Wrong: I Blame Microsoft, It Beats Me, Intimidated By Microsoft, I Bought a MacIntosh
+
+Category: Culture
+Question: Israel has the highest per capital consumption of ······?
+Answer: turkey
+Wrong: Japan, Taiwan, China, Veitnam
+
+Category: Culture
+Question: What London landmark has an 11 foot long hand?
+Answer: Big Ben
+Wrong: London eye, Buckingham Palace, Beckam, Rain
+
+Category: Culture
+Question: What city do the Italians call the Monaco of bavaria?
+Answer: Munich
+Wrong: Napoli, Seoul, Washington, Tokyo
+
+Category: Food
+Question: What breakfast cereal was invented at Battle Creek Sanitarium?
+Answer: Cornflakes
+Wrong: Pancakes, Syrup, English Breafast, Bab
+
+Category: Food
+Question: What did Charles Jung invent?
+Answer: fortune cookies
+Wrong: fortuen frog, fortuen laptop, fortuen mouse, fortuen desk 
+
+Category: Food
+Question: What is the most widely used seasoning?
+Answer: salt
+Wrong: sugar, black pepper, galic, oyster
+
+Category: History
+Question: Where were numerous French nuclear tests conducted?
+Answer: Muraroa Atoll
+Wrong: Tours, Nantes, Rennes, Bordeaux
+
+Category: History
+Question: Where were the Hanging Gardens?
+Answer: Babylon
+Wrong: Rome, Paris, Muich, Lodon
+
+Category: History
+Question: Where were the first books printed?
+Answer: China
+Worng: ghana, Finland, Turkey, America
+
+Category: Olympics
+Question: The Olympic motto 'citius, altius, fortius' means what?
+Answer: Faster higher stronger
+Wrong: Slower higher stronger, Faster lower stronger, Faster higher weaker, Faster bigger stronger
+
+Category: Olympics
+Question: Where were the 1960 summer Olympics held?
+Answer: Rome Italy
+Wrong: Sochi Russia, Sao Paulo Brazil, Paris France, London UK
+
+Category: Olympics
+Question: In ancient Greece, where were the original Olympics held?
+Answer: Olympia
+Wrong: Oliver, Olybiad, Olympus, Olympiac
