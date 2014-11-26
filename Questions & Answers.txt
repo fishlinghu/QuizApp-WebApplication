@@ -84,10 +84,12 @@ Category: Alcohol
 Question: From what is the liqueur kirsch made?
 Answer: cherries
 Regexp: cherr(y|ies)
+Wrong: lemon, kiwi, banana, grapes
 
 Category: Alcohol
 Question: From which plant is tequila derived?
 Answer: cactus
+Wrong: jack daniel, smiroff, red label, guiness
 
 Category: America
 Question: As what is California also known?
@@ -100,6 +102,7 @@ Answer: Gopher State
 Category: America
 Question: What city is also known as Beantown?
 Answer: Boston
+Wrong: Califonia, Washington, Texas, 
 
 Category: America
 Question: What state is 'The Golden State'?
@@ -808,7 +811,7 @@ Question: Which country has the most cars per mile of road?
 Answer: England
 
 Category: Cartoon Decorum
-Question: Donald Duck comics were banned in Finland because he didn't wear ······?
+Question: Donald Duck comics were banned in Finland because he didn't wear Â·Â·Â·Â·Â·Â·?
 Answer: pants
 
 Category: Cartoon Trivia
@@ -867,7 +870,7 @@ Category: Cartoon Trivia
 Question: Who drew the comic 'The Maxx'?
 Answer: Sam Keith
 
-Question: Baseball: The San Diego ·······?
+Question: Baseball: The San Diego Â·Â·Â·Â·Â·Â·Â·?
 Answer: Padres
 
 Category: Cartoon Trivia
@@ -1058,59 +1061,59 @@ Question: In the 'Twelve days of christmas', how many items in total are sent by
 Answer: seventy eight
 Regexp: (seventy eight|78)
 
-Category: Clichés
-Question: A bird in the hand is worth ······?
+Category: ClichÃ©s
+Question: A bird in the hand is worth Â·Â·Â·Â·Â·Â·?
 Answer: two in the bush
 Regexp: (two|2) in the bush
 
-Category: Clichés
-Question: A stitch in time saves ····?
+Category: ClichÃ©s
+Question: A stitch in time saves Â·Â·Â·Â·?
 Answer: nine
 Regexp: (nine|9)
 
-Category: Clichés
-Question: As clear as a ·······?
+Category: ClichÃ©s
+Question: As clear as a Â·Â·Â·Â·Â·Â·Â·?
 Answer: bell
 
-Category: Clichés
-Question: As close as two ······ in a pod?
+Category: ClichÃ©s
+Question: As close as two Â·Â·Â·Â·Â·Â· in a pod?
 Answer: peas
 
-Category: Clichés
-Question: As easy as ······?
+Category: ClichÃ©s
+Question: As easy as Â·Â·Â·Â·Â·Â·?
 Answer: pie
 
-Category: Clichés
-Question: As hard as ·······?
+Category: ClichÃ©s
+Question: As hard as Â·Â·Â·Â·Â·Â·Â·?
 Answer: nails
 
-Category: Clichés
-Question: As mad as a ·······?
+Category: ClichÃ©s
+Question: As mad as a Â·Â·Â·Â·Â·Â·Â·?
 Answer: wet hen or hatter
 Regexp: (wet hen|hatter)
 
-Category: Clichés
-Question: As nervous as a long-tailed cat in a room full of ······?
+Category: ClichÃ©s
+Question: As nervous as a long-tailed cat in a room full of Â·Â·Â·Â·Â·Â·?
 Answer: rocking chairs
 
-Category: Clichés
-Question: As pretty as a ······?
+Category: ClichÃ©s
+Question: As pretty as a Â·Â·Â·Â·Â·Â·?
 Answer: picture
 
-Category: Clichés
-Question: As sick as a ······?
+Category: ClichÃ©s
+Question: As sick as a Â·Â·Â·Â·Â·Â·?
 Answer: dog
 
-Category: Clichés
-Question: As sly as a ······?
+Category: ClichÃ©s
+Question: As sly as a Â·Â·Â·Â·Â·Â·?
 Answer: fox
 
-Category: Clichés
-Question: Hell hath no fury like a ······?
+Category: ClichÃ©s
+Question: Hell hath no fury like a Â·Â·Â·Â·Â·Â·?
 Answer: woman scorned
 
-Category: Clichés
-Question: Time ···· when you're having fun?
+Category: ClichÃ©s
+Question: Time Â·Â·Â·Â· when you're having fun?
 Answer: flies
 
 Category: Clothing
@@ -1165,7 +1168,7 @@ Question: What is a group of geese called?
 Answer: gaggle
 
 Category: Companies
-Question: The De Beers group of companies controls more than 80% of the world's supply of ······?
+Question: The De Beers group of companies controls more than 80% of the world's supply of Â·Â·Â·Â·Â·Â·?
 Answer: rough #diamonds#
 
 Category: Companies
@@ -1237,7 +1240,7 @@ Question: What is pure china clay called?
 Answer: kaolin
 
 Category: Culture
-Question: Because the emu and the kangaroo cannot walk backwards, they are on the Australian ······?
+Question: Because the emu and the kangaroo cannot walk backwards, they are on the Australian Â·Â·Â·Â·Â·Â·?
 Answer: coat of arms
 
 Category: Culture
@@ -1258,7 +1261,7 @@ Question: In which town does the famous 'running of the bulls' take place?
 Answer: Pamplona
 
 Category: Culture
-Question: Israel has the highest per capital consumption of ······?
+Question: Israel has the highest per capital consumption of Â·Â·Â·Â·Â·Â·?
 Answer: turkey
 
 Category: Culture
@@ -1361,33 +1364,33 @@ Question: Which nationality calls Munich the 'Monaco of Bavaria'?
 Answer: Italians
 
 Category: Currencies
-Question: Germany's equivalent to the dollar is the ······?
+Question: Germany's equivalent to the dollar is the Â·Â·Â·Â·Â·Â·?
 Answer: deutsche mark
 Regexp: deutsch(e )?mark
 
 Category: Currencies
-Question: Israel's equivalent to the dollar is the ······?
+Question: Israel's equivalent to the dollar is the Â·Â·Â·Â·Â·Â·?
 Answer: shekel
 Regexp: (shekel|sheqel)
 
 Category: Currencies
-Question: Italy's equivalant to the dollar is the ······?
+Question: Italy's equivalant to the dollar is the Â·Â·Â·Â·Â·Â·?
 Answer: lira
 
 Category: Currencies
-Question: Japan's equivalent to the dollar is the ······?
+Question: Japan's equivalent to the dollar is the Â·Â·Â·Â·Â·Â·?
 Answer: yen
 
 Category: Currencies
-Question: Mexico's equivalent to the dollar is the ······?
+Question: Mexico's equivalent to the dollar is the Â·Â·Â·Â·Â·Â·?
 Answer: peso
 
 Category: Currencies
-Question: Spain's equivalent to the dollar is the ······?
+Question: Spain's equivalent to the dollar is the Â·Â·Â·Â·Â·Â·?
 Answer: peseta
 
 Category: Currencies
-Question: The quetzal is the currency of ······?
+Question: The quetzal is the currency of Â·Â·Â·Â·Â·Â·?
 Answer: Guatemala
 
 Category: Currencies
@@ -1485,7 +1488,7 @@ Question: As what was Sony's video recorder known?
 Answer: betamax
 
 Category: Electronics
-Question: Circuits can be wired in parallel or ······?
+Question: Circuits can be wired in parallel or Â·Â·Â·Â·Â·Â·?
 Answer: series
 
 Category: Entomology
@@ -1732,7 +1735,7 @@ Answer: twelve
 Regexp: (twelve|12)
 
 Category: Gems
-Question: Peridot is the birthstone for ······?
+Question: Peridot is the birthstone for Â·Â·Â·Â·Â·Â·?
 Answer: August
 
 Category: Gems
@@ -1795,19 +1798,19 @@ Question: What is the capital of Democratic Republic of the Congo?
 Answer: Kinshasa
 
 Category: Geography
-Question: Abuja is the capital of ······?
+Question: Abuja is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Nigeria
 
 Category: Geography
-Question: Accra is the capital of ······?
+Question: Accra is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Ghana
 
 Category: Geography
-Question: Albany is the capital of ·····?
+Question: Albany is the capital of Â·Â·Â·Â·Â·?
 Answer: New York
 
 Category: Geography
-Question: Ankara is the capital of ······?
+Question: Ankara is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Turkey
 
 Category: Geography
@@ -1831,68 +1834,68 @@ Question: As what was the Taj Mahal originally built?
 Answer: tomb
 
 Category: Geography
-Question: Austin is the capital of ······?
+Question: Austin is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Texas
 
 Category: Geography
-Question: Bamako is the capital of ······?
+Question: Bamako is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Mali
 
 Category: Geography
-Question: Bangkok is the capital of ······?
+Question: Bangkok is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Thailand
 
 Category: Geography
-Question: Banjul is the capital of ······?
+Question: Banjul is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Gambia
 
 Category: Geography
-Question: Bismarck is the capital of ······?
+Question: Bismarck is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: North Dakota
 
 Category: Geography
-Question: Bissau is the capital of ······?
+Question: Bissau is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Guinea-Bissau
 Regexp: Guinea[- ]Bissau
 
 Category: Geography
-Question: Bogota is the capital of ······?
+Question: Bogota is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Colombia
 
 Category: Geography
-Question: Boise is the capital of ······?
+Question: Boise is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Idaho
 
 Category: Geography
-Question: Bridgetown is the capital of ······?
+Question: Bridgetown is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Barbados
 
 Category: Geography
-Question: Budapest is the capital of ······?
+Question: Budapest is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Hungary
 
 Category: Geography
-Question: Cheyenne is the capital of ······?
+Question: Cheyenne is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Wyoming
 
 Category: Geography
-Question: Columbus is the capital of ······?
+Question: Columbus is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Ohio
 
 Category: Geography
-Question: Dakar is the capital of ······?
+Question: Dakar is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Senegal
 
 Category: Geography
-Question: Des Moines is the capital of ······?
+Question: Des Moines is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Iowa
 
 Category: Geography
-Question: Dhaka is the capital of ······?
+Question: Dhaka is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Bangladesh
 
 Category: Geography
-Question: Djibouti is the capital of ······?
+Question: Djibouti is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Djibouti
 
 Category: Geography
@@ -1900,11 +1903,11 @@ Question: Five US states border which ocean?
 Answer: #Pacific# Ocean
 
 Category: Geography
-Question: Guatemala is the capital of ······?
+Question: Guatemala is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Guatemala
 
 Category: Geography
-Question: Helena is the capital of ······?
+Question: Helena is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Montana
 
 Category: Geography
@@ -1986,68 +1989,68 @@ Question: Is Dublin in Northern or Southern ireland?
 Answer: Southern
 
 Category: Geography
-Question: Jefferson City is the capital of ······?
+Question: Jefferson City is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Missouri
 
 Category: Geography
-Question: Kathmandu is the capital of ······?
+Question: Kathmandu is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Nepal
 
 Category: Geography
-Question: Kigali is the capital of ······?
+Question: Kigali is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Rwanda
 
 Category: Geography
-Question: Kingston is the capital of ······?
+Question: Kingston is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Jamaica
 
 Category: Geography
-Question: Kinshasa is the capital of ······?
+Question: Kinshasa is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Democratic Republic of the Congo
 Regexp: (democratic republic of the congo|congo)
 
 Category: Geography
-Question: Kuwait City is the capital of ······?
+Question: Kuwait City is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Kuwait
 
 Category: Geography
-Question: Lansing is the capital of ······?
+Question: Lansing is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Michigan
 
 Category: Geography
-Question: Libreville is the capital of ······?
+Question: Libreville is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Gabon
 
 Category: Geography
-Question: Lilongwe is the capital of ······?
+Question: Lilongwe is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Malawi
 
 Category: Geography
-Question: Lome is the capital of ······?
+Question: Lome is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Togo
 
 Category: Geography
-Question: Luxembourg is the capital of ······?
+Question: Luxembourg is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Luxembourg
 
 Category: Geography
-Question: Malabo is the capital of ······?
+Question: Malabo is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Equatorial Guinea
 
 Category: Geography
-Question: Mayfair, London is a district of little streets near ······?
+Question: Mayfair, London is a district of little streets near Â·Â·Â·Â·Â·Â·?
 Answer: Hyde Park
 
 Category: Geography
-Question: Mexico City is the capital of ······?
+Question: Mexico City is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Mexico
 
 Category: Geography
-Question: Montevideo is the capital of ······?
+Question: Montevideo is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Uruguay
 
 Category: Geography
-Question: Nashville is the capital of ······?
+Question: Nashville is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Tennessee
 
 Category: Geography
@@ -2055,11 +2058,11 @@ Question: Near what river is the Temple of Karnak?
 Answer: Nile
 
 Category: Geography
-Question: New Delhi is the capital of ······?
+Question: New Delhi is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: India
 
 Category: Geography
-Question: Nicosia is the capital of ······?
+Question: Nicosia is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Cyprus
 
 Category: Geography
@@ -2100,55 +2103,55 @@ Question: On which coast of Australia is Sydney?
 Answer: East
 
 Category: Geography
-Question: Ouagadougou is the capital of ······?
+Question: Ouagadougou is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Burkina Faso
 
 Category: Geography
-Question: Port Louis is the capital of ······?
+Question: Port Louis is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Mauritius
 
 Category: Geography
-Question: Port Moresby is the capital of ······?
+Question: Port Moresby is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Papua New Guinea
 
 Category: Geography
-Question: Raleigh is the capital of ······?
+Question: Raleigh is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: North Carolina
 
 Category: Geography
-Question: Richmond is the capital of ······?
+Question: Richmond is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Virginia
 
 Category: Geography
-Question: Riyadh is the capital of ······?
+Question: Riyadh is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Saudi Arabia
 
 Category: Geography
-Question: Rome is the capital of ······?
+Question: Rome is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Italy
 
 Category: Geography
-Question: Santiago is the capital of ······?
+Question: Santiago is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Chile
 
 Category: Geography
-Question: Santo Domingo is the capital of ······?
+Question: Santo Domingo is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Dominican Republic
 
 Category: Geography
-Question: Singapore is the capital of ······?
+Question: Singapore is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Singapore
 
 Category: Geography
-Question: Springfield is the capital of ······?
+Question: Springfield is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Illinois
 
 Category: Geography
-Question: Sydney is on the east coast of ······?
+Question: Sydney is on the east coast of Â·Â·Â·Â·Â·Â·?
 Answer: Australia
 
 Category: Geography
-Question: Tegucigalpa is the capital of ······?
+Question: Tegucigalpa is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Honduras
 
 Category: Geography
@@ -2156,15 +2159,15 @@ Question: Through which ocean does the International Date Line approximately fol
 Answer: #Pacific# Ocean
 
 Category: Geography
-Question: Tirana is the capital of ······?
+Question: Tirana is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Albania
 
 Category: Geography
-Question: Ulan Bator is the capital of ······?
+Question: Ulan Bator is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Mongolia
 
 Category: Geography
-Question: Vaduz is the capital of ······?
+Question: Vaduz is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Liechtenstein
 
 Category: Geography
@@ -2772,13 +2775,13 @@ Question: Which is the smallest independent country?
 Answer: Vatican City
 
 Category: Geography
-Question: Which island country lies immediately to the East of Réunion?
+Question: Which island country lies immediately to the East of RÃ©union?
 Answer: Mauritius
 
 Category: Geography
 Question: Which island country lies immediately to the West of Mauritius?
-Answer: Réunion
-Regexp: r[ée]union
+Answer: RÃ©union
+Regexp: r[Ã©e]union
 
 Category: Geography
 Question: Which island country lies to the East of Mauritius?
@@ -2809,7 +2812,7 @@ Question: Who owns the island of Bermuda?
 Answer: Britain
 
 Category: Geography
-Question: Yaounde is the capital of ······?
+Question: Yaounde is the capital of Â·Â·Â·Â·Â·Â·?
 Answer: Cameroon
 
 Category: Geogrophy
@@ -2882,7 +2885,7 @@ Answer: Squeaky Fromme
 Regexp: (Lynette|Squeaky) Fromme
 
 Category: History
-Question: East Berlin was the capital of ······?
+Question: East Berlin was the capital of Â·Â·Â·Â·Â·Â·?
 Answer: East Germany
 
 Category: History
@@ -2943,7 +2946,7 @@ Question: In which country was paper money first used?
 Answer: China
 
 Category: History
-Question: King Richard the ········?
+Question: King Richard the Â·Â·Â·Â·Â·Â·Â·Â·?
 Answer: Lionhearted
 Regexp: Lionheart
 
@@ -2977,7 +2980,7 @@ Question: The date of which Christian festival was fixed in 325AD by the Council
 Answer: Easter
 
 Category: History
-Question: The ······ Tea Party?
+Question: The Â·Â·Â·Â·Â·Â· Tea Party?
 Answer: Boston
 
 Category: History
@@ -3668,7 +3671,7 @@ Question: What animal can live several weeks without its head?
 Answer: cockroach
 
 Category: Industry
-Question: South africa is the biggest producer and exporter of ······?
+Question: South africa is the biggest producer and exporter of Â·Â·Â·Â·Â·Â·?
 Answer: mohair
 
 Category: Industry
@@ -3680,7 +3683,7 @@ Question: Who founded the SAS?
 Answer: David Stirling
 
 Category: Interesting Fact
-Question: More people are killed by donkeys every year than are killed in ······?
+Question: More people are killed by donkeys every year than are killed in Â·Â·Â·Â·Â·Â·?
 Answer: plane crashes
 
 Category: Inventors
@@ -3904,7 +3907,7 @@ Answer: Six Days Of The Condor
 Regexp: (Six|6) Days Of The condor
 
 Category: Literature
-Question: The Hardy Boys and ······?
+Question: The Hardy Boys and Â·Â·Â·Â·Â·Â·?
 Answer: Nancy Drew
 
 Category: Literature
@@ -4160,7 +4163,7 @@ Question: In what body part does an osteopath specialise?
 Answer: #bone#s
 
 Category: Medicine
-Question: A salt enema was given to children to rid them of ······?
+Question: A salt enema was given to children to rid them of Â·Â·Â·Â·Â·Â·?
 Answer: Threadworm
 
 Category: Medicine
@@ -4172,7 +4175,7 @@ Question: In the early 20th century, rattlesnake venom was used to treat which i
 Answer: epilepsy
 
 Category: Medicine
-Question: North American Indians ate watercress to dissolve gravel and stones in the ······?
+Question: North American Indians ate watercress to dissolve gravel and stones in the Â·Â·Â·Â·Â·Â·?
 Answer: bladder
 
 Category: Medicine
@@ -4468,7 +4471,7 @@ Question: Pancho was whose faithful sidekick?
 Answer: #Cisco Kid#'s
 
 Category: Movie Trivia
-Question: The film 'The Wizard Of ······'?
+Question: The film 'The Wizard Of Â·Â·Â·Â·Â·Â·'?
 Answer: Oz
 
 Category: Movie Trivia
@@ -4749,7 +4752,7 @@ Question: Bill Justis was a studio musician when he recorded this 'sloppy' instr
 Answer: Raunchy
 
 Category: Music
-Question: Country singer Vince ····?
+Question: Country singer Vince Â·Â·Â·Â·?
 Answer: Gill
 
 Category: Music
@@ -4845,7 +4848,7 @@ Question: R. Kelly sings: 'If I can see it then I can do it, if I just believe i
 Answer: I Believe I Can Fly
 
 Category: Music
-Question: Randy Travis said his love was 'deeper than the ······'?
+Question: Randy Travis said his love was 'deeper than the Â·Â·Â·Â·Â·Â·'?
 Answer: holler
 
 Category: Music
@@ -4853,11 +4856,11 @@ Question: Savage Garden took 13 nominations and 10 wins at which awards?
 Answer: #ARIA# awards
 
 Category: Music
-Question: Singer Paula ······?
+Question: Singer Paula Â·Â·Â·Â·Â·Â·?
 Answer: Abdul
 
 Category: Music
-Question: Sung by Robert Palmer, '······ to love'?
+Question: Sung by Robert Palmer, 'Â·Â·Â·Â·Â·Â· to love'?
 Answer: Addicted
 
 Category: Music
@@ -5261,7 +5264,7 @@ Question: Who's first release was 'Talking Heads 77'?
 Answer: Psycho Killer
 
 Category: Music
-Question: ····· in the name of love?
+Question: Â·Â·Â·Â·Â· in the name of love?
 Answer: Stop
 
 Category: Muthology
@@ -5269,12 +5272,12 @@ Question: In Greek mythology, the riddle of what did Oedipus solve?
 Answer: sphinx
 
 Category: Mytholgy
-Question: Apollo was the Greek god of ······?
+Question: Apollo was the Greek god of Â·Â·Â·Â·Â·Â·?
 Answer: prophecy and archery
 Regexp: (prophecy (and|&) archery|archery (and|&) prophecy)
 
 Category: Mythology
-Question: Dionysus was the greek god of ······?
+Question: Dionysus was the greek god of Â·Â·Â·Â·Â·Â·?
 Answer: Wine
 
 Category: Mythology
@@ -5379,15 +5382,15 @@ Answer: Peleus and Thetis
 Regexp: (Peleus (and |& )Thetis|Thetis (and |& )Peleus)
 
 Category: Mythology
-Question: Neptune was the Roman god of the ······?
+Question: Neptune was the Roman god of the Â·Â·Â·Â·Â·Â·?
 Answer: sea
 
 Category: Mythology
-Question: Persephone was the Greek goddess of ······?
+Question: Persephone was the Greek goddess of Â·Â·Â·Â·Â·Â·?
 Answer: spring
 
 Category: Mythology
-Question: Poseidon was the Greek god of the ······?
+Question: Poseidon was the Greek god of the Â·Â·Â·Â·Â·Â·?
 Answer: sea
 
 Category: Mythology
@@ -5503,7 +5506,7 @@ Question: When does the human uterus expand 500 times its normal size?
 Answer: during #pregnancy#
 
 Category: Nomenclature
-Question: Eras are divided into units called ········?
+Question: Eras are divided into units called Â·Â·Â·Â·Â·Â·Â·Â·?
 Answer: periods
 
 Category: Not Telling!
@@ -5632,7 +5635,7 @@ Answer: seventy five
 Regexp: (seventy five|75)
 
 Category: One For The Trekkies
-Question: In 'Star Trek' Jean ······ Picard?
+Question: In 'Star Trek' Jean Â·Â·Â·Â·Â·Â· Picard?
 Answer: Luc
 
 Category: One For The Trekkies
@@ -5752,7 +5755,7 @@ Question: With what branch of medicine is Franz Mesmer associated?
 Answer: hypnotism
 
 Category: Railways
-Question: New York has the longest subway system in ······?
+Question: New York has the longest subway system in Â·Â·Â·Â·Â·Â·?
 Answer: North #America#
 
 Category: Railways
@@ -5810,19 +5813,19 @@ Question: What are 35% of people using personal ads for dating?
 Answer: married
 
 Category: Saints
-Question: St Frideswide the patron saint ······?
+Question: St Frideswide the patron saint Â·Â·Â·Â·Â·Â·?
 Answer: Oxford
 
 Category: Saints
-Question: St Patrick the patron saint of ······?
+Question: St Patrick the patron saint of Â·Â·Â·Â·Â·Â·?
 Answer: Ireland
 
 Category: Saints
-Question: St. Bernard the patron saint of ·····?
+Question: St. Bernard the patron saint of Â·Â·Â·Â·Â·?
 Answer: skiers
 
 Category: Saints
-Question: St. Christopher the patron saint of ······?
+Question: St. Christopher the patron saint of Â·Â·Â·Â·Â·Â·?
 Answer: travellers
 
 Category: Saints
@@ -5862,7 +5865,7 @@ Question: In which branch of science are monocotyledon and dicotyledon terms?
 Answer: Botany
 
 Category: Science
-Question: Meteorology is the study of ······?
+Question: Meteorology is the study of Â·Â·Â·Â·Â·Â·?
 Answer: weather
 
 Category: Science
@@ -6084,7 +6087,7 @@ Question: Who said 'you'd be surprised how much it costs to look this cheap'?
 Answer: Dolly Parton
 
 Category: Similes
-Question: As neat as a ······?
+Question: As neat as a Â·Â·Â·Â·Â·Â·?
 Answer: pin
 
 Category: Space
@@ -6101,83 +6104,83 @@ Answer: Mohammed Ali
 Regexp: m[uo]hamm[ae]d ali
 
 Category: Sport
-Question: Baseball: The Atlanta ······?
+Question: Baseball: The Atlanta Â·Â·Â·Â·Â·Â·?
 Answer: Braves
 
 Category: Sport
-Question: Baseball: The Boston ······?
+Question: Baseball: The Boston Â·Â·Â·Â·Â·Â·?
 Answer: Red Sox
 
 Category: Sport
-Question: Baseball: The Chicago ······?
+Question: Baseball: The Chicago Â·Â·Â·Â·Â·Â·?
 Answer: Cubs
 
 Category: Sport
-Question: Baseball: The Cleveland ······?
+Question: Baseball: The Cleveland Â·Â·Â·Â·Â·Â·?
 Answer: Indians
 
 Category: Sport
-Question: Baseball: The Florida ······?
+Question: Baseball: The Florida Â·Â·Â·Â·Â·Â·?
 Answer: Marlins
 
 Category: Sport
-Question: Baseball: The Houston ······?
+Question: Baseball: The Houston Â·Â·Â·Â·Â·Â·?
 Answer: Astros
 
 Category: Sport
-Question: Baseball: The Kansas City ······?
+Question: Baseball: The Kansas City Â·Â·Â·Â·Â·Â·?
 Answer: Royals
 
 Category: Sport
-Question: Baseball: The Milwaukee ······?
+Question: Baseball: The Milwaukee Â·Â·Â·Â·Â·Â·?
 Answer: Brewers
 
 Category: Sport
-Question: Baseball: The New York ······?
+Question: Baseball: The New York Â·Â·Â·Â·Â·Â·?
 Answer: Mets
 
 Category: Sport
-Question: Baseball: The Philadelphia ······?
+Question: Baseball: The Philadelphia Â·Â·Â·Â·Â·Â·?
 Answer: Phillies
 
 Category: Sport
-Question: Baseball: The St. Louis ······?
+Question: Baseball: The St. Louis Â·Â·Â·Â·Â·Â·?
 Answer: Cardinals
 
 Category: Sport
-Question: Baseball: The Texas ······?
+Question: Baseball: The Texas Â·Â·Â·Â·Â·Â·?
 Answer: Rangers
 
 Category: Sport
-Question: Basketball: The Denver ······?
+Question: Basketball: The Denver Â·Â·Â·Â·Â·Â·?
 Answer: Nuggets
 
 Category: Sport
-Question: Football: The Chicago ······?
+Question: Football: The Chicago Â·Â·Â·Â·Â·Â·?
 Answer: Bears
 
 Category: Sport
-Question: Football: The Dallas ······?
+Question: Football: The Dallas Â·Â·Â·Â·Â·Â·?
 Answer: Cowboys
 
 Category: Sport
-Question: Football: The Denver ····?
+Question: Football: The Denver Â·Â·Â·Â·?
 Answer: Broncos
 
 Category: Sport
-Question: Football: The Pittsburgh ······?
+Question: Football: The Pittsburgh Â·Â·Â·Â·Â·Â·?
 Answer: Steelers
 
 Category: Sport
-Question: Football: The San Diego ······?
+Question: Football: The San Diego Â·Â·Â·Â·Â·Â·?
 Answer: Chargers
 
 Category: Sport
-Question: Hockey: The Calgary ·······?
+Question: Hockey: The Calgary Â·Â·Â·Â·Â·Â·Â·?
 Answer: Flames
 
 Category: Sport
-Question: Hockey: The Toronto ······?
+Question: Hockey: The Toronto Â·Â·Â·Â·Â·Â·?
 Answer: Maple Leafs
 
 Category: Sport
@@ -6234,7 +6237,7 @@ Question: Other than skiing, which sport takes place on a piste?
 Answer: fencing
 
 Category: Sport
-Question: The first cricket one-day international was held between england and ······?
+Question: The first cricket one-day international was held between england and Â·Â·Â·Â·Â·Â·?
 Answer: Australia
 
 Category: Sport
@@ -6466,7 +6469,7 @@ Question: On 'The Lucy Show', who played Vivian Bagley?
 Answer: Vivian Vance
 
 Category: TV Trivia
-Question: TV series: 'American ······'?
+Question: TV series: 'American Â·Â·Â·Â·Â·Â·'?
 Answer: Bandstand
 
 Category: TV Trivia
@@ -6646,7 +6649,7 @@ Question: 7% of Americans don't know the first nine words of the American anthem
 Answer: #Canadian# anthem
 
 Category: Trivia
-Question: Betsy Ross is the only real person to ever have been the head of a ······?
+Question: Betsy Ross is the only real person to ever have been the head of a Â·Â·Â·Â·Â·Â·?
 Answer: Pez dispenser
 
 Category: Trivia
@@ -6689,11 +6692,11 @@ Answer: one hundred and sixty nine
 Regexp: (one hundred (and )?sixty[- ]nine|169)
 
 Category: Tunnels
-Question: The world's longest tunnel connects Delaware and ······?
+Question: The world's longest tunnel connects Delaware and Â·Â·Â·Â·Â·Â·?
 Answer: New York
 
 Category: Tunnels
-Question: The world's longest tunnel connects New York and ······?
+Question: The world's longest tunnel connects New York and Â·Â·Â·Â·Â·Â·?
 Answer: Delaware
 
 Category: Tunnels
@@ -6804,7 +6807,7 @@ Question: Which word is related to these three: rat, blue, cottage?
 Answer: cheese
 
 Category: Word Pairs
-Question: Cattle are bovine, sheep are ······ ?
+Question: Cattle are bovine, sheep are Â·Â·Â·Â·Â·Â· ?
 Answer: ovine
 
 Category: Words containing 'for'
