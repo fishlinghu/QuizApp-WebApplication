@@ -10,7 +10,7 @@ Category: Alcohol
 Question: From which plant is tequila derived?
 Answer: cactus
 Wrong: bamboo, daisy, orchid, peony
-Description: equila is made from the fermented and distilled juices taken from native Mexican Agave plants. By Mexican law, Tequila can be produced from only the Blue Agave (Weber Blue Agave, Agave Tequilana). The Agave plant is botanically classified as a succulent, and is a relative of the lily family. While cacti and Agave both share a common habitat, the Agave is not a cactus.
+Description: Tequila is made from the fermented and distilled juices taken from native Mexican Agave plants. By Mexican law, Tequila can be produced from only the Blue Agave (Weber Blue Agave, Agave Tequilana). The Agave plant is botanically classified as a succulent, and is a relative of the lily family. While cacti and Agave both share a common habitat, the Agave is not a cactus.
 Wiki_img: http://www.enduringamerica.com/storage/blog-post-images/CACTUS.jpg?__SQUARESPACE_CACHEVERSION=1285276788510
 Wiki_link: https://en.wikipedia.org/wiki/Cactus
 
@@ -26,7 +26,7 @@ Category: Animal Kingdom
 Question: As what is a camelopard also known?
 Answer: giraffe
 Wrong: lion, monkey, pig, horse
-Description: he giraffe (Giraffa camelopardalis) is an African even-toed ungulate mammal, the tallest living terrestrial animal and the largest ruminant. Its species name refers to its camel-like appearance and the patches of color on its fur.
+Description: The giraffe (Giraffa camelopardalis) is an African even-toed ungulate mammal, the tallest living terrestrial animal and the largest ruminant. Its species name refers to its camel-like appearance and the patches of color on its fur.
 Wiki_img: http://cl.jroo.me/z3/J/H/F/e/a.baa-Camelopard-Head.jpg
 Wiki_link: https://en.wikipedia.org/wiki/Giraffe
 
@@ -83,7 +83,7 @@ Category: Culture
 Question: What London landmark has an 11 foot long hand?
 Answer: Big Ben
 Wrong: London eye, Buckingham Palace, Beckam, Rain
-Description:Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London,[1] and often extended to refer to the clock and the clock tower.
+Description: Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London,[1] and often extended to refer to the clock and the clock tower.
 Wiki_img: http://upload.wikimedia.org/wikipedia/commons/9/93/Clock_Tower_-_Palace_of_Westminster%2C_London_-_May_2007.jpg
 Wiki_link: https://en.wikipedia.org/wiki/Big_Ben
 
