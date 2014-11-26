@@ -2,103 +2,148 @@ Category: Alcohol
 Question: From what is the liqueur kirsch made?
 Answer: cherries
 Wrong: lemon, kiwi, banana, grapes
+Description: A kirschwasser or kirsch is a clear, colorless fruit brandy traditionally made from double distillation of morello cherries, a dark-colored cultivar of the sour cherry. However, it is now also made from other kinds of cherries. The cherries are fermented complete (that is, including their stones).Unlike cherry liqueurs and so-called “cherry brandies”, kirschwasser is not sweet.
+Wiki_img: http://eshop.excaliburcity.com/imgs/products/datacon/9754_ea1d7605fd2ee27da27976172ee01280_main_large.jpg
 
 Category: Alcohol
 Question: From which plant is tequila derived?
 Answer: cactus
-Wrong: jack daniel, smiroff, red label, guiness
+Wrong: bamboo, daisy, orchid, peony
+Description: equila is made from the fermented and distilled juices taken from native Mexican Agave plants. By Mexican law, Tequila can be produced from only the Blue Agave (Weber Blue Agave, Agave Tequilana). The Agave plant is botanically classified as a succulent, and is a relative of the lily family. While cacti and Agave both share a common habitat, the Agave is not a cactus.
+Wiki_img: http://www.enduringamerica.com/storage/blog-post-images/CACTUS.jpg?__SQUARESPACE_CACHEVERSION=1285276788510
 
 Category: Alcohol
 Question: Which drug kills more people below the age of 21 than any other?
 Answer: alcohol
 Wrong: cocaine, marijuana, nicotine, nurofen
+Description: Research indicates that the human brain continues to develop into a person’s early twenties and that exposure of the developing brain to alcohol may have long-lasting effects on intellectual capabilities.
+Wiki_img: http://i.dailymail.co.uk/i/pix/2009/04/23/article-0-03B7E4F3000005DC-883_468x286.jpg
 
 Category: Animal Kingdom
 Question: As what is a camelopard also known?
 Answer: giraffe
 Wrong: lion, monkey, pig, horse
+Description: he giraffe (Giraffa camelopardalis) is an African even-toed ungulate mammal, the tallest living terrestrial animal and the largest ruminant. Its species name refers to its camel-like appearance and the patches of color on its fur.
+Wiki_img: http://cl.jroo.me/z3/J/H/F/e/a.baa-Camelopard-Head.jpg
 
 Category: Animal Kingdom
 Question: How many teeth does a walrus have?
 Answer: eighteen
-Wrong: one, five, ten, seventenn
+Wrong: two, five, ten, seventenn
+Description: Walruses have an overall of 18 teeth, lacking molars and having only upper incisor teeth. 
+Wiki_img: http://www.findfast.org/images/walrus.jpg
 
 Category: Animal Kingdom
 Question: Some animals always grow new teeth to replace the old. Name one of them!
 Answer: shark
 Wrong: tiger, dog, cat, dolphine
+Description:  Sharks grow a new set of teeth every two weeks to replace worn teeth. Rodent incisors grow and wear away continually through gnawing, which helps maintain relatively constant length.
+Wiki_img: http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/3/11/1394546448054/A-great-white-shark---loo-010.jpg
 
 Category: Computers
-Question: What was the first version of Microsoft Windows?
-Answer: Windows #286#
-Wrong: Windows #86#, Windows #186#, Windows #386#, Windows #486# 
+Question: What does the 'x' mean when referring to the speed of a CD-rom (eg. 32x)?
+Answer: #times# (faster than standard speed)
+Wrong: unknow value, plus, version, capacity
+Description: 70 minutes might be the right amount of time for a symphony or two but that's ages if all you're trying to do is copy 650 megabytes - the typical capacity of a CD-ROM. So manufacturers started making the disks spin faster so that the electronics could read the data off the disk faster. Soon 2X drives appeared - only 35 minutes for a full disk. Then 4X and we were down to around 18 minutes.
+Wiki_img: http://upload.wikimedia.org/wikipedia/commons/f/f0/CD_laser_assembly1.jpg
 
 Category: Computers
 Question: What country did the operating system 'Linux' come from?
 Answer: Finland
 Wrong: German, Italy, United Kingdom, America
+Description: Finland student Linus Torvalds was dissatisfied with the operating systems he could get for free, so he decided to write one. He based his efforts on the powerful Unix operating system. In 1991 he published his new operating system on the Internet and invited other programmers to join in the development of Linux.
+Wiki_img: http://www.infodrom.north.de/Infodrom/shirts/linuxchiq.jpg
 
 Category: Computers
 Question: What does 'IBM' stand for?
 Answer: International Business Machines
 Wrong: I Blame Microsoft, It Beats Me, Intimidated By Microsoft, I Bought a MacIntosh
+Description: The International Business Machines Corporation (IBM) is an American multinational technology and consulting corporation, with headquarters in Armonk, New York, United States.
+Wiki_img: http://cdn-static.zdnet.com/i/story/70/00/034689/ibm-10tb-cartridge-keeps-tape-in-the-game.jpg
 
 Category: Culture
 Question: Israel has the highest per capital consumption of ······?
 Answer: turkey
 Wrong: Japan, Taiwan, China, Veitnam
+Description: Israel has the highest per capita consumption of turkey in the world, at 17 kg/capita.
+Per Capita Consumption in other selected countries: United States = 7.7 kg, France = 6.7 kg, United Kingdom = 3.6 kg, Mexico = 1.5 kg 
+Wiki_img: http://1.bp.blogspot.com/-E0uuf9ik_qg/URi783-L90I/AAAAAAAAMoY/WV6RMY615ps/s1600/Blue+Mosques.jpeg
 
 Category: Culture
 Question: What London landmark has an 11 foot long hand?
 Answer: Big Ben
 Wrong: London eye, Buckingham Palace, Beckam, Rain
+Description:Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London,[1] and often extended to refer to the clock and the clock tower.
+Wiki_img: http://upload.wikimedia.org/wikipedia/commons/9/93/Clock_Tower_-_Palace_of_Westminster%2C_London_-_May_2007.jpg
 
 Category: Culture
 Question: What city do the Italians call the Monaco of bavaria?
 Answer: Munich
 Wrong: Napoli, Seoul, Washington, Tokyo
+Description: Munich (/ˈmjuːnɪk/; German: München, pronounced [ˈmʏnçən] ( listen) ,[2] Bavarian: Minga pronounced [ˈmɪŋ(:)ə]) is the capital and largest city of the German state of Bavaria, on the River Isar north of the Bavarian Alps. Munich is the third largest city in Germany, after Berlin and Hamburg, with a population of around 1.49 million.
+Wiki_img: http://upload.wikimedia.org/wikipedia/commons/5/59/Munchen_collage.jpg
 
 Category: Food
 Question: What breakfast cereal was invented at Battle Creek Sanitarium?
 Answer: Cornflakes
-Wrong: Pancakes, Syrup, English Breafast, Bab
+Wrong: Pancakes, Syrup, English Breafast, Rice
+Description: Corn flakes are a popular breakfast cereal originally manufactured by Kellogg's through the treatment of maize. A patent for the product was filed on May 31, 1895, and issued on April 14, 1896.
+Wiki_img: http://upload.wikimedia.org/wikipedia/commons/6/6a/Cornflakes_in_bowl.jpg
 
 Category: Food
 Question: What did Charles Jung invent?
 Answer: fortune cookies
 Wrong: fortuen frog, fortuen laptop, fortuen mouse, fortuen desk 
+Description: Fortune cookies are considered a prime symbol for Asian culture. However, fortune cookies were actually invented in America, in 1918, by Charles Jung! Fortune cookies are often used as an after-meal special in Chinese restaurants around Europe and the United States, but they do not have them in China.
+Wiki_img: http://i.huffpost.com/gen/985329/thumbs/o-ROMANTIC-FORTUNE-COOKIES-facebook.jpg
 
 Category: Food
 Question: What is the most widely used seasoning?
 Answer: salt
 Wrong: sugar, black pepper, galic, oyster
+Description: Common salt is a mineral substance composed primarily of sodium chloride (NaCl), a chemical compound belonging to the larger class of ionic salts; salt in its natural form as a crystalline mineral is known as rock salt or halite.
+Wiki_img: http://www.planet-science.com/umbraco/ImageGen.ashx?image=/media/43099/salt_114337314.jpg&width=600&constrain=true
 
 Category: History
 Question: Where were numerous French nuclear tests conducted?
 Answer: Muraroa Atoll
 Wrong: Tours, Nantes, Rennes, Bordeaux
+Description: Mururoa, and its sister atoll Fangataufa, were the site of extensive nuclear testing by France between 1966 and 1996, as well as the site of numerous protests by various vessels, including the Rainbow Warrior.
+Wiki_img: http://upload.wikimedia.org/wikipedia/commons/3/33/Moruroa_atoll.JPG
 
 Category: History
 Question: Where were the Hanging Gardens?
 Answer: Babylon
 Wrong: Rome, Paris, Muich, Lodon
+Description: The Hanging Gardens of Babylon were one of the Seven Wonders of the Ancient World, and the only one whose location has not been definitely established.
+Wiki_img: http://upload.wikimedia.org/wikipedia/commons/a/ae/Hanging_Gardens_of_Babylon.jpg
 
 Category: History
 Question: Where were the first books printed?
 Answer: China
-Worng: ghana, Finland, Turkey, America
+Worng: Ghana, Finland, Turkey, America
+Description: Writing on bone, shells, wood and silk existed in China long before the 2nd century BC. Paper was invented in China around the 1st century AD. The discovery of the process using the bark of the blackberry bush is attributed to Ts'ai Louen, but it may be older. 
+Wiki_img: http://upload.wikimedia.org/wikipedia/commons/9/94/Bamboo_book_-_binding_-_UCR.jpg
 
 Category: Olympics
 Question: The Olympic motto 'citius, altius, fortius' means what?
 Answer: Faster higher stronger
 Wrong: Slower higher stronger, Faster lower stronger, Faster higher weaker, Faster bigger stronger
+Description: The Olympic motto is made up of three Latin words :Citius - Altius - Fortius. These words mean Faster - Higher - Stronger. It was the Dominican priest Henri Didon who first expressed the words in the opening ceremony of a school sports event in 1881.
+Wiki_img: http://i470.photobucket.com/albums/rr62/tam12shi_han/forprintingback.jpg
 
 Category: Olympics
 Question: Where were the 1960 summer Olympics held?
 Answer: Rome Italy
 Wrong: Sochi Russia, Sao Paulo Brazil, Paris France, London UK
+Description: he 1960 Summer Olympics, officially known as the Games of the XVII Olympiad, was an international multi-sport event held from August 25 to September 11, 1960 in Rome, Italy. Rome had been awarded the organization of the 1908 Summer Olympics, but after the 1906 eruption of Mount Vesuvius, was forced to decline and pass the honors to London.
+Wiki_img: http://webfronter.com/towerhamlets/benjonson/menu7/Projects_Index_6/olympic_torch_.jpg
 
 Category: Olympics
 Question: In ancient Greece, where were the original Olympics held?
 Answer: Olympia
-Wrong: Oliver, Olybiad, Olympus, Olympiac
+Wrong: Aegae, Byblos, Epidauros, Kourion
+Description: Olympia (Greek: Ὀλυμπία; Ancient Greek: [ˈolympia]; Modern Greek: [ˈolibia] Olympía), a sanctuary of ancient Greece in Elis on the Peloponnese peninsula, is known for having been the site of the Olympic Games in classical times.
+
+The Olympic Games were held every four years throughout Classical Antiquity, from the 8th century BC to the 4th century AD. The first Olympic Games were in honor of Zeus.
+Wiki_img: http://upload.wikimedia.org/wikipedia/commons/c/cf/Ancient_Olympia%2C_Greece2.jpg
