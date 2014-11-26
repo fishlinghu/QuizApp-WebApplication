@@ -1,42 +1,17 @@
 {% extends "base_of_game_and_result.html" %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  	{% block title %}Match vs. Someone{% endblock %}
-  	{% block head %}
-    {{ super() }}
-	<style>
-		.btn-inner {
-			width: 200px;
-			margin-top:10px;
-			margin-bottom:10px;
-			margin-left:10px;
-			margin-right:10px
-		}
-		.main-inner {
-			padding-left:20px;
-			padding-right:20px
-		}
-		.panel-default {
-			padding:20px
-		}
-		.well-menu {
-			width:500px;
-			margin: 0 auto;
-			margin-top:20px;
-			margin-bottom:20px
-		}
-		.sidebar {
-			text-align:center
-		}
-	</style>
-    {% endblock %}
-  </head>
+<head>
+	{% block title %}Match vs. Someone{% endblock %}
+	{% block head %}
+	{{ super() }}
+	{% endblock %}
+</head>
 
-  <body>
-  	{% block left %}
-  	{{ super() }}
-  	{% endblock %}
+<body>
+	{% block left %}
+	{{ super() }}
+	{% endblock %}
 	
 	{% block middle %}
 	<div class="col-md-8 main-inner">
@@ -70,5 +45,5 @@
 	{% block script %}
 	{{ super() }}
 	{% endblock %}
-  </body>
+</body>
 </html>

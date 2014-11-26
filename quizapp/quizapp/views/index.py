@@ -3,9 +3,9 @@
 
 from views import Handler
 
-class HomepageHandler(Handler):
+class IndexHandler(Handler):
     def render_homepage(self, **kw):
-        self.render("homepage.html", **kw)
+        self.render("index.html", **kw)
 
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
