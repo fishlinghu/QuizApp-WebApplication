@@ -3,6 +3,7 @@
 
 from views import Handler
 from quizapp.models.game import Game
+from google.appengine.api import channel
 
 class QuizHandler(Handler):
     def render_quiz(self, **kw):
@@ -25,12 +26,12 @@ class QuizHandler(Handler):
                     b_ans_list = [],
                     a_score = 0,
                     b_score = 0,
-                    a_score_list = []
+                    a_score_list = [],
                     b_score_list = []
                 )
                 quiz.put()
             else:
-                guiz = Quiz.get_by_key_name(quiz_key)
+                guiz = Game.get_by_key_name(quiz_key)
                 if not quiz.b_ID:
                     quiz.b_ID = user
                     quiz.put()
@@ -47,3 +48,7 @@ class QuizHandler(Handler):
                     'initial_message': QuizUpdater(quiz).get_quiz_message()
                 }
                 self.render("quiz.html", **template_values)
+            else:
+                self.write_plain('No such game')
+        else:
+            self.redirect('/register')
