@@ -44,6 +44,42 @@
 	
 	{% block script %}
 	{{ super() }}
+	<script type="text/javascript" src="/_ah/channel/jsapi"></script>
+	<script type="text/javascript">					
+		var	sendMessage = function(path, opt_param) {
+			if (opt_param) {
+				path += '&' + opt_param;
+			}
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', path, true);
+			setTimeout(xhr.send(), 1000);
+		};		
+		var	submit = function() {
+			sendMessage('/submit');
+		};								
+		var	onOpen = function() {
+			sendMessage('/opened');
+		};		
+		var	onMessage = function(m) {
+			updateGame();
+		};					
+		var	openChannel = function() {
+			var token = '{{ token }}';
+			var channel = new goog.appengine.Channel(token);
+			var handler = {
+				'onopen': onOpen,
+				'onmessage': onMessage,
+				'onerror': function() {},
+				'onclose': function() {}
+			};
+			var socket = channel.open(handler);
+			socket.onopen = onOpen;
+			socket.onmessage = onMessage;
+		};		
+		$(function(){
+			openChannel();
+		});
+	</script>
 	{% endblock %}
 </body>
 </html>

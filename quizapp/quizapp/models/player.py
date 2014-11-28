@@ -1,6 +1,6 @@
 from google.appengine.ext import db
 
-class Player(db.model):
+class Player(db.Model):
 	player_ID = db.IntegerProperty()
 	account = db.StringProperty()
 	password = db.StringProperty()
@@ -11,6 +11,6 @@ class Player(db.model):
 	level = db.IntegerProperty()
 	experience = db.IntegerProperty()
 	#store a list of friends' ID 
-	friend_list = db.ListProperty()
+	friend_list = db.ListProperty(int)
 	#store the id of games played before
-	game_history = db.ListProperty()
+	game_history = db.ListProperty(int)
