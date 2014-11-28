@@ -11,7 +11,7 @@ from quizapp.views.questions import QuestionHandler
 routes = [
     ('/', HomepageHandler),
     ('/index', IndexHandler),
-    ('/quiz', QuizHandler),
+    ('/quiz/(\d+)/(\d+)/', QuizHandler),
     ('/results', ResultsHandler),
     ('/test', TestHandler),
     ('/questions/(\w+)/', QuestionHandler),
