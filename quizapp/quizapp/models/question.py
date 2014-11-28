@@ -1,9 +1,11 @@
-from google.appengine.ext import ndb
+from google.appengine.ext import db
 
-class Question(ndb.model):
-	question = ndb.StringProperty()
-	correct_ans = ndb.StringProperty()
-	wrong_ans = ndb.StringListProperty()
-	description = ndb.StringProperty()
-	wiki_link = ndb.StringProperty()
-	topic = ndb.StringProperty()
+class Question(db.model):
+	question_ID = db.IntegerProperty()
+	description = db.StringProperty()
+	correct_ans = db.StringProperty()
+	wrong_ans = db.StringListProperty()
+	solution = db.StringProperty()
+	wiki_link = db.StringProperty()
+	topic = db.StringProperty()
+	topic_ID = db.IntegerProperty()
