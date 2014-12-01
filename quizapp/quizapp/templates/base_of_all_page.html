@@ -16,11 +16,6 @@ This bar should appear in every page, so this is a base template for every html 
 	<link href="static/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="static/css/quizapp.css" rel="stylesheet">
 	<title>{% block title %}QuizApp{% endblock %}</title>
-	
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	<script src="bootstrap/js/html5shiv.js"></script>
-	<![endif]-->
 
 	<!-- Fav and touch icons -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
@@ -45,9 +40,9 @@ This bar should appear in every page, so this is a base template for every html 
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			{% block user %}
-			<ul class="nav navbar-nav navbar-right">
+			<form class="nav navbar-nav navbar-right" name="logoutForm" action="/logout" method="POST">
 				<li><a href="/logout">Logout</a></li>
-			</ul>
+			</form>
 			{% endblock %}
 		</div>
 	</div>

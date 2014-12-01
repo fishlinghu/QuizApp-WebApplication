@@ -4,6 +4,7 @@
 import webapp2
 import jinja2
 import os
+from webapp2_extras import sessions
 
 template_dir = os.path.join(os.path.dirname(__file__), '../templates')
 jinja_env = jinja2.Environment(
@@ -26,6 +27,22 @@ class Handler(webapp2.RequestHandler):
     def render(self, template, **kw):
         self.response.headers['Content-Type'] = 'text/html'
         self.write(self.render_str(template, **kw))
+
+    def dispatch(self):
+        # Get a session store for this request.
+        self.session_store = sessions.get_store(request=self.request)
+
+        try:
+            # Dispatch the request.
+            webapp2.RequestHandler.dispatch(self)
+        finally:
+            # Save all sessions.
+            self.session_store.save_sessions(self.response)
+
+    @webapp2.cached_property
+    def session(self):
+        # Returns a session using the default cookie key.
+        return self.session_store.get_session()
 
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
