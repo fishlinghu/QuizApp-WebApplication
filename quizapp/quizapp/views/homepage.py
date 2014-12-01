@@ -8,5 +8,9 @@ class HomepageHandler(Handler):
         self.render("homepage.html", **kw)
 
     def get(self):
-        self.response.headers['Content-Type'] = 'text/html'
-        self.render_homepage()
+        user = self.session.get('QUIZAPP_USER')
+        if user:
+            self.redirect('/index')
+        else:
+            self.response.headers['Content-Type'] = 'text/html'
+            self.render_homepage()

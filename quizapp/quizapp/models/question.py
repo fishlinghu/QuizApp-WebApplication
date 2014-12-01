@@ -1,6 +1,6 @@
 from google.appengine.ext import db
 
-class Question(db.model):
+class Question(db.Model):
 	question_ID = db.IntegerProperty()
 	description = db.StringProperty()
 	correct_ans = db.StringProperty()

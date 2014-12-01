@@ -13,7 +13,7 @@ def checkPlayer(username):
         
     #Check if no such player exists
     if not results:
-        return false
+        return None
     else :
         return results
 

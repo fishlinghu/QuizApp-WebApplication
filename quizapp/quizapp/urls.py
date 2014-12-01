@@ -14,7 +14,7 @@ from quizapp.views.users import RegisterHandler
 routes = [
     ('/', HomepageHandler),
     ('/index', IndexHandler),
-    ('/quiz', QuizHandler),
+    ('/quiz/(\w+)/', QuizHandler),
     ('/results', ResultsHandler),
     ('/test', TestHandler),
     ('/questions/(\w+)/', QuestionHandler),

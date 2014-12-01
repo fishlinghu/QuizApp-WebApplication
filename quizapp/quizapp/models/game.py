@@ -12,7 +12,7 @@ class Game(db.Model):
 	#record the answers of each player every round
 	a_ans_list = db.ListProperty(bool)
 	b_ans_list = db.ListProperty(bool)
-	#total socres of two players
+	#total scores of two players
 	a_score = db.IntegerProperty()
 	b_score = db.IntegerProperty()
 	#record the scores each player got in every round
