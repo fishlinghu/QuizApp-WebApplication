@@ -3,6 +3,9 @@ import datetime
 
 #the result page's information can base on the information in game model and question model
 class Game(db.Model):
+	# It seems that there's a key property we can use
+	# Maybe we should use that instead of game_ID
+	game_ID = db.IntegerProperty()
 	create_time = db.DateTimeProperty(auto_now_add=True)
 	#user id of two players
 	a_ID = db.IntegerProperty()
