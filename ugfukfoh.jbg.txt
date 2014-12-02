@@ -1,0 +1,31 @@
+﻿Implement results.py
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   appengine-guestbook-python-master/.idea/.name
+#	new file:   appengine-guestbook-python-master/.idea/appengine-guestbook-python-master.iml
+#	new file:   appengine-guestbook-python-master/.idea/encodings.xml
+#	new file:   appengine-guestbook-python-master/.idea/libraries/Google_App_Engine_SDK.xml
+#	new file:   appengine-guestbook-python-master/.idea/misc.xml
+#	new file:   appengine-guestbook-python-master/.idea/modules.xml
+#	new file:   appengine-guestbook-python-master/.idea/scopes/scope_settings.xml
+#	new file:   appengine-guestbook-python-master/.idea/vcs.xml
+#	new file:   appengine-guestbook-python-master/.idea/workspace.xml
+#	new file:   guestbook/.idea/.name
+#	new file:   guestbook/.idea/encodings.xml
+#	new file:   guestbook/.idea/guestbook.iml
+#	new file:   guestbook/.idea/inspectionProfiles/Project_Default.xml
+#	new file:   guestbook/.idea/inspectionProfiles/profiles_settings.xml
+#	new file:   guestbook/.idea/libraries/Google_App_Engine_SDK.xml
+#	new file:   guestbook/.idea/misc.xml
+#	new file:   guestbook/.idea/modules.xml
+#	new file:   guestbook/.idea/scopes/scope_settings.xml
+#	new file:   guestbook/.idea/vcs.xml
+#	new file:   guestbook/.idea/workspace.xml
+#	modified:   quizapp/quizapp/models/player.py
+#	modified:   quizapp/quizapp/views/results.py
+#
+

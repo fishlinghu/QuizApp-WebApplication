@@ -10,6 +10,7 @@ class Player(db.Model):
 	#need a regulation about how can a player level-up
 	level = db.IntegerProperty()
 	experience = db.IntegerProperty()
+	exp_require = db.ListProperty(int)
 	#store a list of friends' ID 
 	friend_list = db.ListProperty(int)
 	#store the id of games played before
