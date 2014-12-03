@@ -48,14 +48,14 @@ This bar should appear in every page, so this is a base template for every html 
 	</div>
 	</nav>
 	{% block content %}
-	{% if error %}
-	<div class="col-md-12 main-inner">
-		<div class="alert {{ error_type }} alert-dismissible" role="alert">{{ error }}
-		  	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span>
-		  	<span class="sr-only">Close</span></button>
+		{% if error %}
+		<div class="col-md-12 main-inner">
+			<div class="alert {{ error_type }} alert-dismissible" role="alert">{{ error }}
+			  	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span>
+		  		<span class="sr-only">Close</span></button>
+			</div>
 		</div>
-	</div>
-	{% endif %}
+		{% endif %}
 	{% endblock %}
 	{% endblock %}
 	{% block script %}

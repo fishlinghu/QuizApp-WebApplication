@@ -22,4 +22,5 @@ class Game(db.Model):
 	a_score_list = db.ListProperty(int)
 	b_score_list = db.ListProperty(int)
 	#topic of quiz
+	topic = db.StringProperty()
 	topic_ID = db.IntegerProperty()

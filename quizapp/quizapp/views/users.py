@@ -37,6 +37,7 @@ class LoginHandler(Handler):
 class LogoutHandler(Handler):
     def get(self):
         self.session.pop('QUIZAPP_USER')
+        self.session.pop('QUIZAPP_QUIZ')
         self.redirect('/')       
         
 class RegisterHandler(Handler):

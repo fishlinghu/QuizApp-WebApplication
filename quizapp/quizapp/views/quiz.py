@@ -48,8 +48,9 @@ class QuizHandler(Handler):
         if user:
             if not quiz_key:
                 q = db.Query(Game)
-                q.filter('b_ID', None)
-                q.filter('topic', topic) 
+                q.filter('b_ID =', None)
+                q.filter('a_ID !=', user)
+                q.filter('topic =', topic) 
                 quiz = q.get()
                 
                 if not quiz:
@@ -72,15 +73,20 @@ class QuizHandler(Handler):
                                 b_score = 0,
                                 a_score_list = [],
                                 b_score_list = [],
-                                topic_ID = 1
+                                topic_ID = 1,
+                                topic = topic
                                 )
                     quiz.put()
                     quiz_key = quiz.key().id()
+                    self.session['QUIZAPP_QUIZ'] = quiz_key
                 else:
+                    quiz.b_ID = user
+                    quiz.put()
                     quiz_key = quiz.key().id()
+                    self.session['QUIZAPP_QUIZ'] = quiz_key
             
             else:
-                quiz = Game.get_by_id(quiz_key)               
+                quiz = Game.get_by_id(int(quiz_key))             
             
             if quiz:
                 token = channel.create_channel(str(user) + str(quiz_key))
