@@ -23,63 +23,63 @@ class ResultsHandler(Handler):
 
             game = Game.get_by_id(player.game_history[-1])
         	
-        	if game.a_ID == player.key().id():
+            if game.a_ID == player.key().id():
         		# user's ID == a_ID
         		your_score = game.a_score
         		opp_score = game.b_score
-        	else:
+            else:
         		# user's ID == b_ID
         		your_score = game.b_score
         		opp_score = game.a_score
 
         	# Check who wins
-        	if your_score > opp_score:
+            if your_score > opp_score:
         		# Show you win
-        		win_or_lose = "You Win!!"
-        		w_o_l = 2
-        	elif your_score < opp_score:
+                win_or_lose = "You Win!!"
+                w_o_l = 2
+            elif your_score < opp_score:
         		# Show you lose
         		win_or_lose = "You Lose!!"
         		w_o_l = 0
-        	else:
+            else:
         		# Even
         		win_or_lose = "Even Game"
         		w_o_l = 1
 
         	# Need a function of score/win/lose to calculate the experience an user get
-        	exp = exp_calculator(score, w_o_l)
-        	player.experience = player.experience + exp;
-        	if player.experience >= player.exp_require[player.level]:
+            exp = exp_calculator(score, w_o_l)
+            player.experience = player.experience + exp;
+            if player.experience >= player.exp_require[player.level]:
         		# level up
         		player.experience = player.experience - player.exp_require[player.level]
         		player.level = player.level + 1
 
         	# Update the player entity
-        	db.put(player)
+            db.put(player)
 
         	# Scoring breakdown for both players
         	# I don't know if I can send a list to html
-        	for score in game.a_score_list:
+            for score in game.a_score_list:
         		score = score
 
-        	for score in game.b_score_list:
+            for score in game.b_score_list:
         		score = score
         	
         	# Need to get the question number from html somehow
-        	q = Question.all()
-        	q.filter('question_ID = ', question_ID)
-        	question = q.fetch(1)
+            q = Question.all()
+            q.filter('question_ID = ', question_ID)
+            question = q.fetch(1)
 
-        	template_values = {
-        		'win_or_lose': win_or_lose,
-        		'level' : player.level,
-        		'experience': player.experience,
+            template_values = {
+                'win_or_lose': win_or_lose,
+                'level' : player.level,
+                'experience': player.experience,
                 'description': question.description,
                 'solution': question.solution,
                 'wiki_link': question.wiki_link,
                 'correct_ans': question.correct_ans 
-              	}
-        	self.render("quiz.html", **template_values)
+            }
+            self.render("quiz.html", **template_values)
 
         else:
-        	self.redirect('/index')
+            self.redirect('/index')
