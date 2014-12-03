@@ -41,7 +41,7 @@ class ResultsHandler(Handler):
         		# Show you win
         		win_or_lose = "You Win!!"
         		w_o_l = 2
-        	else if your_score < opp_score:
+        	elif your_score < opp_score:
         		# Show you lose
         		win_or_lose = "You Lose!!"
         		w_o_l = 0
@@ -64,9 +64,11 @@ class ResultsHandler(Handler):
         	# Scoring breakdown for both players
         	# I don't know if I can send a list to html
         	for score in game.a_score_list:
+        		score = score
 
         	for score in game.b_score_list:
-
+        		score = score
+        	
         	# Need to get the question number from html somehow
         	q = Question.all()
         	q.filter('question_ID = ', question_ID)
