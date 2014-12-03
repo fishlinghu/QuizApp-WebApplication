@@ -21,3 +21,5 @@ class Game(db.Model):
 	#record the scores each player got in every round
 	a_score_list = db.ListProperty(int)
 	b_score_list = db.ListProperty(int)
+	#topic of quiz
+	topic_ID = db.IntegerProperty()

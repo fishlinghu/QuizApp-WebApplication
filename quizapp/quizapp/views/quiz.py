@@ -3,6 +3,7 @@
 
 from views import Handler
 import random
+import json
 from google.appengine.ext import db
 from quizapp.models.game import Game
 from quizapp.models.question import Question
@@ -70,7 +71,8 @@ class QuizHandler(Handler):
                                 a_score = 0,
                                 b_score = 0,
                                 a_score_list = [],
-                                b_score_list = []
+                                b_score_list = [],
+                                topic_ID = 1
                                 )
                     quiz.put()
                     quiz_key = quiz.key().id()
@@ -82,11 +84,23 @@ class QuizHandler(Handler):
             
             if quiz:
                 token = channel.create_channel(str(user) + str(quiz_key))
+                
+                question = quiz.question_set[0]
+                
+                query = db.Query(Question)
+                query.filter('topic', topic)
+                query.filter('question_ID', question)
+                question = query.get()
+                
                 template_values = {
                     'token': token,
-                    'me': user,
+                    'user': user,
                     'quiz_key': quiz_key,
-                    'initial_message': QuizUpdater.get_quiz_message()
+                    'question': question.description,
+                    'answer1': question.correct_ans.title(),
+                    'answer2' : question.wrong_ans[0].title(),
+                    'answer3' : question.wrong_ans[1].title(),
+                    'answer4' : question.wrong_ans[2].title()
                 }
                 self.render("quiz.html", **template_values)
             else:

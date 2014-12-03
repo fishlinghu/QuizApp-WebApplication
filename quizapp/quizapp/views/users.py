@@ -30,9 +30,9 @@ class LoginHandler(Handler):
                 self.session['QUIZAPP_USER'] = player.key().id()
                 self.redirect('index')
             else :
-                self.write_plain("Error: Invalid username or password")
+                self.render("homepage.html", error="Invalid username or password", error_type="alert-danger")
         else :
-            self.write_plain("Error: Invalid username or password")
+            self.render("homepage.html", error="Invalid username or password", error_type="alert-danger")
         
 class LogoutHandler(Handler):
     def get(self):
@@ -52,7 +52,7 @@ class RegisterHandler(Handler):
             player = checkPlayer(username)
         
             if player:
-                self.write_plain("Username is already in use. Please use a different username")
+                self.render("homepage.html", error="Username is already in use. Please use a different username", error_type="alert-danger")
             else:
                 #Create new Player object
                 player = Player(account = username,
@@ -61,4 +61,4 @@ class RegisterHandler(Handler):
                 player.put()
                 self.redirect('/')
         else:
-            self.write_plain("Passwords do not match. Please try again")
+            self.render("homepage.html", error="Passwords do not match. Please try again", error_type="alert-danger")

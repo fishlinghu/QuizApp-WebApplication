@@ -19,15 +19,11 @@ class ResultsHandler(Handler):
         	# So this should be done in quiz.py
 
         	# get the user
-        	q = Player.all()
-        	q.filter('player_ID = ', user)
-        	player = q.fetch(1)
+            player = Player.get_by_id(user)
 
-        	q = Game.all()
-        	q.filter('game_ID', player.game_history[-1])
-        	game = q.fetch(1)
+            game = Game.get_by_id(player.game_history[-1])
         	
-        	if game.a_ID == player.player_ID:
+        	if game.a_ID == player.key().id():
         		# user's ID == a_ID
         		your_score = game.a_score
         		opp_score = game.b_score

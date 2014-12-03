@@ -31,9 +31,7 @@ class SettingHandler(Handler):
             new_password_check = self.request.get('new_password_check')
             
             # Get the player
-            q = Player.all()
-            q.filter('player_ID = ', user)
-            player = q.fetch(1)
+            player = Player.get_by_id(user)
 
             # If the user type something in the blank for account
             # He can change his account
