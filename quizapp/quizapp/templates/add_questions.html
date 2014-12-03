@@ -21,7 +21,25 @@
                 <div><input type="submit" value="Submit"></div>
             </form>
             {% if questions %}
-                <p>{{ questions }}</p> 
+                {% for q in questions %}
+                    <h1>{{ q['question'] }}</h1>
+                    <center>
+                    <table style="border: 1px solid black; text-align:left; 
+                        border-collapse: collapse;">
+                    <tr>
+                        <th>Key</th> 
+                        <th>Value</th> 
+                    </tr>
+                    {% for k, v in q.items() %}
+                        <tr>
+                            <td><p><strong>{{ k }}</strong><p></td>
+                            <td><p>{{ v }}</p></td> 
+                        </tr>
+                    {% endfor %}
+                    </table>
+                    </center>
+                    <hr>
+                {% endfor %}
             {% endif %}
         </div>
 	</div>

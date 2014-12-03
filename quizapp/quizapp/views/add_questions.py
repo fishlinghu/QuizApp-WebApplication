@@ -24,6 +24,7 @@ class AddQuestionsHandler(Handler):
             try:
                 questions = json.loads(self.request.get('questions'))
                 count = 0
+                list_of_questions = []
                 for q in questions['questions']:
                     """
                         Each q has:
@@ -52,8 +53,9 @@ class AddQuestionsHandler(Handler):
                         topic_ID = 1
                     )
                     question.put()
+                    list_of_questions.append(q)
                     count += 1
-                self.render_add_questions(questions=json.dumps(questions))
+                self.render_add_questions(questions=list_of_questions)
             except ValueError:
                 self.render_add_questions(error="Invalid JSON inserted.")
         else:
