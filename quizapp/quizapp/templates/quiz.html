@@ -21,18 +21,18 @@
 					<span class="sr-only">60% Complete</span>
 				</div>
 			</div>
-			<h1>Question</h1>
+			<h1>{{ question }}</h1>
 			<br>
 			<div style="height:200px; background:grey">
 				<h1>Picture</h1>
 			</div>
 			
 			<div class="well well-menu">
-				<button type="button" class="btn btn-default btn-inner">Answer 1</button>
-				<button type="button" class="btn btn-default btn-inner">Answer 2</button>
+				<button type="button" id="button1" class="btn btn-default btn-inner">{{ answer1 }}</button>
+				<button type="button" id="button2" class="btn btn-default btn-inner">{{ answer2 }}</button>
 				<br>
-				<button type="button" class="btn btn-default btn-inner">Answer 3</button>
-				<button type="button" class="btn btn-default btn-inner">Answer 4</button>
+				<button type="button" id="button3" class="btn btn-default btn-inner">{{ answer3 }}</button>
+				<button type="button" id="button4" class="btn btn-default btn-inner">{{ answer4 }}</button>
 			</div>
 		</div>
 		<div>{{ quiz_key }}</div>
@@ -46,21 +46,22 @@
 	{% block script %}
 	{{ super() }}
 	<script type="text/javascript" src="/_ah/channel/jsapi"></script>
-	<script type="text/javascript">					
-		var	sendMessage = function(path, opt_param) {
-			if (opt_param) {
-				path += '&' + opt_param;
-			}
+	<script type="text/javascript">		
+		var state = {
+			user : "{{ user }}",
+			quiz_key : "{{ quiz_key }}"
+		};			
+		var	sendMessage = function(path) {
 			var xhr = new XMLHttpRequest();
 			xhr.open('POST', path, true);
-			setTimeout(xhr.send(), 1000);
+			xhr.send();
 		};		
-		var	submit = function() {
-			sendMessage('/submit');
-		};								
-		var	onOpen = function() {
-			sendMessage('/opened');
-		};		
+		var	submit = function(button) {
+			var source = document.getElementById(button);
+			var answer = source.innerHTML;
+			var parameters = '?user=' + state.user + '&quiz_key=' + state.quiz_key + '&answer=' + answer + '&score=' + 100;
+			sendMessage('/quiz/submit' + parameters);
+		};									
 		var	onMessage = function(m) {
 			updateGame();
 		};					
@@ -68,7 +69,7 @@
 			var token = '{{ token }}';
 			var channel = new goog.appengine.Channel(token);
 			var handler = {
-				'onopen': onOpen,
+				'onopen': function() {},
 				'onmessage': onMessage,
 				'onerror': function() {},
 				'onclose': function() {}
@@ -76,10 +77,14 @@
 			var socket = channel.open(handler);
 			socket.onopen = onOpen;
 			socket.onmessage = onMessage;
-		};		
-		$(function(){
-			openChannel();
-		});
+		};
+		
+		$('#button1').click(function(){ submit("button1"); });
+		$('#button2').click(function(){ submit("button2"); });
+		$('#button3').click(function(){ submit("button3"); });
+		$('#button4').click(function(){ submit("button4"); });
+		
+		$(function(){ openChannel(); });
 	</script>
 	{% endblock %}
 </body>
