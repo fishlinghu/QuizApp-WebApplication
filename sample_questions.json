@@ -1,0 +1,151 @@
+{
+    "questions": [
+        {
+            "correct_ans": "cherries",
+            "wrong_ans": ["lemon", "kiwi", "banana"],
+            "question": "From what is the liqueur kirsch made?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Cherry"
+        },
+        {
+            "correct_ans": "cactus",
+            "wrong_ans": ["bamboo", "daisy", "orchid"],
+            "question": "From which plant is tequila derived?",
+            "topic": "alcohol",
+            "wiki": ""
+        },
+        {
+            "correct_ans": "alcohol",
+            "wrong_ans": ["cocaine", "marijuana", "nicotine"],
+            "question": "Which drug kills more people below the age of 21 than any other?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Alcohol"
+        },
+        {
+            "correct_ans": "giraffe",
+            "wrong_ans": ["lion", "monkey", "pig"],
+            "question": "As what is a camelopard also known?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Giraffe"
+        },
+        {
+            "correct_ans": "eighteen",
+            "wrong_ans": ["two", "five", "ten"],
+            "question": "How many teeth does a walrus have?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Walrus"
+        },
+        {
+            "correct_ans": "shark",
+            "wrong_ans": ["tiger", "dog", "cat"],
+            "question": "Some animals always grow new teeth to replace the old. Name one of them!",
+            "topic": "alcohol",
+            "wiki": ""
+        },
+        {
+            "correct_ans": "#times# (faster than standard speed)",
+            "wrong_ans": ["plus", "version", "capacity"],
+            "question": "What does the 'x' mean when referring to the speed of a CD-rom (eg. 32x)?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/CD-ROM"
+        },
+        {
+            "correct_ans": "Finland",
+            "wrong_ans": ["Italy", "United Kingdom", "German"],
+            "question": "What country did the operating system 'Linux' come from?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Linux"
+        },
+        {
+            "correct_ans": "International Business Machines",
+            "wrong_ans": ["Intimidated By Microsoft", "I Bought a MacIntosh", "I Blame Microsoft"],
+            "question": "What does 'IBM' stand for?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/IBM"
+        },
+        {
+            "correct_ans": "turkey",
+            "wrong_ans": ["Japan", "Taiwan", "China"],
+            "question": "Israel has the highest per capital consumption of ······?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Turkey"
+        },
+        {
+            "correct_ans": "Big Ben",
+            "wrong_ans": ["London eye", "Buckingham Palace", "Beckam"],
+            "question": "What London landmark has an 11 foot long hand?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Big_Ben"
+        },
+        {
+            "correct_ans": "Munich",
+            "wrong_ans": ["Napoli", "Seoul", "Washington"],
+            "question": "What city do the Italians call the Monaco of Bavaria?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Munich"
+        },
+        {
+            "correct_ans": "Cornflakes",
+            "wrong_ans": ["Pancakes", "Syrup", "English Breafast"],
+            "question": "What breakfast cereal was invented at Battle Creek Sanitarium?",
+            "topic": "alcohol",
+            "wiki": ""
+        },
+        {
+            "correct_ans": "fortune cookies",
+            "wrong_ans": ["fortuen frog", "fortuen laptop", "fortuen mouse"],
+            "question": "What did Charles Jung invent?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Corn_flakes"
+        },
+        {
+            "correct_ans": "salt",
+            "wrong_ans": ["sugar", "black pepper", "garlic"],
+            "question": "What is the most widely used seasoning?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Salt"
+        },
+        {
+            "correct_ans": "Muraroa Atoll",
+            "wrong_ans": ["Tours", "Nantes", "Rennes"],
+            "question": "Where were numerous French nuclear tests conducted?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Moruroa"
+        },
+        {
+            "correct_ans": "Babylon",
+            "wrong_ans": ["Rome", "Paris", "Muich"],
+            "question": "Where were the Hanging Gardens?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Hanging_Gardens_of_Babylon"
+        },
+        {
+            "correct_ans": "China",
+            "wrong_ans": ["Ghana", "Finland", "Turkey"],
+            "question": "Where were the first books printed?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Book"
+        },
+        {
+            "correct_ans": "Faster higher stronger",
+            "wrong_ans": ["Slower higher stronger", "Faster lower stronger", "Faster higher weaker"],
+            "question": "The Olympic motto 'citius, altius, fortius' means what?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Olympic_Games"
+        },
+        {
+            "correct_ans": "Rome Italy",
+            "wrong_ans": ["Sochi Russia", "Sao Paulo Brazil", "Paris France"],
+            "question": "Where were the 1960 summer Olympics held?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/1960_Summer_Olympics"
+        },
+        {
+            "correct_ans": "Olympia",
+            "wrong_ans": ["Aegae", "Byblos", "Epidauros"],
+            "question": "In ancient Greece, where were the original Olympics held?",
+            "topic": "alcohol",
+            "wiki": "https://en.wikipedia.org/wiki/Olympia"
+        }
+    ]
+}
