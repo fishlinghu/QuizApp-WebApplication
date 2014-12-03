@@ -10,6 +10,7 @@ from quizapp.views.questions import QuestionHandler
 from quizapp.views.users import LoginHandler
 from quizapp.views.users import LogoutHandler
 from quizapp.views.users import RegisterHandler
+from quizapp.views.add_questions import AddQuestionsHandler
 
 routes = [
     ('/', HomepageHandler),
