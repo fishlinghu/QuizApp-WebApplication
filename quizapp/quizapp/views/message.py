@@ -12,20 +12,15 @@ class MessageHandler(Handler):
         user = self.session.get('QUIZAPP_USER')
         if user:
             # Get the player
-            q = Player.all()
-            q.filter('player_ID = ', user)
-            player = q.fetch(1)
+            player = Player.get_by_id(user)
 
             # Get friends list, I think we should show the friend list in this page
             # So the player can send message to their friends
             # Maybe we can use some fancy ways to implement this function
             # But this version I'll just get the names of friends
-            q = Player.all()
             friend_name_list = []
             for friend_ID in player.friend_list:
-                q = Player.all()
-                q.filter('player_ID = ', friend_ID)
-                friend = q.fetch(1)
+                friend = Player.get_by_id(friend_ID)
                 friend_name_list.append(friend.name)
 
             # Get all inbox message, ordered as the newest first 
@@ -36,7 +31,7 @@ class MessageHandler(Handler):
             # Get all sent message, ordered as the newest first 
             q = Message.all()
             q.filter('sender_ID = ', user).order('-create_time')
-            sent_message_list = q
+            sent_message_list = q.fetchAll()
 
             # Get the list of inbox messages' topics and contents 
             in_message_topic_list = []
@@ -49,9 +44,7 @@ class MessageHandler(Handler):
                 in_message_topic_list.append(in_message.topic)
                 in_message_content_list.append(in_message.content)
                 in_message_time_list.append(in_message.create_time)
-                q = Player.all()
-                q.filter('player_ID = ', in_message.sender_ID)
-                sender = q.fetch(1)
+                sender = Player.get_by_id(in_message.sender_ID)
                 sender_name_list.append(sender.name)
 
             # Get the list of sent messages' topics and contents 
@@ -65,9 +58,7 @@ class MessageHandler(Handler):
                 sent_message_topic_list.append(sent_message.topic)
                 sent_message_content_list.append(sent_message.content)
                 sent_message_time_list.append(sent_message.create_time)
-                q = Player.all()
-                q.filter('player_ID = ', in_message.receiver_ID)
-                receiver = q.fetch(1)
+                receiver = Player.get_by_id(sent_message.receiver)
                 receiver_name_list.append(receiver.name)
 
             template_values = {
@@ -101,7 +92,7 @@ class MessageHandler(Handler):
                 new_message = Message(
                     topic = topic,
                     content = content, 
-                    receiver_ID = receiver.player_ID,
+                    receiver_ID = receiver.key().id(),
                     sender_ID = user,
                     create_time = datetime.now())
                 new_message.put()

@@ -12,17 +12,12 @@ class FriendHandler(Handler):
         user = self.session.get('QUIZAPP_USER')
         if user:
             # Get the player
-            q = Player.all()
-            q.filter('player_ID = ', user)
-            player = q.fetch(1)
+            player = Player.get_by_id(user)
 
             # Get the list of friends' names
-            q = Player.all()
             friend_name_list = []
             for friend_ID in player.friend_list:
-                q = Player.all()
-                q.filter('player_ID = ', friend_ID)
-                friend = q.fetch(1)
+                friend = Player.get_by_id(friend_ID)
                 friend_name_list.append(friend.name)
 
             template_values = {
@@ -43,24 +38,22 @@ class FriendHandler(Handler):
         user = self.session.get('QUIZAPP_USER')
         if user:
             # Get the player
-            q = Player.all()
-            q.filter('player_ID = ', user)
-            player = q.fetch(1)
+            player = Player.get_by_id(user)
 
             # Add the player as friend by name
             friend_name = self.request.get('friend_name')
             friend = checkPlayerName(friend_name)
             if friend:
                 # There is such player
-                player.friend_list.append(friend.player_ID)
+                player.friend_list.append(friend.key().id())
             else:
                 self.write_plain("Sorry, no such player")
 
-            # Add the player as friend by id
-            friend_ID = self.request.get('friend_ID')
-            friend = checkPlayer(friend_ID)
+            # Add the player as friend by account
+            account = self.request.get('account')
+            friend = checkPlayer(account)
             if friend:
-                player.friend_list.append(friend_ID)
+                player.friend_list.append(friend.key().id())
             else:
                 self.write_plain("Sorry, no such player")
 
@@ -71,7 +64,7 @@ class FriendHandler(Handler):
                 # There is such player
                 if friend.player_ID in player.friend_list:
                     # okay he is your friend
-                    player.friend_list.remove(friend.player_ID)
+                    player.friend_list.remove(friend.key().id())
                 else:
                     self.write_plain("This player is not your friend!")
             else:
@@ -83,7 +76,7 @@ class FriendHandler(Handler):
             if friend:
                 if friend_ID_del in player.friend_list:
                     # Okay he is your friend
-                    player.friend_list.remove(friend_ID_del)
+                    player.friend_list.remove(friend.key().id())
                 else:
                     self.write_plain("This player is not your friend!")
             else:
