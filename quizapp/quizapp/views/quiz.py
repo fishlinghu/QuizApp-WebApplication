@@ -8,7 +8,7 @@ from quizapp.models.game import Game
 from quizapp.models.question import Question
 from google.appengine.api import channel
 
-class QuizUpdater(quiz):
+class QuizUpdater(Game):
     quiz = None
     
     def __init__(self, quiz):

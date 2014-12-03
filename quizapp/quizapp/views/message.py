@@ -11,31 +11,31 @@ class MessageHandler(Handler):
     def get(self):
         user = self.session.get('QUIZAPP_USER')
         if user:
-        	# Get the player
-        	q = Player.all()
-        	q.filter('player_ID = ', user)
-        	player = q.fetch(1)
+            # Get the player
+            q = Player.all()
+            q.filter('player_ID = ', user)
+            player = q.fetch(1)
 
-        	# Get friends list, I think we should show the friend list in this page
-        	# So the player can send message to their friends
-        	# Maybe we can use some fancy ways to implement this function
-        	# But this version I'll just get the names of friends
-        	q = Player.all()
-        	friend_name_list = []
-        	for friend_ID in player.friend_list:
-        		q = Player.all()
-        		q.filter('player_ID = ', friend_ID)
-        		friend = q.fetch(1)
-        		friend_name_list.append(friend.name)
+            # Get friends list, I think we should show the friend list in this page
+            # So the player can send message to their friends
+            # Maybe we can use some fancy ways to implement this function
+            # But this version I'll just get the names of friends
+            q = Player.all()
+            friend_name_list = []
+            for friend_ID in player.friend_list:
+                q = Player.all()
+                q.filter('player_ID = ', friend_ID)
+                friend = q.fetch(1)
+                friend_name_list.append(friend.name)
 
-        	# Get all inbox message, ordered as the newest first 
-        	q = Message.all()
-        	q.filter('receiver_ID = ', user).order('-create_time')
-            in_message_list = q
+            # Get all inbox message, ordered as the newest first 
+            q = Message.all()
+            q.filter('receiver_ID = ', user).order('-create_time')
+            in_message_list = q.fetchAll()
 
             # Get all sent message, ordered as the newest first 
             q = Message.all()
-        	q.filter('sender_ID = ', user).order('-create_time')
+            q.filter('sender_ID = ', user).order('-create_time')
             sent_message_list = q
 
             # Get the list of inbox messages' topics and contents 
@@ -46,13 +46,13 @@ class MessageHandler(Handler):
             # Here might be a BUG
             # I am not sure whether content (TextProperty) can be saved in a list
             for in_message in in_message_list:
-            	in_message_topic_list.append(in_message.topic)
-            	in_message_content_list.append(in_message.content)
-            	in_message_time_list.append(in_message.create_time)
-            	q = Player.all()
-            	q.filter('player_ID = ', in_message.sender_ID)
-            	sender = q.fetch(1)
-            	sender_name_list.append(sender.name)
+                in_message_topic_list.append(in_message.topic)
+                in_message_content_list.append(in_message.content)
+                in_message_time_list.append(in_message.create_time)
+                q = Player.all()
+                q.filter('player_ID = ', in_message.sender_ID)
+                sender = q.fetch(1)
+                sender_name_list.append(sender.name)
 
             # Get the list of sent messages' topics and contents 
             sent_message_topic_list = []
@@ -62,53 +62,53 @@ class MessageHandler(Handler):
             # Here might be a BUG
             # I am not sure whether content (TextProperty) can be saved in a list
             for sent_message in sent_message_list:
-            	sent_message_topic_list.append(sent_message.topic)
-            	sent_message_content_list.append(sent_message.content)
-            	sent_message_time_list.append(sent_message.create_time)q = Player.all()
-            	q = Player.all()
-            	q.filter('player_ID = ', in_message.receiver_ID)
-            	receiver = q.fetch(1)
-            	receiver_name_list.append(receiver.name)
+                sent_message_topic_list.append(sent_message.topic)
+                sent_message_content_list.append(sent_message.content)
+                sent_message_time_list.append(sent_message.create_time)
+                q = Player.all()
+                q.filter('player_ID = ', in_message.receiver_ID)
+                receiver = q.fetch(1)
+                receiver_name_list.append(receiver.name)
 
             template_values = {
-            	'friend_name_list': friend_name_list,
-            	'receiver_name_list': receiver_name_list,
-        		'sent_message_topic_list': sent_message_topic_list,
+                'friend_name_list': friend_name_list,
+                'receiver_name_list': receiver_name_list,
+                'sent_message_topic_list': sent_message_topic_list,
                 'sent_message_content_list': sent_message_content_list,
                 'sent_message_time_list': sent_message_time_list,
                 'sender_name_list': sender_name_list,
                 'in_message_topic_list': in_message_topic_list,
                 'in_message_content_list': in_message_content_list,
                 'in_message_time_list': in_message_time_list
-              	}
+                }
 
             self.render("message.html", **template_values)
         else:
             self.response.headers['Content-Type'] = 'text/html'
             self.render_homepage()
     def post(self):
-    	# In case you want to send a message to other player
-    	user = self.session.get('QUIZAPP_USER')
+        # In case you want to send a message to other player
+        user = self.session.get('QUIZAPP_USER')
         if user:
             receiver_name = self.request.get('receiver_name')
             q = Player.all()
             q.filter('name = ', receiver_name)
             receiver = q
             if receiver:
-            	topic = self.request.get('topic')
-            	content = self.request.get('content')
-            	# Need to assign the message ID, or just use key?
-            	new_message = Message(
-            		topic = topic,
-            		content = content, 
-            		receiver_ID = receiver.player_ID,
-            		sender_ID = user,
-            		create_time = datetime.now())
-            	new_message.put()
-            	self.redirect('/message')
+                topic = self.request.get('topic')
+                content = self.request.get('content')
+                # Need to assign the message ID, or just use key?
+                new_message = Message(
+                    topic = topic,
+                    content = content, 
+                    receiver_ID = receiver.player_ID,
+                    sender_ID = user,
+                    create_time = datetime.now())
+                new_message.put()
+                self.redirect('/message')
             else:
-            	# No such player
-            	self.write_plain('The player does not exist')
+                # No such player
+                self.write_plain('The player does not exist')
 
         else:
             self.response.headers['Content-Type'] = 'text/html'
