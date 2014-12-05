@@ -9,12 +9,10 @@
 
 <body>
 	{% block content %}
+    {{ super() }}
 	<div class="col-md-10 main-inner">
 		<div class="panel panel-default" style="text-align:center">
-            {% if error %}
-                <span style="color:red"><strong>{{ error }}</strong></span>
-            {% endif %}
-            <form action="/add_questions" method="post">
+            <form action="/add_question" method="post">
                 <table style="text-align: left;">
                     <tr>
                         <td>
@@ -28,9 +26,9 @@
                     {% if topics %}
                     <tr>
                         <td><label for="topic">Topic:</label></td>
-                        <td><select>
+                        <td><select name="topic">
                             {% for topic in topics %}
-                            <option value="{{ topic.id }}">{{ topic.name }}</option>
+                            <option value="{{ topic.key().id() }}">{{ topic.name }}</option>
                             {% endfor %}
                         </select></td>
                     </tr>
@@ -40,15 +38,15 @@
                         <td><input type="text" name="correct_ans" size="60"></td>
                     </tr>
                     <tr>
-                        <td><label for="wrong_ans">Wrong answers 1:</label></td>
+                        <td><label for="wrong_ans1">Wrong answers 1:</label></td>
                         <td><input type="text" name="wrong_ans1" size="60"></td>
                     </tr>
                     <tr>
-                        <td><label for="wrong_ans">Wrong answers 2:</label></td>
+                        <td><label for="wrong_ans2">Wrong answers 2:</label></td>
                         <td><input type="text" name="wrong_ans2" size="60"></td>
                     </tr>
                     <tr>
-                        <td><label for="wrong_ans">Wrong answers 3:</label></td>
+                        <td><label for="wrong_ans3">Wrong answers 3:</label></td>
                         <td><input type="text" name="wrong_ans3" size="60"></td>
                     </tr>
                     <tr>

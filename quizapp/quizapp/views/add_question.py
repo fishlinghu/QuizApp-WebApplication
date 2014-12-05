@@ -6,57 +6,38 @@ import json
 import logging
 from google.appengine.ext import db
 from quizapp.models.question import Question
+from quizapp.models.topic import Topic 
 
 class AddQuestionHandler(Handler):
-    def render_add_questions(self, **kw):
+    topics = Topic.all()
+
+    def render_add_question(self, **kw):
         self.render("add_question.html", **kw)
 
     def get(self):
         user = self.session.get('QUIZAPP_USER')
         if user:
-            self.render_add_questions()
+            self.render_add_question(topics=self.topics)
         else:
             self.redirect('/')
     
     def post(self):
         user = self.session.get('QUIZAPP_USER')
         if user:
-            try:
-                questions = json.loads(self.request.get('questions'))
-                count = 0
-                list_of_questions = []
-                for q in questions['questions']:
-                    """
-                        Each q has:
-                            question: string
-                            correct_ans: string
-                            wrong_ans: list of string
-                            topic: string
-                            wiki: string
-
-                        Each model q has:
-                            question_ID Integer generate by count
-                            description String is the questions
-                            correct_ans String
-                            wrong_ans StringList
-                            wiki_link String
-                            topic String always "alcohol"
-                            topic_ID 1
-                    """
-                    question = Question(
-                        question_ID = count,
-                        description = q['question'],
-                        correct_ans = q['correct_ans'],
-                        wrong_ans = q['wrong_ans'],
-                        topic = q['topic'],
-                        wiki_link = q['wiki'],
-                        topic_ID = 1
-                    )
-                    question.put()
-                    list_of_questions.append(q)
-                    count += 1
-                self.render_add_questions(questions=list_of_questions)
-            except ValueError:
-                self.render_add_questions(error="Invalid JSON inserted.")
+            wrong_ans_list = []
+            wrong_ans_list.append(self.request.get('wrong_ans1'))
+            wrong_ans_list.append(self.request.get('wrong_ans2'))
+            wrong_ans_list.append(self.request.get('wrong_ans3'))
+            newquestion = Question(
+                question = self.request.get('question'),
+                description= self.request.get('description'),
+                correct_ans = self.request.get('correct_ans'),
+                wrong_ans = wrong_ans_list,
+                wiki_link = self.request.get('wiki_link'),
+                img_link = self.request.get('img_link'),
+                topic_ID = int(self.request.get('topic'))
+            )
+            newquestion.put()
+            self.render_add_question(message="Successfully added new question.", message_type="alert-success", topics=self.topics)
         else:
             self.redirect('/')
