@@ -8,7 +8,8 @@ from google.appengine.ext import db
 
 class IndexHandler(Handler):
     def render_homepage(self, **kw):
-        self.render("index.html", **kw)
+        if (self.check_clearance()):
+            self.render("index.html", **kw)
 
     def get(self):
         playerID = self.session['QUIZAPP_USER']
