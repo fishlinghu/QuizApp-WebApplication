@@ -18,13 +18,23 @@
             <form action="/add/questions" method="post">
                 <table style="text-align: left;">
                 <tr>
-                    <td><label>Enter questions in JSON:</label></td>
+                    <td colspan="2"><label>Enter questions in JSON:</label></td>
+                </tr>
+                {% if topics %}
+                    <tr>
+                        <td><label for="topic">Topic:</label></td>
+                        <td><select name="topic">
+                        {% for topic in topics %}
+                            <option value="{{ topic.key().id() }}">{{ topic.name }}</option>
+                        {% endfor %}
+                        </select></td>
+                    </tr>
+                {% endif %}
+                <tr>
+                    <td colspan="2"><textarea name="questions" rows="3" cols="60"></textarea></td>
                 </tr>
                 <tr>
-                    <td><textarea name="questions" rows="3" cols="60"></textarea></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Submit"></td>
+                    <td colspan="2"><input type="submit" value="Submit"></td>
                 </tr>
                 </table>
             </form>
