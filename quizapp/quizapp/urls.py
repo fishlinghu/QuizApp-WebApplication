@@ -14,6 +14,7 @@ from quizapp.views.users import RegisterHandler
 from quizapp.views.message import MessageHandler
 from quizapp.views.friend import FriendHandler
 from quizapp.views.setting import SettingHandler
+from quizapp.views.info import InfoHandler
 from quizapp.views.add_questions import AddQuestionsHandler
 from quizapp.views.add_question import AddQuestionHandler
 from quizapp.views.add_topic import AddTopicHandler

@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 from views import Handler
+from quizapp.models.player import Player
 
-class ResultsHandler(Handler):
+class InfoHandler(Handler):
     def render_info(self, **kw):
         self.render("info.html", **kw)
 
     def get(self):
-        self.render_result()
         user = self.session.get('QUIZAPP_USER')
         if user: 
             # Should add the game ID to the end of player's "game_history" list when a quiz start
@@ -24,7 +24,7 @@ class ResultsHandler(Handler):
                 'level': player.level,
                 'intro': player.intro
                 }
-            self.render("info.html", **template_values)
+            self.render_info(**template_values)
 
         else:
             self.redirect('/index')
