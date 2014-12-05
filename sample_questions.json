@@ -21,6 +21,8 @@
             "topic": "alcohol",
             "wiki": "https://en.wikipedia.org/wiki/Alcohol"
         },
+
+
         {
             "correct_ans": "giraffe",
             "wrong_ans": ["lion", "monkey", "pig"],
@@ -65,10 +67,10 @@
         },
         {
             "correct_ans": "turkey",
-            "wrong_ans": ["Japan", "Taiwan", "China"],
+            "wrong_ans": ["pork", "beef", "tuna"],
             "question": "Israel has the highest per capital consumption of ······?",
             "topic": "alcohol",
-            "wiki": "https://en.wikipedia.org/wiki/Turkey"
+            "wiki": "https://en.wikipedia.org/wiki/turkey"
         },
         {
             "correct_ans": "Big Ben",
@@ -146,6 +148,6 @@
             "question": "In ancient Greece, where were the original Olympics held?",
             "topic": "alcohol",
             "wiki": "https://en.wikipedia.org/wiki/Olympia"
-        }
-    ]
+        }    
+    }
 }

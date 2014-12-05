@@ -1,0 +1,194 @@
+{     
+    {
+        {
+            "correct_ans": giraffe,
+            "wrong_ans": ["lion", "monkey", "pig"],
+            "question": As what is a camelopard also known?,
+            "topic": Animal Kingdom,
+            "wiki": http://en.wikipedia.org/wiki/Giraffe,
+            "description": The giraffe (Giraffa camelopardalis) is an African even-toed ungulate mammal, the tallest living terrestrial animal and the largest ruminant. Its species name refers to its camel-like appearance and the patches of color on its fur.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/9/9e/Giraffe_Mikumi_National_Park.jpg
+
+        },
+        {   
+            "correct_ans": shark,
+            "wrong_ans": ["tiger", "dog", "cat"],
+            "question":  Some animals always grow new teeth to replace the old. Name one of them!,
+            "topic": Animal Kingdom,
+            "wiki": http://en.wikipedia.org/wiki/Shark,
+            "description": Sharks are a group of fish characterized by a cartilaginous skeleton, five to seven gill slits on the sides of the head, and pectoral fins that are not fused to the head.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/b/bb/Tibur%C3%B3n.jpg
+        },
+        {   
+            "correct_ans": horse,
+            "wrong_ans": ["hippo", "leonpard", "monkey"],
+            "question": What animal can get the disease 'heaves'?,
+            "topic": Animal Kingdom,
+            "wiki": http://en.wikipedia.org/wiki/Horse,
+            "description": The horse (Equus ferus caballus) is one of two extant subspecies of Equus ferus. It is an odd-toed ungulate mammal belonging to the taxonomic family Equidae.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/d/de/Nokota_Horses_cropped.jpg
+        },
+        {   
+            "correct_ans": kangaroo,
+            "wrong_ans": ["horse", "rabbit", "deer"],
+            "question": What animal can hop as fast as 40 mph?,
+            "topic": Animal Kingdom,
+            "wiki": http://en.wikipedia.org/wiki/Kangaroo
+            "description": The horse (Equus ferus caballus) is one of two extant subspecies of Equus ferus. It is an odd-toed ungulate mammal belonging to the taxonomic family Equidae.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/0/0d/Kangaroo_and_joey03.jpg
+        },
+        {   
+            "correct_ans": mandrill,
+            "wrong_ans": ["deer", "pig", "bulls"],
+            "question": What animal has red patches on its rear?,
+            "topic": Animal Kingdom,
+            "wiki": http://en.wikipedia.org/wiki/Mandrill,
+            "description": The mandrill (Mandrillus sphinx) is a primate of the Old World monkey (Cercopithecidae) family,[4] closely related to the baboons and even more closely to the drill. It is found in southern Cameroon, Gabon, Equatorial Guinea, and Congo.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/7/75/Mandrill_at_san_francisco_zoo.jpg
+        },
+        {   
+            "correct_ans": rabbit,
+            "wrong_ans": ["fox", "cat", "racoon"],
+            "question": What animal lives in a warren?,
+            "topic": Animal Kingdom,
+            "wiki": http://en.wikipedia.org/wiki/Rabbit,
+            "description": Rabbits are small mammals in the family Leporidae of the order Lagomorpha, found in several parts of the world. ,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/3/3b/Rabbit_in_montana.jpg
+        },
+        {   
+            "correct_ans": hare,
+            "wrong_ans": ["wolf", "bear", "turtle"],
+            "question": What animal lives in a form?,
+            "topic": Animal Kingdom,
+            "wiki": http://en.wikipedia.org/wiki/Hare,
+            "description": Hares and jackrabbits are leporids belonging to the genus Lepus. Hares are classified into the same family as rabbits and are of similar size, form, and diet as rabbits.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/1/1e/Hare.jpg
+        },
+        {   
+            "correct_ans": Regents Park,
+            "wrong_ans": ["Holland Park", "Gladston Park", "Waterlow Park"],
+            "question": In which park are Queen Mary's gardens?,
+            "topic": Britain,
+            "wiki": http://en.wikipedia.org/wiki/Regent%27s_Park,
+            "description": Regent's Park (officially The Regent's Park) is one of the Royal Parks of London. It lies within inner North West London, partly in the City of Westminster and partly in the London Borough of Camden.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/5/59/Regent%27s_Park_bandstand.jpg
+        },
+        {   
+            "correct_ans": twenty,
+            "wrong_ans": ["ten" , "thirty", "fourty"],
+            "question": How many inches tall are the bearskins worn by the guards at Buckingham Palace?,
+            "topic": Britain,
+            "wiki": http://en.wikipedia.org/wiki/Bearskin,
+            "description": A bearskin is a tall fur cap, usually worn as part of a ceremonial military uniform. Traditionally, the bearskin was the headgear of grenadiers and it is still worn by grenadier and guards regiments in various armies.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/6/6a/1st_Sardinia_Grenadiers_Bastille_Day_2007_n1.jpg
+        },
+        {   
+            "correct_ans": Great Fire of London,
+            "wrong_ans":["Great time of Lodon", "Great mood of London", "Great hero of Lodon"],
+            "question": What does 'The Monument' in London commemorate?,
+            "topic": Britain,
+            "wiki": http://en.wikipedia.org/wiki/Monument_to_the_Great_Fire_of_London,
+            "description": The Monument to the Great Fire of London, more commonly known simply as the Monument, is a fluted Doric column in the City of London, near the northern end of London Bridge, which commemorates the Great Fire of London,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/7/7f/The_Monument_to_the_Great_Fire_of_London.JPG
+        },
+        {   
+            "correct_ans":Westminster Bridge,
+            "wrong_ans": ["Bettersea Bridge", "Lodon Bridge",  "New Bridge"],
+            "question": What was the second bridge built across the Thames?,
+            "topic": Britain,
+            "wiki": http://en.wikipedia.org/wiki/Westminster_Bridge,
+            "description": Westminster Bridge is a road and foot traffic bridge over the River Thames in London, linking Westminster on the north side and Lambeth on the south side.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/9/9d/River_Thames_and_Westminster_Bridge%2C_London-17Aug2009.jpg
+        },
+        {   
+            "correct_ans":  Oxford Street,
+            "wrong_ans": ["Victoria Street", "Chapel Street", "Covent Garden"],
+            "question": Where is Selfridges?,
+            "topic": Britain,
+            "wiki": http://en.wikipedia.org/wiki/Selfridges,
+            "description": Selfridges, also known as Selfridge & Co., is a chain of high end department stores in the United Kingdom. It was founded by Harry Gordon Selfridge. The flagship store on London's Oxford Street is the second largest shop in the UK (after Harrods) and opened 15 March 1909.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/a/a4/Selfridges_nameboard.JPG
+        },
+        {   
+            "correct_ans": Monument,
+            "wrong_ans": ["London eye", "Buckingham Palace", "Big Ben"],
+            "question": Which building commemorates the Great Fire of London?,
+            "topic": Britain,
+            "wiki": http://en.wikipedia.org/wiki/Monument_to_the_Great_Fire_of_London,
+            "description": The Monument to the Great Fire of London, more commonly known simply as the Monument, is a fluted Doric column in the City of London, near the northern end of London Bridge, which commemorates the Great Fire of London,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/7/7f/The_Monument_to_the_Great_Fire_of_London.JPG
+        },
+        {   
+            "correct_ans": guards,
+            "wrong_ans": ["Queen Elizabeth", "Crown", "King Athor"],
+            "question": Who at Buckingham Palace wears bearskins?,
+            "topic": Britain,
+            "wiki": http://en.wikipedia.org/wiki/Guard,
+            "description": Person who is paid to protect property, assets, or people. They are usually privately and formally employed civilian personnel.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/f/f7/Private_factory_guard.jpg
+        },
+        {   
+            "correct_ans": fortune cookies,
+            "wrong_ans": ["Pizza", "Saussage", "Gum"], 
+            "question": What did Charles Jung invent?,
+            "topic": Food,
+            "wiki": http://en.wikipedia.org/wiki/Fortune_cookie,
+            "description": A fortune cookie is a crisp cookie usually made from flour, sugar, vanilla, and sesame seed oil with a "fortune" wrapped inside. ,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/f/f8/Fortune_cookie.jpg
+        },
+        {   
+            "correct_ans": eleven,
+            "wrong_ans": ["ten", "twelve", "thirty"],
+            "question": How many herbs and spices are used in Kentucky Fried Chicken?,
+            "topic": Food,
+            "wiki": http://en.wikipedia.org/wiki/KFC,
+            "description": KFC (the name was originally an initialism for Kentucky Fried Chicken) is a fast food restaurant chain that specializes in fried chicken and is headquartered in Louisville, Kentucky, in the United States. ,
+            "img_link": http://upload.wikimedia.org/wikipedia/en/b/bf/KFC_logo.svg
+        },
+        {   
+            "correct_ans": salt,
+            "wrong_ans": ["black pepper", "sugar", "chili powder"],
+            "question": What is the most widely used seasoning?,
+            "topic": Food,
+            "wiki": http://en.wikipedia.org/wiki/Salt,
+            "description": Common salt is a mineral substance composed primarily of sodium chloride (NaCl), a chemical compound belonging to the larger class of ionic salts; salt in its natural form as a crystalline mineral is known as rock salt or halite. ,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/f/fd/DeadSeaIsrael5.jpg
+        },
+        {   
+            "correct_ans": pea,
+            "wrong_ans": ["carrot", "cabage", "cucumber"],
+            "question": What is the oldest known vegetable?,
+            "topic": Food,
+            "wiki": http://en.wikipedia.org/wiki/Pea,
+            "description": The pea is most commonly the small spherical seed or the seed-pod of the pod fruit Pisum sativum. Each pod contains several peas,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/1/11/Peas_in_pods_-_Studio.jpg
+        },
+        {   
+            "correct_ans": Holland,
+            "wrong_ans": ["Thailand", "America", "France"],
+            "question":In which country did edam cheese originate?,
+            "topic": Food,
+            "wiki": http://en.wikipedia.org/wiki/Edam_cheese,
+            "description": Edam is a semi-hard cheese that originated in the Netherlands, and is named after the town of Edam in the province of North Holland.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/5/52/SmallEdamCheese.jpg
+        },
+        {   
+            "correct_ans": United States,
+            "wrong_ans": ["Korea", "Brazil", "Sweden"],
+            "question": Where were fortune cookies invented?,
+            "topic": Food,
+            "wiki": http://en.wikipedia.org/wiki/Fortune_cookie,
+            "description": A fortune cookie is a crisp cookie usually made from flour, sugar, vanilla, and sesame seed oil with a fortune' wrapped inside. ,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/f/f8/Fortune_cookie.jpg
+        },
+        {   
+            "correct_ans": Corn flakes,
+            "wrong_ans": ["Cup flakes", "Pea flakes", "Snow flakes"],
+            "question": What breakfast cereal was invented at Battle Creek Sanitarium?,
+            "topic": Food,
+            "wiki": http://en.wikipedia.org/wiki/Corn_flakes,
+            "description": Corn flakes are a popular breakfast cereal originally manufactured by Kellogg's through the treatment of maize. A patent for the product was filed on May 31, 1895, and issued on April 14, 1896.,
+            "img_link": http://upload.wikimedia.org/wikipedia/commons/6/6a/Cornflakes_in_bowl.jpg
+        }
+    }
+}
