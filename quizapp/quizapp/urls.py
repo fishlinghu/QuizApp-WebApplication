@@ -38,7 +38,7 @@ routes = [
     ('/setting', SettingHandler), # Change your informations here, such as account, password, name, etc. 
     ('/friend', FriendHandler), # Show your friends list, you can also add/delete friend here
     #('/gamehistory', GamehistoryHandler), # Show your game history, just like result
-    ('/add_questions', AddQuestionsHandler),
-    ('/add_question', AddQuestionHandler),
-    ('/add_topic', AddTopicHandler),
+    ('/add/questions', AddQuestionsHandler),
+    ('/add/question', AddQuestionHandler),
+    ('/add/topic', AddTopicHandler),
 ]
