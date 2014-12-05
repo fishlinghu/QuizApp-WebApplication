@@ -15,9 +15,17 @@
                 <span style="color:red"><strong>{{ error }}</strong></span>
             {% endif %}
             <form action="/add_questions" method="post">
-                <label>Enter questions in JSON:</label>
-                <div><textarea name="questions" rows="3" cols="60"></textarea></div>
-                <div><input type="submit" value="Submit"></div>
+                <table style="text-align: left;">
+                <tr>
+                    <td><label>Enter questions in JSON:</label></td>
+                </tr>
+                <tr>
+                    <td><textarea name="questions" rows="3" cols="60"></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+                </table>
             </form>
             {% if questions %}
                 {% for q in questions %}

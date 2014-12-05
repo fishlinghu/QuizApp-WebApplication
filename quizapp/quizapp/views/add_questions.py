@@ -26,31 +26,14 @@ class AddQuestionsHandler(Handler):
                 count = 0
                 list_of_questions = []
                 for q in questions['questions']:
-                    """
-                        Each q has:
-                            question: string
-                            correct_ans: string
-                            wrong_ans: list of string
-                            topic: string
-                            wiki: string
-
-                        Each model q has:
-                            question_ID Integer generate by count
-                            description String is the questions
-                            correct_ans String
-                            wrong_ans StringList
-                            wiki_link String
-                            topic String always "alcohol"
-                            topic_ID 1
-                    """
                     question = Question(
-                        question_ID = count,
-                        description = q['question'],
+                        question = q['question'],
+                        description = q['description'],
                         correct_ans = q['correct_ans'],
                         wrong_ans = q['wrong_ans'],
-                        topic = q['topic'],
-                        wiki_link = q['wiki'],
-                        topic_ID = 1
+                        wiki_link = q['wiki_link'],
+                        img_link = q['img_link'],
+                        topic_ID = int(q['topic_ID'])
                     )
                     question.put()
                     list_of_questions.append(q)
