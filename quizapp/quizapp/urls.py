@@ -32,7 +32,7 @@ routes = [
     # When in the index.html, and click on the corresponding buttons
     # You can go to corresponding new pages
     ('/message', MessageHandler), # Deal with the messages, you can send and read messages 
-    #('/info', InfoHandler),  # Show your personal information, maybe everyone can view other people's profile
+    ('/info', InfoHandler),  # Show your personal information, maybe everyone can view other people's profile
     ('/setting', SettingHandler), # Change your informations here, such as account, password, name, etc. 
     ('/friend', FriendHandler), # Show your friends list, you can also add/delete friend here
     ('/add_questions', AddQuestionsHandler),
