@@ -16,6 +16,7 @@ from quizapp.views.friend import FriendHandler
 from quizapp.views.setting import SettingHandler
 from quizapp.views.add_questions import AddQuestionsHandler
 from quizapp.views.add_question import AddQuestionHandler
+from quizapp.views.add_topic import AddTopicHandler
 
 routes = [
     ('/', HomepageHandler),
@@ -36,5 +37,6 @@ routes = [
     ('/setting', SettingHandler), # Change your informations here, such as account, password, name, etc. 
     ('/friend', FriendHandler), # Show your friends list, you can also add/delete friend here
     ('/add_questions', AddQuestionsHandler),
-    ('/add_question', AddQuestionHandler)
+    ('/add_question', AddQuestionHandler),
+    ('/add_topic', AddTopicHandler),
 ]
