@@ -5,7 +5,7 @@ from views import Handler
 import json
 import logging
 from google.appengine.ext import db
-from quizapp.models.question import Question
+from quizapp.models.topic import Topic
 
 class AddTopicHandler(Handler):
     def render_add_topic(self, **kw):
@@ -21,42 +21,13 @@ class AddTopicHandler(Handler):
     def post(self):
         user = self.session.get('QUIZAPP_USER')
         if user:
-            try:
-                questions = json.loads(self.request.get('questions'))
-                count = 0
-                list_of_questions = []
-                for q in questions['questions']:
-                    """
-                        Each q has:
-                            question: string
-                            correct_ans: string
-                            wrong_ans: list of string
-                            topic: string
-                            wiki: string
-
-                        Each model q has:
-                            question_ID Integer generate by count
-                            description String is the questions
-                            correct_ans String
-                            wrong_ans StringList
-                            wiki_link String
-                            topic String always "alcohol"
-                            topic_ID 1
-                    """
-                    question = Question(
-                        question_ID = count,
-                        description = q['question'],
-                        correct_ans = q['correct_ans'],
-                        wrong_ans = q['wrong_ans'],
-                        topic = q['topic'],
-                        wiki_link = q['wiki'],
-                        topic_ID = 1
-                    )
-                    question.put()
-                    list_of_questions.append(q)
-                    count += 1
-                self.render_add_questions(questions=list_of_questions)
-            except ValueError:
-                self.render_add_questions(error="Invalid JSON inserted.")
+            name = (self.request.get('name'))
+            description = (self.request.get('description'))
+            topic = Topic(
+                description = description,
+                name = name
+            )
+            topic.put()
+            self.render_add_topic(success="New topic " + name + " added.")
         else:
             self.redirect('/')
