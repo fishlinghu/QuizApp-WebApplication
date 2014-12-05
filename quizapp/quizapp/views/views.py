@@ -14,9 +14,6 @@ jinja_env = jinja2.Environment(
 
 class Handler(webapp2.RequestHandler):
     
-    def __init__(self, request, response):
-        self.initialize(request, response)
-
     def check_clearance(self, classified=True, *a, **kw):
         user = self.session.get('QUIZAPP_USER')
         if (classified and not user):
