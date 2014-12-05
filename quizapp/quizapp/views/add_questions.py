@@ -38,8 +38,8 @@ class AddQuestionsHandler(Handler):
                     question.put()
                     list_of_questions.append(q)
                     count += 1
-                self.render_add_questions(questions=list_of_questions)
+                self.render_add_questions(message="Questions added successfully.", message_type="alert-success", questions=list_of_questions)
             except ValueError:
-                self.render_add_questions(error="Invalid JSON inserted.")
+                self.render_add_questions(message="Invalid JSON inserted.", message_type="alert-danger")
         else:
             self.redirect('/')
