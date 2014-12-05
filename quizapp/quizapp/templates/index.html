@@ -11,36 +11,39 @@
 	{% block content %}
 	{{ super() }}
 	<div class="col-md-10 main-inner">
-		<div class="panel panel-default" style="text-align:center">
-			<h1>Topics</h1>
+		<h1 style="text-align:center">Topics</h1>
 			
-			<div>
-				<button type="button" class="btn btn-default btn-topic">Sports</button>
-				<button type="button" class="btn btn-default btn-topic">Technology</button>
-				<button type="button" class="btn btn-default btn-topic">Music</button>
-				<button type="button" class="btn btn-default btn-topic">Languages</button>
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			{% for topic in topics %}
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Topic 1</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse">
+					<div class="panel-body">
+						<button type="button" class="btn btn-default btn-inner">Play</a>
+						<button type="button" class="btn btn-default btn-inner">Challenge</button>
+						<br>
+						<button type="button" class="btn btn-default btn-inner">Chat</button>
+						<button type="button" class="btn btn-default btn-inner">Ranking</button>
+					</div>
+				</div>
 			</div>
-			
-			<div class="well well-menu">
-				<a class="btn btn-default btn-inner" href="quiz">Play</a>
-				<button type="button" class="btn btn-default btn-inner">Challenge</button>
-				<br>
-				<button type="button" class="btn btn-default btn-inner">Chat</button>
-				<button type="button" class="btn btn-default btn-inner">Ranking</button>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 
 	<div class="col-md-2">
 		<div class="well sidebar">
 			<ul class="nav nav-stacked">
-				<li class="active"><a href="#">Name</a></li>
-				<li><a href="#">Friends</a></li>
-				<li>
-					<a data-toggle="collapse" href="#collapseMessages">
-						Messages <span class="badge">2</span>
-					</a>
+				<li class="active"><a>{{ name }}</a></li>
+				<li><a data-toggle="collapse" href="#collapseFriends">Friends</a></li>
+				<li id="collapseFriends" class="collapse" data-toggle="false" style="height:0px">
+					You have no friends
 				</li>
+				<li><a data-toggle="collapse" href="#collapseMessages">Messages</a></li>
 				<li id="collapseMessages" class="collapse" data-toggle="false" style="height:0px">
 					You have no new messages
 				</li>

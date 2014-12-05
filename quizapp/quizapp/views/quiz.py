@@ -7,35 +7,8 @@ import json
 from google.appengine.ext import db
 from quizapp.models.game import Game
 from quizapp.models.question import Question
+from quizapp.models.player import Player
 from google.appengine.api import channel
-
-class QuizUpdater(Game):
-    quiz = None
-    
-    def __init__(self, quiz):
-        self.quiz  = quiz
-        
-    def get_quiz(self):
-        return quiz
-    
-    def get_quiz_message(self):
-        quizUpdate = {
-                      'a_ID' : self.quiz.a_ID,
-                      'b_ID' : self.quiz.b_ID,
-                      'question_set' : self.quiz.question_set,
-                      'a_ans_list' : self.quiz.a_ans_list,
-                      'b_ans_list' : self.quiz.b_ans_list,
-                      'a_score' : self.quiz.a_score,
-                      'b_score' : self.quiz.b_score,
-                      'a_score_list' : self.quiz.a_score_list,
-                      'b_score_list' : self.quiz.b_score_list
-                      }
-        return json.dumps(quizUpdate)
-    
-    def send_update(self):
-        channel.send_message(self.quiz.a_ID + self.game.key().id(), self.get_game_message())
-        if self.quiz.b_ID:
-            channel.send_message(self.quiz.b_ID + self.game.key().id(), self.get_game_message())
 
 class QuizHandler(Handler):
     def render_quiz(self, **kw):
@@ -57,16 +30,20 @@ class QuizHandler(Handler):
                     q = db.Query(Question)
                     q.filter('topic =', topic)
         
-                    questions = q.count()
-                    questions2 = []
-        
+                    questionRange = q.count()
+                    questions = []
+                    
                     for i in range(5):
-                        questionNumber = random.randint(0, questions - 1)
-                        questions2.append(questionNumber)
+                        #Generate a random integer which dictates the question at that position
+                        questionNumber = random.randint(0, questionRange - 1)
+                        #Get the question from the datastore using the randomly generated integer
+                        question = q.get(offset = questionNumber)
+                        #Append question ID
+                        questions.append(question.key().id())
                         
                     quiz = Game(
                                 a_ID = user,
-                                question_set = questions2,
+                                question_set = questions,
                                 a_ans_list = [],
                                 b_ans_list = [],
                                 a_score = 0,
@@ -98,11 +75,27 @@ class QuizHandler(Handler):
                 query.filter('question_ID', question)
                 question = query.get()
                 
+                player1 = Player.get_by_id(quiz.a_ID)
+                player2 = None
+                if quiz.b_ID:
+                    player2 = Player.get_by_id(quiz.b_ID)
+                
+                if (player1.key().id() == user):
+                    player = player1
+                    if player2:
+                        opponent = player2
+                    else :
+                        opponent = None
+                else:
+                    player = player2
+                    opponent = player1
+                
                 template_values = {
                     'token': token,
-                    'user': user,
+                    'name': player.account,
+                    'opponentName' : '' if not opponent else opponent.account,
                     'quiz_key': quiz_key,
-                    'question': question.description,
+                    'question': question.question,
                     'answer1': question.correct_ans.title(),
                     'answer2' : question.wrong_ans[0].title(),
                     'answer3' : question.wrong_ans[1].title(),

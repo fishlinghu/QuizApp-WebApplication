@@ -1,15 +1,19 @@
 {
     "questions": [
         {
+            "question": "From what is the liqueur kirsch made?",
+            "description": "A kirschwasser (/ˈkɪərʃvɑːsər/ KEERSH-vahs-ər; German: [ˈkɪɐ̯ʃvasɐ], German for “cherry water”) or kirsch is a clear, colorless fruit brandy traditionally made from double distillation of morello cherries, a dark-colored cultivar of the sour cherry. However, it is now also made from other kinds of cherries. The cherries are fermented complete (that is, including their stones).[1] Unlike cherry liqueurs and so-called “cherry brandies”, kirschwasser is not sweet .The best kirschwassers have a refined taste with subtle flavors of cherry and a slight bitter-almond taste that derives from the stones.",
             "correct_ans": "cherries",
             "wrong_ans": ["lemon", "kiwi", "banana"],
-            "question": "From what is the liqueur kirsch made?",
-            "topic": "alcohol",
-            "wiki": "https://en.wikipedia.org/wiki/Cherry"
+            "wiki_link": "https://en.wikipedia.org/wiki/Cherry",
+            "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Fuersteneck_Kirschwasser.jpg/320px-Fuersteneck_Kirschwasser.jpg"
         },
         {
+            "question": "From which plant is tequila derived?",
+            "description": "",
             "correct_ans": "cactus",
             "wrong_ans": ["bamboo", "daisy", "orchid"],
+<<<<<<< HEAD
             "question": "From which plant is tequila derived?",
             "topic": "alcohol",
             "wiki": ""
@@ -29,18 +33,14 @@
             "question": "As what is a camelopard also known?",
             "topic": "alcohol",
             "wiki": "https://en.wikipedia.org/wiki/Giraffe"
+=======
+            "wiki_link": "",
+            "img_link": ""
+>>>>>>> origin/master
         },
         {
-            "correct_ans": "eighteen",
-            "wrong_ans": ["two", "five", "ten"],
-            "question": "How many teeth does a walrus have?",
-            "topic": "alcohol",
-            "wiki": "https://en.wikipedia.org/wiki/Walrus"
-        },
-        {
-            "correct_ans": "shark",
-            "wrong_ans": ["tiger", "dog", "cat"],
             "question": "Some animals always grow new teeth to replace the old. Name one of them!",
+<<<<<<< HEAD
             "topic": "alcohol",
             "wiki": ""
         },
@@ -127,22 +127,32 @@
             "question": "Where were the first books printed?",
             "topic": "alcohol",
             "wiki": "https://en.wikipedia.org/wiki/Book"
+=======
+            "description": "",
+            "correct_ans": "shark",
+            "wrong_ans": ["cat", "dog", "turtle"],
+            "wiki_link": "",
+            "img_link": ""
+>>>>>>> origin/master
         },
         {
-            "correct_ans": "Faster higher stronger",
-            "wrong_ans": ["Slower higher stronger", "Faster lower stronger", "Faster higher weaker"],
-            "question": "The Olympic motto 'citius, altius, fortius' means what?",
-            "topic": "alcohol",
-            "wiki": "https://en.wikipedia.org/wiki/Olympic_Games"
+            "question": "How many teeth does a walrus have?",
+            "description": "",
+            "correct_ans": "18",
+            "wrong_ans": ["2", "5", "10"],
+            "wiki_link": "https://en.wikipedia.org/wiki/Walrus",
+            "img_link": ""
         },
         {
-            "correct_ans": "Rome Italy",
-            "wrong_ans": ["Sochi Russia", "Sao Paulo Brazil", "Paris France"],
-            "question": "Where were the 1960 summer Olympics held?",
-            "topic": "alcohol",
-            "wiki": "https://en.wikipedia.org/wiki/1960_Summer_Olympics"
+            "question": "As what is a camelopard also known?",
+            "description": "",
+            "correct_ans": "cactus",
+            "wrong_ans": ["lion", "monkey", "pig"],
+            "wiki_link": "https://en.wikipedia.org/wiki/Giraffe",
+            "img_link": ""
         },
         {
+<<<<<<< HEAD
             "correct_ans": "Olympia",
             "wrong_ans": ["Aegae", "Byblos", "Epidauros"],
             "question": "In ancient Greece, where were the original Olympics held?",
@@ -151,3 +161,14 @@
         }    
     }
 }
+=======
+            "question": "Which drug kills more people below the age of 21 than any other?",
+            "description": "",
+            "correct_ans": "alcohol",
+            "wrong_ans": ["cocaine", "marijuana", "nicotine"],
+            "wiki_link": "https://en.wikipedia.org/wiki/Alcohol",
+            "img_link": ""
+        }
+    ]
+}
+>>>>>>> origin/master

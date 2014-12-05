@@ -8,6 +8,34 @@ from quizapp.models.game import Game
 from quizapp.models.question import Question
 from google.appengine.api import channel
 
+class QuizUpdater(Game):
+    quiz = None
+    
+    def __init__(self, quiz):
+        self.quiz  = quiz
+        
+    def get_quiz(self):
+        return quiz
+    
+    def get_quiz_message(self):
+        quizUpdate = {
+                      'a_ID' : self.quiz.a_ID,
+                      'b_ID' : self.quiz.b_ID,
+                      'question_set' : self.quiz.question_set,
+                      'a_ans_list' : self.quiz.a_ans_list,
+                      'b_ans_list' : self.quiz.b_ans_list,
+                      'a_score' : self.quiz.a_score,
+                      'b_score' : self.quiz.b_score,
+                      'a_score_list' : self.quiz.a_score_list,
+                      'b_score_list' : self.quiz.b_score_list
+                      }
+        return json.dumps(quizUpdate)
+    
+    def send_update(self):
+        channel.send_message(self.quiz.a_ID + self.game.key().id(), self.get_game_message())
+        if self.quiz.b_ID:
+            channel.send_message(self.quiz.b_ID + self.game.key().id(), self.get_game_message())
+
 class SubmitHandler(Handler):
     def post(self):
         self.response.headers['Content-Type'] = 'text/html'

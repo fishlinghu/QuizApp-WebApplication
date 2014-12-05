@@ -13,6 +13,14 @@ jinja_env = jinja2.Environment(
 )
 
 class Handler(webapp2.RequestHandler):
+    
+    def check_clearance(self, classified=True, *a, **kw):
+        user = self.session.get('QUIZAPP_USER')
+        if (classified and not user):
+            self.redirect('/')
+            return False
+        return True
+
     def write(self, *a, **kw):
         self.response.out.write(*a, **kw)
 
@@ -24,7 +32,7 @@ class Handler(webapp2.RequestHandler):
         t = jinja_env.get_template(template)
         return t.render(params)
 
-    def render(self, template, **kw):
+    def render(self, template, classified=True, **kw):
         self.response.headers['Content-Type'] = 'text/html'
         self.write(self.render_str(template, **kw))
 
