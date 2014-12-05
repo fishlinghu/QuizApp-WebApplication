@@ -15,13 +15,60 @@
                 <span style="color:red"><strong>{{ error }}</strong></span>
             {% endif %}
             <form action="/add_questions" method="post">
-                <label>Enter question details:</label>
-                <div><textarea name="questions" rows="3" cols="60"></textarea></div>
-                <div>
-                    <label for="last_name">Question:</label>
-                    <input type="text" name="question" size="30">
-                <div>
-                <div><input type="submit" value="Submit"></div>
+                <table style="text-align: left;">
+                    <tr>
+                        <td>
+                            <h1>Enter question details:</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="question">Question:</label></td>
+                        <td><input type="text" name="question" size="60"></td>
+                    </tr>
+                    {% if topics %}
+                    <tr>
+                        <td><label for="topic">Topic:</label></td>
+                        <td><select>
+                            {% for topic in topics %}
+                            <option value="{{ topic.id }}">{{ topic.name }}</option>
+                            {% endfor %}
+                        </select></td>
+                    </tr>
+                    {% endif %}
+                    <tr>
+                        <td><label for="correct_ans">Correct answer:</label></td>
+                        <td><input type="text" name="correct_ans" size="60"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="wrong_ans">Wrong answers 1:</label></td>
+                        <td><input type="text" name="wrong_ans1" size="60"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="wrong_ans">Wrong answers 2:</label></td>
+                        <td><input type="text" name="wrong_ans2" size="60"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="wrong_ans">Wrong answers 3:</label></td>
+                        <td><input type="text" name="wrong_ans3" size="60"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="wiki_link">Wiki link:</label></td>
+                        <td><input type="text" name="wiki_link" size="60"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="img_link">Image link:</label></td>
+                        <td><input type="text" name="img_link" size="60"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="description">Description:</label><br></td>
+                        <td><textarea name="description" rows="3" cols="60"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Submit">
+                        </td>
+                    </tr>
+                </table>
             </form>
             </div>
 	</div>
