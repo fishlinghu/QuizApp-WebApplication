@@ -7,7 +7,7 @@
             "wrong_ans": ["lemon", "kiwi", "banana"],
             "wiki_link": "https://en.wikipedia.org/wiki/Cherry",
             "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Fuersteneck_Kirschwasser.jpg/320px-Fuersteneck_Kirschwasser.jpg",
-            "topic_ID": ""
+            "topic_ID": "1"
         },
         {
             "question": "From which plant is tequila derived?",
@@ -16,7 +16,7 @@
             "wrong_ans": ["bamboo", "daisy", "orchid"],
             "wiki_link": "",
             "img_link": "",
-            "topic_ID": ""
+            "topic_ID": "1"
         },
         {
             "question": "Some animals always grow new teeth to replace the old. Name one of them!",
@@ -25,7 +25,7 @@
             "wrong_ans": ["cat", "dog", "turtle"],
             "wiki_link": "",
             "img_link": "",
-            "topic_ID": ""
+            "topic_ID": "1"
         },
         {
             "question": "How many teeth does a walrus have?",
@@ -34,7 +34,7 @@
             "wrong_ans": ["2", "5", "10"],
             "wiki_link": "https://en.wikipedia.org/wiki/Walrus",
             "img_link": "",
-            "topic_ID": ""
+            "topic_ID": "1"
         },
         {
             "question": "As what is a camelopard also known?",
@@ -43,7 +43,7 @@
             "wrong_ans": ["lion", "monkey", "pig"],
             "wiki_link": "https://en.wikipedia.org/wiki/Giraffe",
             "img_link": "",
-            "topic_ID": ""
+            "topic_ID": "1"
         },
         {
             "question": "Which drug kills more people below the age of 21 than any other?",
@@ -52,7 +52,7 @@
             "wrong_ans": ["cocaine", "marijuana", "nicotine"],
             "wiki_link": "https://en.wikipedia.org/wiki/Alcohol",
             "img_link": "",
-            "topic_ID": ""
+            "topic_ID": "1"
         }
     ]
 }
