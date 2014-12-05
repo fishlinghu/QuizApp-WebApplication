@@ -2,8 +2,21 @@
 # -*- coding: utf-8 -*-
 
 from google.appengine.ext import db
+from webapp2_extras import security
 from quizapp.models.player import Player
 from views import Handler
+
+secretPepper = """
+VyPYorPdj45z43ZG
+doNZSGBev1iaLx72
+byGvGGOpaw6lUwiD
+pyQtV0mIHPybSX89
+XjmeVqJsfsDEGxqA
+AvHzw6Xx4nTs585k
+zjM4MLKr2FLSrLU3
+jlnhMc9RENEndPwc
+"""
+
 
 def checkPlayer(username):
     #Query Datastore for player
@@ -22,6 +35,9 @@ class LoginHandler(Handler):
         username = self.request.get('username')
         password = self.request.get('password')
         
+        if password:
+            password = security.hash_password(password, method='sha512', pepper=secretPepper)
+        
         #Check if player exists in the datastore
         player = checkPlayer(username)
         
@@ -30,14 +46,15 @@ class LoginHandler(Handler):
                 self.session['QUIZAPP_USER'] = player.key().id()
                 self.redirect('index')
             else :
-                self.render("homepage.html", error="Invalid username or password", error_type="alert-danger")
+                self.render("homepage.html", message="Invalid username or password", message_type="alert-danger")
         else :
-            self.render("homepage.html", error="Invalid username or password", error_type="alert-danger")
+            self.render("homepage.html", message="Invalid username or password", message_type="alert-danger")
         
 class LogoutHandler(Handler):
     def get(self):
         self.session.pop('QUIZAPP_USER')
-        self.session.pop('QUIZAPP_QUIZ')
+        if 'QUIZAPP_QUIZ' in self.session:
+            self.session.pop('QUIZAPP_QUIZ')
         self.redirect('/')       
         
 class RegisterHandler(Handler):
@@ -53,13 +70,13 @@ class RegisterHandler(Handler):
             player = checkPlayer(username)
         
             if player:
-                self.render("homepage.html", error="Username is already in use. Please use a different username", error_type="alert-danger")
+                self.render("homepage.html", message="Username is already in use. Please use a different username", message_type="alert-danger")
             else:
                 #Create new Player object
                 player = Player(account = username,
-                                password = password,
+                                password = security.hash_password(password, method='sha512', pepper=secretPepper),
                                 name = displayName)
                 player.put()
                 self.redirect('/')
         else:
-            self.render("homepage.html", error="Passwords do not match. Please try again", error_type="alert-danger")
+            self.render("homepage.html", message="Passwords do not match. Please try again", message_type="alert-danger")
