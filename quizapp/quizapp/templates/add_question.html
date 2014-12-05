@@ -1,0 +1,52 @@
+{% extends "base_of_all_page.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+	{{ super() }}
+	{% endblock %}	
+</head>
+
+<body>
+	{% block content %}
+	<div class="col-md-10 main-inner">
+		<div class="panel panel-default" style="text-align:center">
+            {% if error %}
+                <span style="color:red"><strong>{{ error }}</strong></span>
+            {% endif %}
+            <form action="/add_questions" method="post">
+                <label>Enter question details:</label>
+                <div><textarea name="questions" rows="3" cols="60"></textarea></div>
+                <div>
+                    <label for="last_name">Question:</label>
+                    <input type="text" name="question" size="30">
+                <div>
+                <div><input type="submit" value="Submit"></div>
+            </form>
+            </div>
+	</div>
+
+	<div class="col-md-2">
+		<div class="well sidebar">
+			<ul class="nav nav-stacked">
+				<li class="active"><a href="#">Name</a></li>
+				<li><a href="#">Friends</a></li>
+				<li>
+					<a data-toggle="collapse" href="#collapseMessages">
+						Messages <span class="badge">2</span>
+					</a>
+				</li>
+				<li id="collapseMessages" class="collapse" data-toggle="false" style="height:0px">
+					You have no new messages
+				</li>
+				<li><a href="#">Achievements <span class="badge">2</span></a></li>
+				<li><a href="#">Settings</a></li>
+			</ul>
+		</div>
+	</div>
+	{% endblock %}
+	{% block script %}
+	{{ super() }}
+	{% endblock %}
+</body>
+</html>
