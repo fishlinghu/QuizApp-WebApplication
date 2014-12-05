@@ -17,7 +17,7 @@ from quizapp.views.setting import SettingHandler
 from quizapp.views.add_questions import AddQuestionsHandler
 from quizapp.views.add_question import AddQuestionHandler
 from quizapp.views.add_topic import AddTopicHandler
-from quizapp.views.info import InfosHandler
+from quizapp.views.info import InfoHandler
 
 routes = [
     ('/', HomepageHandler),
