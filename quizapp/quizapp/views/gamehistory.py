@@ -2,84 +2,120 @@
 # -*- coding: utf-8 -*-
 
 from views import Handler
-
-def exp_calculator(score, w_o_l):
-    exp = score * 0.5 + w_o_l * 20
-    return exp
+from setting import checkPlayerName
 
 class GamehistoryHandler(Handler):
     def render_gamehistory(self, **kw):
         self.render("gamehistory.html", **kw)
 
     def get(self):
-        self.render_result()
+        self.render_gamehistory()
         user = self.session.get('QUIZAPP_USER')
         if user: 
-            # Should add the game ID to the end of player's "game_history" list when a quiz start
-            # So this should be done in quiz.py
-
             # get the user
             player = Player.get_by_id(user)
+            player_a_name_list = []
+            player_b_name_list = []
+            player_a_score_list = []
+            player_b_score_list = []
+            who_win_list = []
+            game_time_list = []
+            topic_list = []
 
-            game = Game.get_by_id(player.game_history[-1])
-            
-            if game.a_ID == player.key().id():
-                # user's ID == a_ID
-                your_score = game.a_score
-                opp_score = game.b_score
-            else:
-                # user's ID == b_ID
-                your_score = game.b_score
-                opp_score = game.a_score
+            for game_ID in player.game_history:
+                game = Game.get_by_id(game_ID)
+                player_a = Player.get_by_id(a_ID)
+                player_b = Player.get_by_id(b_ID)
+                
+                # Get player's name
+                player_a_name_list.append(player_a.name)
+                player_b_name_list.append(player_b.name)
 
-            # Check who wins
-            if your_score > opp_score:
-                # Show you win
-                win_or_lose = "You Win!!"
-                w_o_l = 2
-            elif your_score < opp_score:
-                # Show you lose
-                win_or_lose = "You Lose!!"
-                w_o_l = 0
-            else:
-                # Even
-                win_or_lose = "Even Game"
-                w_o_l = 1
+                # Get both player's scores
+                player_a_score_list.append(game.a_score)
+                player_b_score_list.append(game.b_score)
 
-            # Need a function of score/win/lose to calculate the experience an user get
-            exp = exp_calculator(score, w_o_l)
-            player.experience = player.experience + exp;
-            if player.experience >= player.exp_require[player.level]:
-                # level up
-                player.experience = player.experience - player.exp_require[player.level]
-                player.level = player.level + 1
+                # Get winning message
+                if game.who_win == 0:
+                    win_message = player_a.name + ' wins!'
+                    who_win_list.append(win_message)
+                else is game.who_win == 1:
+                    win_message = player_b.name + ' wins!'
+                    who_win_list.append(win_message)
+                else: 
+                    who_win_list.append('Even')
 
-            # Update the player entity
-            db.put(player)
+                # Get game created time
+                game_time_list.append(game.create_time)
 
-            # Scoring breakdown for both players
-            # I don't know if I can send a list to html
-            for score in game.a_score_list:
-                score = score
-
-            for score in game.b_score_list:
-                score = score
-            
-            # Need to get the question number from html somehow
-            q = Question.all()
-            q.filter('question_ID = ', question_ID)
-            question = q.fetch(1)
+                # Get topics
+                topic_list.append(game.topic)
 
             template_values = {
-                'win_or_lose': win_or_lose,
-                'level' : player.level,
-                'experience': player.experience,
-                'description': question.description,
-                'solution': question.solution,
-                'wiki_link': question.wiki_link,
-                'correct_ans': question.correct_ans 
+                'player_a_name_list': player_a_name_list,
+                'player_b_name_list' : player_b_name_list,
+                'player_a_score_list': player_a_score_list,
+                'player_b_score_list': player_b_score_list,
+                'who_win_list': who_win_list,
+                'game_time_list': game_time_list,
+                'topic_list': topic_list 
                 }
             self.render("gamehistory.html", **template_values)
 
         else:
             self.redirect('/index')
+    def post(self):
+        # You can also find a player's game history by keying in his name
+        player_name = self.request.get('player_name')
+        player = checkPlayerName(player_name)
+        if player:
+            player_a_name_list = []
+            player_b_name_list = []
+            player_a_score_list = []
+            player_b_score_list = []
+            who_win_list = []
+            game_time_list = []
+            topic_list = []
+
+            for game_ID in player.game_history:
+                game = Game.get_by_id(game_ID)
+                player_a = Player.get_by_id(a_ID)
+                player_b = Player.get_by_id(b_ID)
+                
+                # Get player's name
+                player_a_name_list.append(player_a.name)
+                player_b_name_list.append(player_b.name)
+
+                # Get both player's scores
+                player_a_score_list.append(game.a_score)
+                player_b_score_list.append(game.b_score)
+
+                # Get winning message
+                if game.who_win == 0:
+                    win_message = player_a.name + ' wins!'
+                    who_win_list.append(win_message)
+                else is game.who_win == 1:
+                    win_message = player_b.name + ' wins!'
+                    who_win_list.append(win_message)
+                else: 
+                    who_win_list.append('Even')
+
+                # Get game created time
+                game_time_list.append(game.create_time)
+
+                # Get topics
+                topic_list.append(game.topic)
+            
+            template_values = {
+                'player_a_name_list': player_a_name_list,
+                'player_b_name_list' : player_b_name_list,
+                'player_a_score_list': player_a_score_list,
+                'player_b_score_list': player_b_score_list,
+                'who_win_list': who_win_list,
+                'game_time_list': game_time_list,
+                'topic_list': topic_list 
+                }
+            self.render("gamehistory.html", **template_values)
+        else:
+            self.write_plain("Sorry, no such player")
+            self.render_gamehistory()

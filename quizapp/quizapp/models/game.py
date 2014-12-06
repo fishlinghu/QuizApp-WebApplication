@@ -24,3 +24,6 @@ class Game(db.Model):
 	#topic of quiz
 	topic = db.StringProperty()
 	topic_ID = db.IntegerProperty()
+	# record who win or lose, so we can look up in the gamehistory
+	# 0=player a win;1=player b win;2=even
+	who_win = db.IntegerProperty()

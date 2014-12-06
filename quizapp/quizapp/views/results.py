@@ -15,7 +15,7 @@ class ResultsHandler(Handler):
 		self.render_result()
 		user = self.session.get('QUIZAPP_USER')
 		if user: 
-			# Should add the game ID to the end of player's "game_history" list when a quiz start
+			# Should add the game ID(key().id()) to the end of player's "game_history" list when a quiz start
 			# So this should be done in quiz.py
 
 			# get the user
@@ -57,13 +57,17 @@ class ResultsHandler(Handler):
 			# Update the player entity
 			db.put(player)
 
+			player_a = Player.get_by_id(game.a_ID)
+			player_b = Player.get_by_id(game.b_ID)
+
+			player_a_score_breakdown = []
+			player_b_score_breakdown = []
 			# Scoring breakdown for both players
-			# I don't know if I can send a list to html
 			for score in game.a_score_list:
-				score = score
+				player_a_score_breakdown.append(score)
 
 			for score in game.b_score_list:
-				score = score
+				player_b_score_breakdown.append(score)
 			
 			# Need to get the question number from html somehow
 			q = Question.all()
@@ -71,6 +75,10 @@ class ResultsHandler(Handler):
 			question = q.fetch(1)
 
 			template_values = {
+				'player_a_name': player_a.name, 
+				'player_b_name': player_b.name,
+				'player_a_score_breakdown': player_a_score_breakdown,
+				'player_b_score_breakdown': player_b_score_breakdown,
 				'win_or_lose': win_or_lose,
 				'level' : player.level,
 				'experience': player.experience,
