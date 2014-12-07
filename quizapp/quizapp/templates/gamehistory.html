@@ -1,0 +1,54 @@
+{% extends "base_of_all_page.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+	{{ super() }}
+	{% endblock %}	
+</head>
+
+<body>
+	{% block content %}
+	{{ super() }}
+	<div class="col-md-10 main-inner">
+		<h1 style="text-align:center">Game History</h1>
+		<form action="/gamehistory" method="post">
+            Find the games history of a player by NAME: <input type="text" name="player_name"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <hr>
+        {% for game_time in game_time_list %}
+		<ul>
+            <li>Played time: {{ game_time_list[loop.revindex0] }}</li>
+            <li>Topic: {{ topic_list[loop.revindex0] }}</li>
+            <li>{{ who_win_list[loop.revindex0] }}</li>
+            <li>{{ player_a_name_list[loop.revindex0] }}'s score: {{ player_a_score_list[loop.revindex0] }}</li>
+            <li>{{ player_b_name_list[loop.revindex0] }}'s score: {{ player_b_score_list[loop.revindex0] }}</li>
+        </ul>
+        <hr>
+        {% endfor %}
+	</div>
+
+	<div class="col-md-2">
+		<div class="well sidebar">
+			<ul class="nav nav-stacked">
+				<li class="active"><a>{{ name }}</a></li>
+				<li><a data-toggle="collapse" href="#collapseFriends">Friends</a></li>
+				<li id="collapseFriends" class="collapse" data-toggle="false" style="height:0px">
+					You have no friends
+				</li>
+				<li><a data-toggle="collapse" href="#collapseMessages">Messages</a></li>
+				<li id="collapseMessages" class="collapse" data-toggle="false" style="height:0px">
+					You have no new messages
+				</li>
+				<li><a href="#">Achievements <span class="badge">2</span></a></li>
+				<li><a href="#">Settings</a></li>
+			</ul>
+		</div>
+	</div>
+	{% endblock %}
+	{% block script %}
+	{{ super() }}
+	{% endblock %}
+</body>
+</html>

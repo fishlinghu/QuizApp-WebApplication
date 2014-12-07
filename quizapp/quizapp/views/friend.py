@@ -62,7 +62,7 @@ class FriendHandler(Handler):
             friend = checkPlayerName(friend_name_del)
             if friend:
                 # There is such player
-                if friend.player_ID in player.friend_list:
+                if friend.key().id() in player.friend_list:
                     # okay he is your friend
                     player.friend_list.remove(friend.key().id())
                 else:
@@ -71,10 +71,10 @@ class FriendHandler(Handler):
                 self.write_plain("Sorry, no such player")
 
             # Unfriend the player by id
-            friend_ID_del = self.request.get('friend_ID_del')
-            friend = checkPlayer(friend_ID_del)
+            friend_account_del = self.request.get('friend_account_del')
+            friend = checkPlayer(friend_account_del)
             if friend:
-                if friend_ID_del in player.friend_list:
+                if friend.key().id() in player.friend_list:
                     # Okay he is your friend
                     player.friend_list.remove(friend.key().id())
                 else:

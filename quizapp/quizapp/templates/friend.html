@@ -1,0 +1,56 @@
+{% extends "base_of_all_page.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+	{{ super() }}
+	{% endblock %}	
+</head>
+
+<body>
+	{% block content %}
+	{{ super() }}
+	<div class="col-md-10 main-inner">
+		<h1 style="text-align:center">Friends</h1>
+		<form action="/friend" method="post">
+            Add a player as your friend by NAME: <input type="text" name="friend_name"><br>
+            Add a player as your friend by ACCOUNT: <input type="text" name="account"><br>
+            Delete a friend by NAME: <input type="text" name="friend_name_del"><br>
+            Delete a friend by ACCOUNT: <input type="text" name="friend_account_del"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <hr>
+        {% for friend_name in friend_name_list %}
+		<ul>
+            <li>{{ friend_name }}</li>
+            <!-- Maybe we should add some features here -->
+            <!-- Click on the friend's name, and there comes out a list of things you can do -->
+            <!-- Such as send message to him, play game with him, view his game history, view his profile, etc. -->
+        </ul>
+        <hr>
+        {% endfor %}
+	</div>
+
+	<div class="col-md-2">
+		<div class="well sidebar">
+			<ul class="nav nav-stacked">
+				<li class="active"><a>{{ name }}</a></li>
+				<li><a data-toggle="collapse" href="#collapseFriends">Friends</a></li>
+				<li id="collapseFriends" class="collapse" data-toggle="false" style="height:0px">
+					You have no friends
+				</li>
+				<li><a data-toggle="collapse" href="#collapseMessages">Messages</a></li>
+				<li id="collapseMessages" class="collapse" data-toggle="false" style="height:0px">
+					You have no new messages
+				</li>
+				<li><a href="#">Achievements <span class="badge">2</span></a></li>
+				<li><a href="#">Settings</a></li>
+			</ul>
+		</div>
+	</div>
+	{% endblock %}
+	{% block script %}
+	{{ super() }}
+	{% endblock %}
+</body>
+</html>
