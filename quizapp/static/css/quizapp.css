@@ -1,6 +1,10 @@
 /*!
  * QuizApp CSS file
  */
+body{
+	background-image: url('../../../static/img/background.jpg');
+	background-attachment: fixed;
+}
 
 .btn-inner {
 	width:200px;
