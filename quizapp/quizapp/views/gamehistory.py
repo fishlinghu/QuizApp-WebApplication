@@ -4,7 +4,7 @@
 from views import Handler
 from setting import checkPlayerName
 
-class GamehistoryHandler(Handler):
+class GameHistoryHandler(Handler):
     def render_gamehistory(self, **kw):
         self.render("gamehistory.html", **kw)
 
@@ -39,7 +39,7 @@ class GamehistoryHandler(Handler):
                 if game.who_win == 0:
                     win_message = player_a.name + ' wins!'
                     who_win_list.append(win_message)
-                else is game.who_win == 1:
+                elif game.who_win == 1:
                     win_message = player_b.name + ' wins!'
                     who_win_list.append(win_message)
                 else: 
@@ -94,7 +94,7 @@ class GamehistoryHandler(Handler):
                 if game.who_win == 0:
                     win_message = player_a.name + ' wins!'
                     who_win_list.append(win_message)
-                else is game.who_win == 1:
+                elif game.who_win == 1:
                     win_message = player_b.name + ' wins!'
                     who_win_list.append(win_message)
                 else: 
