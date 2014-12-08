@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from views import Handler
+from quizapp.models.player import Player
 from users import checkPlayer
 
 def checkPlayerName(name):

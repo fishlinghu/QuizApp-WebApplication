@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from views import Handler
+from quizapp.models.player import Player
+from quizapp.models.game import Game
 
 def exp_calculator(score, w_o_l):
 	exp = score * 0.5 + w_o_l * 20

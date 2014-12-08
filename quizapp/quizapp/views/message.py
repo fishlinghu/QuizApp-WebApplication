@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from views import Handler
+from quizapp.models.player import Player
 import datetime
 
 class MessageHandler(Handler):

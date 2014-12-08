@@ -3,6 +3,8 @@
 
 from views import Handler
 from setting import checkPlayerName
+from quizapp.models.player import Player
+from quizapp.models.game import Game
 
 class GameHistoryHandler(Handler):
     def render_gamehistory(self, **kw):
