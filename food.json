@@ -1,0 +1,95 @@
+{
+    "questions": [
+        {
+            "correct_ans": "fortune cookies",
+            "wrong_ans": [
+                "Pizza",
+                "Saussage",
+                "Gum"
+            ],
+            "question": "What did Charles Jung invent?",
+            "topic": "Food",
+            "wiki_link": "http://en.wikipedia.org/wiki/Fortune_cookie",
+            "description": "A fortune cookie is a crisp cookie usually made from flour, sugar, vanilla, and sesame seed oil with a 'fortune' wrapped inside.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/f/f8/Fortune_cookie.jpg"
+        },
+        {
+            "correct_ans": "eleven",
+            "wrong_ans": [
+                "ten",
+                "twelve",
+                "thirty"
+            ],
+            "question": "How many herbs and spices are used in Kentucky Fried Chicken?",
+            "topic": "Food",
+            "wiki_link": "http://en.wikipedia.org/wiki/KFC",
+            "description": "KFC (the name was originally an initialism for Kentucky Fried Chicken) is a fast food restaurant chain that specializes in fried chicken and is headquartered in Louisville, Kentucky, in the United States.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/en/b/bf/KFC_logo.svg"
+        },
+        {
+            "correct_ans": "salt",
+            "wrong_ans": [
+                "black pepper",
+                "sugar",
+                "chili powder"
+            ],
+            "question": "What is the most widely used seasoning?",
+            "topic": "Food",
+            "wiki_link": "http://en.wikipedia.org/wiki/Salt",
+            "description": "Common salt is a mineral substance composed primarily of sodium chloride (NaCl), a chemical compound belonging to the larger class of ionic salts; salt in its natural form as a crystalline mineral is known as rock salt or halite.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/f/fd/DeadSeaIsrael5.jpg"
+        },
+        {
+            "correct_ans": "pea",
+            "wrong_ans": [
+                "carrot",
+                "cabage",
+                "cucumber"
+            ],
+            "question": "What is the oldest known vegetable?",
+            "topic": "Food",
+            "wiki_link": "http://en.wikipedia.org/wiki/Pea",
+            "description": "The pea is most commonly the small spherical seed or the seed-pod of the pod fruit Pisum sativum. Each pod contains several peas",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/1/11/Peas_in_pods_-_Studio.jpg"
+        },
+        {
+            "correct_ans": "Holland",
+            "wrong_ans": [
+                "Thailand",
+                "America",
+                "France"
+            ],
+            "question": "In which country did edam cheese originate?",
+            "topic": "Food",
+            "wiki_link": "http://en.wikipedia.org/wiki/Edam_cheese",
+            "description": "Edam is a semi-hard cheese that originated in the Netherlands, and is named after the town of Edam in the province of North Holland.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/5/52/SmallEdamCheese.jpg"
+        },
+        {
+            "correct_ans": "United States",
+            "wrong_ans": [
+                "Korea",
+                "Brazil",
+                "Sweden"
+            ],
+            "question": "Where were fortune cookies invented?",
+            "topic": "Food",
+            "wiki_link": "http://en.wikipedia.org/wiki/Fortune_cookie",
+            "description": "A fortune cookie is a crisp cookie usually made from flour, sugar, vanilla, and sesame seed oil with a fortune' wrapped inside.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/f/f8/Fortune_cookie.jpg"
+        },
+        {
+            "correct_ans": "Corn flakes",
+            "wrong_ans": [
+                "Cup flakes",
+                "Pea flakes",
+                "Snow flakes"
+            ],
+            "question": "What breakfast cereal was invented at Battle Creek Sanitarium?",
+            "topic": "Food",
+            "wiki_link": "http://en.wikipedia.org/wiki/Corn_flakes",
+            "description": "Corn flakes are a popular breakfast cereal originally manufactured by Kellogg's through the treatment of maize. A patent for the product was filed on May 31, 1895, and issued on April 14, 1896.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/6/6a/Cornflakes_in_bowl.jpg"
+        }
+    ]
+}

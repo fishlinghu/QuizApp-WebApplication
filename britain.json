@@ -1,0 +1,95 @@
+{
+    "questions": [
+        {
+            "correct_ans": "Regents Park",
+            "wrong_ans": [
+                "Holland Park",
+                "Gladston Park",
+                "Waterlow Park"
+            ],
+            "question": "In which park are Queen Mary's gardens?",
+            "topic": "Britain",
+            "wiki_link": "http://en.wikipedia.org/wiki/Regent%27s_Park",
+            "description": "Regent's Park (officially The Regent's Park) is one of the Royal Parks of London. It lies within inner North West London, partly in the City of Westminster and partly in the London Borough of Camden.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/5/59/Regent%27s_Park_bandstand.jpg"
+        },
+        {
+            "correct_ans": "twenty",
+            "wrong_ans": [
+                "ten",
+                "thirty",
+                "fourty"
+            ],
+            "question": "How many inches tall are the bearskins worn by the guards at Buckingham Palace?",
+            "topic": "Britain",
+            "wiki_link": "http://en.wikipedia.org/wiki/Bearskin",
+            "description": "A bearskin is a tall fur cap, usually worn as part of a ceremonial military uniform. Traditionally, the bearskin was the headgear of grenadiers and it is still worn by grenadier and guards regiments in various armies.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/6/6a/1st_Sardinia_Grenadiers_Bastille_Day_2007_n1.jpg"
+        },
+        {
+            "correct_ans": "Great Fire of London",
+            "wrong_ans": [
+                "Great time of Lodon",
+                "Great mood of London",
+                "Great hero of Lodon"
+            ],
+            "question": "What does 'The Monument' in London commemorate?",
+            "topic": "Britain",
+            "wiki_link": "http://en.wikipedia.org/wiki/Monument_to_the_Great_Fire_of_London",
+            "description": "The Monument to the Great Fire of London, more commonly known simply as the Monument, is a fluted Doric column in the City of London, near the northern end of London Bridge, which commemorates the Great Fire of London",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/7/7f/The_Monument_to_the_Great_Fire_of_London.JPG"
+        },
+        {
+            "correct_ans": "Westminster Bridge",
+            "wrong_ans": [
+                "Bettersea Bridge",
+                "Lodon Bridge",
+                "New Bridge"
+            ],
+            "question": "What was the second bridge built across the Thames?",
+            "topic": "Britain",
+            "wiki_link": "http://en.wikipedia.org/wiki/Westminster_Bridge",
+            "description": "Westminster Bridge is a road and foot traffic bridge over the River Thames in London, linking Westminster on the north side and Lambeth on the south side.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/9/9d/River_Thames_and_Westminster_Bridge%2C_London-17Aug2009.jpg"
+        },
+        {
+            "correct_ans": "Oxford Street",
+            "wrong_ans": [
+                "Victoria Street",
+                "Chapel Street",
+                "Covent Garden"
+            ],
+            "question": "Where is Selfridges?",
+            "topic": "Britain",
+            "wiki_link": "http://en.wikipedia.org/wiki/Selfridges",
+            "description": "Selfridges, also known as Selfridge & Co., is a chain of high end department stores in the United Kingdom. It was founded by Harry Gordon Selfridge. The flagship store on London's Oxford Street is the second largest shop in the UK (after Harrods) and opened 15 March 1909.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/a/a4/Selfridges_nameboard.JPG"
+        },
+        {
+            "correct_ans": "Monument",
+            "wrong_ans": [
+                "London eye",
+                "Buckingham Palace",
+                "Big Ben"
+            ],
+            "question": "Which building commemorates the Great Fire of London?",
+            "topic": "Britain",
+            "wiki_link": "http://en.wikipedia.org/wiki/Monument_to_the_Great_Fire_of_London",
+            "description": "The Monument to the Great Fire of London, more commonly known simply as the Monument, is a fluted Doric column in the City of London, near the northern end of London Bridge, which commemorates the Great Fire of London",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/7/7f/The_Monument_to_the_Great_Fire_of_London.JPG"
+        },
+        {
+            "correct_ans": "guards",
+            "wrong_ans": [
+                "Queen Elizabeth",
+                "Crown",
+                "King Athor"
+            ],
+            "question": "Who at Buckingham Palace wears bearskins?",
+            "topic": "Britain",
+            "wiki_link": "http://en.wikipedia.org/wiki/Guard",
+            "description": "Person who is paid to protect property, assets, or people. They are usually privately and formally employed civilian personnel.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/f/f7/Private_factory_guard.jpg"
+        }
+    ]
+}

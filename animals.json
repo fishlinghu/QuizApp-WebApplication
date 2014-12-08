@@ -1,0 +1,95 @@
+{
+    "questions": [
+        {
+            "correct_ans": "giraffe",
+            "wrong_ans": [
+                "lion",
+                "monkey",
+                "pig"
+            ],
+            "question": "As what is a camelopard also known?",
+            "topic": "Animal Kingdom",
+            "wiki_link": "http://en.wikipedia.org/wiki/Giraffe",
+            "description": "The giraffe (Giraffa camelopardalis) is an African even-toed ungulate mammal, the tallest living terrestrial animal and the largest ruminant. Its species name refers to its camel-like appearance and the patches of color on its fur.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/9/9e/Giraffe_Mikumi_National_Park.jpg"
+        },
+        {
+            "correct_ans": "shark",
+            "wrong_ans": [
+                "tiger",
+                "dog",
+                "cat"
+            ],
+            "question": "Some animals always grow new teeth to replace the old. Name one of them!",
+            "topic": "Animal Kingdom",
+            "wiki_link": "http://en.wikipedia.org/wiki/Shark",
+            "description": "Sharks are a group of fish characterized by a cartilaginous skeleton, five to seven gill slits on the sides of the head, and pectoral fins that are not fused to the head.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/b/bb/Tibur%C3%B3n.jpg"
+        },
+        {
+            "correct_ans": "horse",
+            "wrong_ans": [
+                "hippo",
+                "leonpard",
+                "monkey"
+            ],
+            "question": "What animal can get the disease 'heaves'?",
+            "topic": "Animal Kingdom",
+            "wiki_link": "http://en.wikipedia.org/wiki/Horse",
+            "description": "The horse (Equus ferus caballus) is one of two extant subspecies of Equus ferus. It is an odd-toed ungulate mammal belonging to the taxonomic family Equidae.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/d/de/Nokota_Horses_cropped.jpg"
+        },
+        {
+            "correct_ans": "kangaroo",
+            "wrong_ans": [
+                "horse",
+                "rabbit",
+                "deer"
+            ],
+            "question": "What animal can hop as fast as 40 mph?",
+            "topic": "Animal Kingdom",
+            "wiki_link": "http://en.wikipedia.org/wiki/Kangaroo",
+            "description": "The horse (Equus ferus caballus) is one of two extant subspecies of Equus ferus. It is an odd-toed ungulate mammal belonging to the taxonomic family Equidae.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/0/0d/Kangaroo_and_joey03.jpg"
+        },
+        {
+            "correct_ans": "mandrill",
+            "wrong_ans": [
+                "deer",
+                "pig",
+                "bulls"
+            ],
+            "question": "What animal has red patches on its rear?",
+            "topic": "Animal Kingdom",
+            "wiki_link": "http://en.wikipedia.org/wiki/Mandrill",
+            "description": "The mandrill (Mandrillus sphinx) is a primate of the Old World monkey (Cercopithecidae) family,[4] closely related to the baboons and even more closely to the drill. It is found in southern Cameroon, Gabon, Equatorial Guinea, and Congo.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/7/75/Mandrill_at_san_francisco_zoo.jpg"
+        },
+        {
+            "correct_ans": "rabbit",
+            "wrong_ans": [
+                "fox",
+                "cat",
+                "racoon"
+            ],
+            "question": "What animal lives in a warren?",
+            "topic": "Animal Kingdom",
+            "wiki_link": "http://en.wikipedia.org/wiki/Rabbit",
+            "description": "Rabbits are small mammals in the family Leporidae of the order Lagomorpha, found in several parts of the world.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/3/3b/Rabbit_in_montana.jpg"
+        },
+        {
+            "correct_ans": "hare",
+            "wrong_ans": [
+                "wolf",
+                "bear",
+                "turtle"
+            ],
+            "question": "What animal lives in a form?",
+            "topic": "Animal Kingdom",
+            "wiki_link": "http://en.wikipedia.org/wiki/Hare",
+            "description": "Hares and jackrabbits are leporids belonging to the genus Lepus. Hares are classified into the same family as rabbits and are of similar size, form, and diet as rabbits.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/1/1e/Hare.jpg"
+        }
+    ]
+}
