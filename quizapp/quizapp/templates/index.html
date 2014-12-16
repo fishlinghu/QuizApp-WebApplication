@@ -11,27 +11,29 @@
 	{% block content %}
 	{{ super() }}
 	<div class="col-md-10 main-inner">
-		<h1 style="text-align:center">Topics</h1>
-			
-		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-			{% for topic in topics %}
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingOne">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Topic 1</a>
-					</h4>
-				</div>
-				<div id="collapseOne" class="panel-collapse collapse">
-					<div class="panel-body">
-						<button type="button" class="btn btn-default btn-inner">Play</a>
-						<button type="button" class="btn btn-default btn-inner">Challenge</button>
-						<br>
-						<button type="button" class="btn btn-default btn-inner">Chat</button>
-						<button type="button" class="btn btn-default btn-inner">Ranking</button>
+		<div class="content">
+			<h1 style="text-align:center">Topics</h1>
+				
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				{% for topic in topics %}
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingOne">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Topic 1</a>
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse">
+						<div class="panel-body">
+							<button type="button" class="btn btn-default btn-inner">Play</a>
+							<button type="button" class="btn btn-default btn-inner">Challenge</button>
+							<br>
+							<button type="button" class="btn btn-default btn-inner">Chat</button>
+							<button type="button" class="btn btn-default btn-inner">Ranking</button>
+						</div>
 					</div>
 				</div>
+				{% endfor %}
 			</div>
-			{% endfor %}
 		</div>
 	</div>
 
