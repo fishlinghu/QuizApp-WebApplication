@@ -6,6 +6,11 @@ body{
 	background-attachment: fixed;
 }
 
+.content{
+	background: #FFFFFF;
+	border: 3px solid red;
+}
+
 .btn-inner {
 	width:200px;
 	margin-top:10px;
