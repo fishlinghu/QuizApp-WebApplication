@@ -1,0 +1,95 @@
+{
+    "questions": [
+        {
+            "correct_ans": "Aristotle",
+            "wrong_ans": [
+                "Demonax",
+                "Heraclitus",
+                "Phaedrus"
+            ],
+            "question": "Who said all things were made up of air, earth, fire, and water?",
+            "topic": "Science",
+            "wiki_link": "http://en.wikipedia.org/wiki/Aristotle",
+            "description": "Aristotle was a Greek philosopher and scientist born in Stagira of Chalkidiki, next to the Macedonian Kingdom in the north part of the Greek world.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/a/ae/Aristotle_Altemps_Inv8575.jpg"
+        },
+        {
+            "correct_ans": "X-rays",
+            "wrong_ans": [
+                "infrared rays",
+                "magnetic resonance imaging",
+                "ultrasound"
+            ],
+            "question": "What did Wilhelm Roentgen discover in 1895?",
+            "topic": "Science",
+            "wiki_link": "http://en.wikipedia.org/wiki/X-ray",
+            "description": "X-radiation (composed of X-rays) is a form of electromagnetic radiation. Most X-rays have a wavelength ranging from 0.01 to 10 nanometers, corresponding to frequencies in the range 30 petahertz to 30 exahertz (3×1016 Hz to 3×1019 Hz) and energies in the range 100 eV to 100 keV.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/b/b7/X-ray_applications.svg"
+        },
+        {
+            "correct_ans": "temperature",
+            "wrong_ans": [
+                "mass",
+                "density",
+                "longitude"
+            ],
+            "question": "What does the Rankine scale measure?",
+            "topic": "Science",
+            "wiki_link": "http://en.wikipedia.org/wiki/Temperature",
+            "description": "A temperature is a comparative objective measure of hot and cold. It is measured, typically by a thermometer, through the bulk behavior of a thermometric material, detection of heat radiation, or by particle velocity or kinetic energy.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/8/8f/Carnot-engine-1824.png"
+        },
+        {
+            "correct_ans": "paedology",
+            "wrong_ans": [
+                "morphics",
+                "astronomy",
+                "archeology"
+            ],
+            "question": "What is name applied to the study of soil?",
+            "topic": "Science",
+            "wiki_link": "http://en.wikipedia.org/wiki/Pedology_(soil_study)",
+            "description": "Pedology is the study of soils in their natural environment.[1] It is one of two main branches of soil science, the other being edaphology.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/1/10/Calcareous_Soil_Profile%2C_Seven_Sisters_Country_Park_-_geograph.org.uk_-_1280181.jpg"
+        },
+        {
+            "correct_ans": "gillette",
+            "wrong_ans": [
+                "venus",
+                "schick",
+                "xperia"
+            ],
+            "question": "What is the number of blue razor blades a given beam can puncture?",
+            "topic": "Science",
+            "wiki_link": "http://en.wikipedia.org/wiki/Laser",
+            "description": "Even the first laser was recognized as being potentially dangerous. Theodore Maiman characterized the first laser as having a power of one Gillette as it could burn through one Gillette razor blade.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/a/a0/Military_laser_experiment.jpg"
+        },
+        {
+            "correct_ans": "chemistry",
+            "wrong_ans": [
+                "archeology",
+                "anthropology",
+                "ethnography"
+            ],
+            "question": "What is the study of the composition of substances and the changes they undergo?",
+            "topic": "Science",
+            "wiki_link": "http://en.wikipedia.org/wiki/Chemistry",
+            "description": "Chemistry is a branch of physical science that studies the composition, structure, properties and change of matter.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/e/e1/Chemicals_in_flasks.jpg"
+        },
+        {
+            "correct_ans": "Sonic boom",
+            "wrong_ans": [
+                "Vibration shock",
+                "Hurricane bomb",
+                "Boom Boom Pow"
+            ],
+            "question": "What does breaking the sound barrier cause?",
+            "topic": "Science",
+            "wiki_link": "http://en.wikipedia.org/wiki/Sonic_boom",
+            "description": "A sonic boom is the sound associated with the shock waves created by an object traveling through the air faster than the speed of sound.",
+            "img_link": "https://chivethebrigade.files.wordpress.com/2014/02/sonic-boom-920-34.jpg"
+        }
+    ]
+}

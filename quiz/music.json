@@ -1,0 +1,95 @@
+{
+    "questions": [
+        {
+            "correct_ans": "Oh Boy",
+            "wrong_ans": [
+                "Pump It Up",
+                "I Just Don't Know What to Do With Myself",
+                "Like a Rolling Stone"
+            ],
+            "question": "In late 1957, Buddy Holly's solo release 'Peggy Sue' challenged which song recorded with The Crickets?",
+            "topic": "Music",
+            "wiki_link": "http://en.wikipedia.org/wiki/Buddy_Holly",
+            "description": "Charles Hardin Holley (September 7, 1936 – February 3, 1959), known professionally as Buddy Holly, was an American musician and singer-songwriter and a pioneer of rock and roll.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/1/14/Buddy_Holly_cropped.JPG"
+        },
+        {
+            "correct_ans": "servant",
+            "wrong_ans": [
+                "student",
+                "nanny",
+                "soldier"
+            ],
+            "question": "In the opera 'Don Giovanni', what was Leporello?",
+            "topic": "Music",
+            "wiki_link": "http://en.wikipedia.org/wiki/Don_Giovanni",
+            "description": "Don Giovanni (K. 527; complete title: Il dissoluto punito, ossia il Don Giovanni, literally The Rake Punished, or Don Giovanni) is an opera in two acts with music by Wolfgang Amadeus Mozart and Italian libretto by Lorenzo Da Ponte.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/6/68/Don_Giovanni_0202_Michelides.jpg"
+        },
+        {
+            "correct_ans": "La Traviata",
+            "wrong_ans": [
+                "La forza del destino",
+                "Il trovatore",
+                "Rigoletto"
+            ],
+            "question": "In which Verdi opera does Violetta sing 'Sempre Libera'?",
+            "topic": "Music",
+            "wiki_link": "http://en.wikipedia.org/wiki/La_traviata",
+            "description": "La traviata is an opera in three acts by Giuseppe Verdi set to an Italian libretto by Francesco Maria Piave.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/5/51/Verdi.jpg"
+        },
+        {
+            "correct_ans": "Don Giovanni",
+            "wrong_ans": [
+                "Tancredi",
+                "Hérodiade",
+                "Don Quichotte"
+            ],
+            "question": "In which opera does Leporello entertain a vengeful jilted lover?",
+            "topic": "Music",
+            "wiki_link": "http://en.wikipedia.org/wiki/Don_Giovanni",
+            "description": "Don Giovanni (K. 527; complete title: Il dissoluto punito, ossia il Don Giovanni, literally The Rake Punished, or Don Giovanni) is an opera in two acts with music by Wolfgang Amadeus Mozart and Italian libretto by Lorenzo Da Ponte.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/6/68/Don_Giovanni_0202_Michelides.jpg"
+        },
+        {
+            "correct_ans": "Beat It",
+            "wrong_ans": [
+                "Let it be",
+                "The show",
+                "Mama"
+            ],
+            "question": "Michael di Lorenzo was one of the lead dancers on which Michael Jackson video?",
+            "topic": "Music",
+            "wiki_link": "http://en.wikipedia.org/wiki/Beat_It",
+            "description": "Beat It is a song written and performed by American recording artist Michael Jackson and produced by Quincy Jones (with co-production by Jackson). ",
+            "img_link": "http://upload.wikimedia.org/wikipedia/en/6/65/Michael_Jackson_-_Beat_It_cover.jpg"
+        },
+        {
+            "correct_ans": "I Believe I Can Fly",
+            "wrong_ans": [
+                "Your Body's Callin",
+                "If I Could Turn Back the Hands of Time",
+                "I'm a Flirt"
+            ],
+            "question": "R. Kelly sings: 'If I can see it then I can do it, if I just believe it, there's nothing to it'. What's the song title?",
+            "topic": "Music",
+            "wiki_link": "http://en.wikipedia.org/wiki/I_Believe_I_Can_Fly",
+            "description": "I Believe I Can Fly is a 1996 song written, produced and performed by R&B singer R. Kelly from the soundtrack to the 1996 film Space Jam. It was originally released on November 26, 1996, but later appeared in Kelly's 1998 album R.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/en/c/c6/IBELIEVEICANFLY.jpg"
+        },
+        {
+            "correct_ans": "American Pie",
+            "wrong_ans": [
+                "Vincent",
+                "Billie Jean",
+                "Homeless brother"
+            ],
+            "question": "What Don Mclean song laments the day Buddy Holly died?",
+            "topic": "Music",
+            "wiki_link": "http://en.wikipedia.org/wiki/Don_McLean",
+            "description": "Donald Don McLean (born October 2, 1945) is an American singer-songwriter. He is most famous for the 1971 album American Pie, containing the songs American Pie and Vincent.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/0/07/Don_McLean_in_2012.jpg"
+        }
+    ]
+}

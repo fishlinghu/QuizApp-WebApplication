@@ -1,0 +1,95 @@
+{
+    "questions": [
+        {
+            "correct_ans": "fencing",
+            "wrong_ans": [
+                "hockey",
+                "football",
+                "water polo"
+            ],
+            "question": "Other than skiing, which sport takes place on a piste?",
+            "topic": "Sports",
+            "wiki_link": "http://en.wikipedia.org/wiki/Fencing",
+            "description": "Fencing is the martial art of fighting with blades. The common version of fencing today, generally known as olympic fencing.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/1/10/Final_Trophee_Monal_2012_n08.jpg"
+        },
+        {
+            "correct_ans": "Netherlands",
+            "wrong_ans": [
+                "Mexico",
+                "Mongo",
+                "Hungary"
+            ],
+            "question": "Other than England, which european country took part in the 1996 cricket World Cup?",
+            "topic": "Sports",
+            "wiki_link": "http://en.wikipedia.org/wiki/1996_Cricket_World_Cup",
+            "description": "The 1996 Cricket World Cup, also called the Wills World Cup after its official sponsors, ITC's Wills brand, was the sixth Cricket World Cup, organised by the International Cricket Council (ICC).",
+            "img_link": "http://upload.wikimedia.org/wikipedia/en/1/12/Worldcupdr96.png"
+        },
+        {
+            "correct_ans": "fourteen",
+            "wrong_ans": [
+                "seven",
+                "nine",
+                "twelve"
+            ],
+            "question": "What is the maximum number of clubs a golfer may use in a round?",
+            "topic": "Sports",
+            "wiki_link": "http://en.wikipedia.org/wiki/Golf_club",
+            "description": "A golf club is a club used to hit a golf ball in a game of golf. Each club is composed of a shaft with a grip and a club head.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/0/03/Golf_clubs.jpg"
+        },
+        {
+            "correct_ans": "Argentinian",
+            "wrong_ans": [
+                "Spanish",
+                "Swedish",
+                "Taiwanese"
+            ],
+            "question": "What nationality is Gabriela Sabatini?",
+            "topic": "Sports",
+            "wiki_link": "http://en.wikipedia.org/wiki/Gabriela_Sabatini",
+            "description": "Gabriela Beatriz Sabatini is an Argentine former professional tennis player. She was one of the leading players on the women's circuit in the late-1980s and early-1990s.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/2/23/Gab2-sabatini-wikipedia.jpg"
+        },
+        {
+            "correct_ans": "Stanley Cup",
+            "wrong_ans": [
+                "Edison Cup",
+                "Johnsons Cup",
+                "Miller Cup"
+            ],
+            "question": "What trophy is awarded to the winner of the NHL playoffs?",
+            "topic": "Sports",
+            "wiki_link": "http://en.wikipedia.org/wiki/Stanley_Cup",
+            "description": "The Stanley Cup is the championship trophy awarded annually to the National Hockey League (NHL) playoff winner after the conclusion of the Stanley Cup Finals. Originally commissioned in 1892 as the Dominion Hockey Challenge Cup.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/3/3f/Stanley_Cup_no_background.png"
+        },
+        {
+            "correct_ans": "Pele",
+            "wrong_ans": [
+                "Maradona",
+                "Kaka",
+                "Ronaldo"
+            ],
+            "question": "Who is Edson Arantes do Nascimento better known as?",
+            "topic": "Sports",
+            "wiki_link": "http://en.wikipedia.org/wiki/Pel%C3%A9",
+            "description": "dson Arantes do Nascimento is a retired Brazilian professional footballer who is widely regarded to be the greatest player of all time.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/4/4a/Pele200802FabioRodriguesPozzebomAgenciaBrasil.jpg"
+        },
+        {
+            "correct_ans": "butterfly",
+            "wrong_ans": [
+                "diving beetle",
+                "water strider",
+                "shark spin"
+            ],
+            "question": "What swimming stroke is named after an insect?",
+            "topic": "Sports",
+            "wiki_link": "http://en.wikipedia.org/wiki/Butterfly_stroke",
+            "description": "The butterfly is a swimming stroke swum on the breast, with both arms moving simultaneously, accompanied by the butterfly kick. ",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/f/f4/US_Marines_butterfly_stroke.jpg"
+        }
+    ]
+}

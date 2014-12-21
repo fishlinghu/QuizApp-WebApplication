@@ -1,0 +1,95 @@
+{
+    "questions": [
+        {
+            "correct_ans": "Igraine",
+            "wrong_ans": [
+                "Diana",
+                "Elizabeth",
+                "Chelsea"
+            ],
+            "question": "What was King Arthur's mother's name?",
+            "topic": "History",
+            "wiki_link": "http://en.wikipedia.org/wiki/Igraine",
+            "description": "In Arthurian legend, Igraine is the mother of King Arthur. She is also known in Latin as Igerna, in Welsh as Eigyr, in French as Igerne, in Thomas Malory's Le Morte d'Arthur as Ygrayne— often modernized as Igraine—and in Wolfram von Eschenbach's Parzival as Arnive.",
+            "img_link": "http://images5.fanpop.com/image/photos/27400000/igraine-camelot-2011-27468067-639-432.jpg"
+        },
+        {
+            "correct_ans": "Alaska",
+            "wrong_ans": [
+                "Gulf",
+                "Chukchi",
+                "Edmonton"
+            ],
+            "question": "What was Russian America called after 1867?",
+            "topic": "History",
+            "wiki_link": "http://en.wikipedia.org/wiki/Alaska",
+            "description": "Alaska is a U.S. state situated in the northwest extremity of the North American continent. Bordering the state to the east is Yukon, a Canadian territory, and the Canadian province of British Columbia, the Arctic Ocean to the north, and the Pacific Ocean to the west and south, with Russia (specifically, Chukotka Autonomous Okrug and Kamchatka Krai) further west across the Bering Strait.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/8/84/Alaska_in_United_States_%28US50%29.svg"
+        },
+        {
+            "correct_ans": "Siam",
+            "wrong_ans": [
+                "Kyaikto",
+                "Wakema",
+                "Hoi an"
+            ],
+            "question": "What was Thailand formerly known as?",
+            "topic": "History",
+            "wiki_link": "http://en.wikipedia.org/wiki/Thailand",
+            "description": "Thailand, officially the Kingdom of Thailand, formerly known as Siam, is a country at the centre of the Indochina peninsula in Southeast Asia.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg"
+        },
+        {
+            "correct_ans": "America",
+            "wrong_ans": [
+                "Brazil",
+                "Serbia",
+                "Colombia"
+            ],
+            "question": "What was named after Amerigo Vespucci?",
+            "topic": "History",
+            "wiki_link": "http://en.wikipedia.org/wiki/Amerigo_Vespucci",
+            "description": "Amerigo Vespucci was an Italian explorer, financier, navigator and cartographer who first demonstrated that Brazil and the West Indies did not represent Asia's eastern outskirts as initially conjectured from Columbus' voyages, but instead constituted an entirely separate landmass hitherto unknown to Afro-Eurasians.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/b/b9/Amerigo_Vespucci01.jpg"
+        },
+        {
+            "correct_ans": "Comanche",
+            "wrong_ans": [
+                "Badal",
+                "Scooby",
+                "Folly"
+            ],
+            "question": "What was George A Custer's horses' name?",
+            "topic": "History",
+            "wiki_link": "http://en.wikipedia.org/wiki/Comanche_%28horse%29",
+            "description": "Comanche was a mixed breed horse who survived General George Armstrong Custer's detachment of the United States 7th Cavalry at the Battle of the Little Bighorn.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/6/6e/ComancheeCuster-GrabillLR.jpg"
+        },
+        {
+            "correct_ans": "Roxana",
+            "wrong_ans": [
+                "Jennin",
+                "Sena",
+                "Rea"
+            ],
+            "question": "What was Alexander The Great's wife's name?",
+            "topic": "History",
+            "wiki_link": "http://en.wikipedia.org/wiki/Roxana",
+            "description": "Roxana was a Bactrian princess and a wife of Alexander the Great. She was born earlier than the year 343 BC, though the precise date remains uncertain, and died in ca. 310 BC.",
+            "img_link": "http://upload.wikimedia.org/wikipedia/commons/a/ab/Alexander_The_Greate_and_Roxane_by_Rotari_1756.jpg"
+        },
+        {
+            "correct_ans": "Mickey Mouse",
+            "wrong_ans": [
+                "Corn flakes",
+                "Pocket monster",
+                "Donald duck"
+            ],
+            "question": "What was the D-Day invasion password?",
+            "topic": "History",
+            "wiki_link": "http://en.wikipedia.org/wiki/Invasion_of_Normandy",
+            "description": "The notion has long been widespread that Mickey Mouse was the code name for the D-Day invasion of Normandy on June 6, 1944.",
+            "img_link": "http://goodcomics.comicbookresources.com/wp-content/uploads/2011/12/mickeymouse.jpg"
+        }
+    ]
+}
