@@ -8,7 +8,8 @@ body{
 
 .content{
 	background: #FFFFFF;
-	border: 3px solid red;
+	border: 2px solid red;
+	border-radius: 5px;
 }
 
 .btn-inner {
