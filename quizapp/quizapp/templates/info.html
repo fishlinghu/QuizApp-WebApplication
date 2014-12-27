@@ -11,6 +11,14 @@
 	{% block content %}
 	{{ super() }}
 	<div class="col-md-10 main-inner">
+        <div class="panel panel-default">
+            <h1>{{ name }}</h1>
+            <p>
+                <em>{{ account }}</em> | <strong>{{ level }}</strong> ({{ experience }})
+            </p>
+            <hr>
+            <p>{{ intro }}</p>
+        </div>
 	</div>
 
 	<div class="col-md-2">

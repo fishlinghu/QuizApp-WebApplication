@@ -8,23 +8,24 @@ class InfoHandler(Handler):
     def render_info(self, **kw):
         self.render("info.html", **kw)
 
-    def get(self):
+    def get(self, account):
         user = self.session.get('QUIZAPP_USER')
-        if user: 
-            # Should add the game ID to the end of player's "game_history" list when a quiz start
-            # So this should be done in quiz.py
 
-            # get the user
-            player = Player.get_by_id(user)
+        # Get the users profile which is viewed
+        q = Player.all()
+        q.filter('account =', account)
+        profile = q.get()
+
+        if user: 
+            # player = Player.get_by_id(user)
 
             template_values = {
-                'account': player.account,
-                'name' : player.name,
-                'experience': player.experience,
-                'level': player.level,
-                'intro': player.intro
+                'account': profile.account,
+                'name' : profile.name,
+                'experience': profile.experience,
+                'level': profile.level,
+                'intro': profile.intro
                 }
             self.render_info(**template_values)
-
         else:
             self.redirect('/index')
