@@ -11,34 +11,21 @@
 	{% block content %}
 	{{ super() }}
 	<div class="col-md-10 main-inner">
-        <div class="panel panel-default">
-            <h1>{{ name }}</h1>
-            <p>
-                <em>{{ account }}</em> | <strong>{{ level }}</strong> ({{ experience }})
-            </p>
-            <hr>
-            <p>{{ intro }}</p>
-        </div>
-	</div>
-
-	<div class="col-md-2">
-		<div class="well sidebar">
-			<ul class="nav nav-stacked">
-				<li class="active"><a>{{ name }}</a></li>
-				<li><a href="#">Friends</a></li>
-				<li>
-					<a data-toggle="collapse" href="#collapseMessages">
-						Messages <span class="badge">2</span>
-					</a>
-				</li>
-				<li id="collapseMessages" class="collapse" data-toggle="false" style="height:0px">
-					You have no new messages
-				</li>
-				<li><a href="#">Achievements <span class="badge">2</span></a></li>
-				<li><a href="#">Settings</a></li>
-			</ul>
+		<div class="content">
+			<div class="panel panel-default">
+				<h1>{{ name }}</h1>
+				<p>
+					<em>{{ account }}</em> | <strong>{{ level }}</strong> ({{ experience }})
+				</p>
+				<hr>
+				<p>{{ intro }}</p>
+			</div>
 		</div>
 	</div>
+
+	{% endblock %}
+	{% block sidebar %}
+	{{ super() }}
 	{% endblock %}
 	{% block script %}
 	{{ super() }}
