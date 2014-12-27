@@ -25,7 +25,7 @@ class FriendHandler(Handler):
                 'friend_name_list': friend_name_list
                 }
 
-            self.render("friend.html", **template_values)
+            self.render("friend.html", name = player.account, **template_values)
         else:
             self.response.headers['Content-Type'] = 'text/html'
             self.render_homepage()
