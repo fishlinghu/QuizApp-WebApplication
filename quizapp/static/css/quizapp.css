@@ -1,6 +1,10 @@
 /*!
  * QuizApp CSS file
  */
+h1{
+	text-align:center;
+}
+
 body{
 	background-image: url('../../../static/img/background.jpg');
 	background-attachment: fixed;
@@ -10,34 +14,39 @@ body{
 	background: #FFFFFF;
 	border: 2px solid red;
 	border-radius: 5px;
+	padding 40px;
 }
 
-.btn-inner {
+.btn-inner{
+	color:white;
+	background: red;
 	width:200px;
 	margin-top:10px;
 	margin-bottom:10px;
 	margin-left:10px;
-	margin-right:10px
+	margin-right:10px;
 }
-.btn-topic {
+.btn-topic{
 	width:80%;
 	margin-top:10px;
-	margin-bottom:10px
+	margin-bottom:10px;
 }
-.main-inner {
+.main-inner{
 	text-align:center;
 	padding-left:20px;
 	padding-right:20px;
 }
-.well-menu {
+.well-menu{
 	width:500px;
 	margin: 0 auto;
 	margin-top:20px;
-	margin-bottom:20px
+	margin-bottom:20px;
 }
-.sidebar {
-	text-align:center
+.sidebar{
+	text-align:center;
 }
-.panel-default {
-	padding:20px
+.panel-topic{
+	border: 2px solid red;
+	border-radius: 5px;
+	margin: 20px;
 }
