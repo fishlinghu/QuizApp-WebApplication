@@ -11,17 +11,33 @@
 	{% block content %}
 	{{ super() }}
 	<div class="col-md-10 main-inner">
-		<h1 style="text-align:center">Friends</h1>
-        <hr>
-		<form action="/friend" method="post">
-            Enter new account: <input type="text" name="account"><br>
-            Enter new name: <input type="text" name="name"><br>
-            Enter new personal introduction: <input type="text" name="intro"><br>
-            Modify password: Old password: <input type="text" name="old_password">, 
-            New password:<input type="text" name="new_password">, 
-            New password again:<input type="text" name="new_password_check"><br>
-            <input type="submit" value="Submit">
-        </form>
+        <div class="panel panel-default">
+		    <h1>{{ account }}</h1>
+            <a href="/password">Change password</a>
+            <hr>
+		    <form action="/setting" method="post">
+                <table>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" name="name" value="{{ name }}"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Intro">Introduction:</label></td>
+                        <td><input type="text" name="intro" value="{{ intro }}"></td>
+                    </tr>
+                </table>
+               
+                <!--
+                Enter new account: <input type="text" name="account"><br>
+                Enter new name: <input type="text" name="name"><br>
+                Enter new personal introduction: <input type="text" name="intro"><br>
+                Modify password: Old password: <input type="text" name="old_password">, 
+                New password:<input type="text" name="new_password">, 
+                New password again:<input type="text" name="new_password_check"><br>
+                -->
+                <input type="submit" value="Change">
+            </form>
+        </div>
 	</div>
 
 	<div class="col-md-2">
