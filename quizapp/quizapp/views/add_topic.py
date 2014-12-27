@@ -18,9 +18,11 @@ class AddTopicHandler(Handler):
     def post(self):
         name = (self.request.get('name'))
         description = (self.request.get('description'))
+        topicID = (self.request.get('topicID'))
         topic = Topic(
             description = description,
-            name = name
+            name = name,
+            topicID = topicID.replace(" ", "")
         )
         topic.put()
         self.render_add_topic(success="New topic " + name + " added.")
