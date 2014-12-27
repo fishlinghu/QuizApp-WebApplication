@@ -12,11 +12,11 @@
 	{{ super() }}
 	<div class="col-md-10 main-inner">
 		<div class="content">
-			<h1 style="text-align:center">Topics</h1>
+			<h1>Topics</h1>
 				
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 				{% for topic in topics %}
-				<div class="panel panel-default">
+				<div class="panel panel-topic">
 					<div class="panel-heading" role="tab" id="headingOne">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion" href="{{ '#' + topic.topicID }}">{{ topic.name }}</a>
@@ -24,7 +24,7 @@
 					</div>
 					<div id="{{ topic.topicID }}" class="panel-collapse collapse">
 						<div class="panel-body">
-							<button type="button" class="btn btn-default btn-inner">Play</a>
+							<button type="button" class="btn btn-default btn-inner" onclick="location.href='quiz/{{ topic.topicID }}'">Play</button>
 							<button type="button" class="btn btn-default btn-inner">Challenge</button>
 							<br>
 							<button type="button" class="btn btn-default btn-inner">Chat</button>
@@ -38,7 +38,7 @@
 	</div>
 
 	<div class="col-md-2">
-		<div class="well sidebar">
+		<div class="content sidebar">
 			<ul class="nav nav-stacked">
 				<li class="active"><a>{{ name }}</a></li>
 				<li><a data-toggle="collapse" href="#collapseFriends">Friends</a></li>
