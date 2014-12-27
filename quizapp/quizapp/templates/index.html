@@ -19,10 +19,10 @@
 				<div class="panel panel-default">
 					<div class="panel-heading" role="tab" id="headingOne">
 						<h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">{{ topic.name }}</a>
+							<a data-toggle="collapse" data-parent="#accordion" href="{{ '#' + topic.topicID }}">{{ topic.name }}</a>
 						</h4>
 					</div>
-					<div id="collapseOne" class="panel-collapse collapse">
+					<div id="{{ topic.topicID }}" class="panel-collapse collapse">
 						<div class="panel-body">
 							<button type="button" class="btn btn-default btn-inner">Play</a>
 							<button type="button" class="btn btn-default btn-inner">Challenge</button>
