@@ -11,7 +11,6 @@ class GameHistoryHandler(Handler):
         self.render("gamehistory.html", **kw)
 
     def get(self):
-        self.render_gamehistory()
         user = self.session.get('QUIZAPP_USER')
         if user: 
             # get the user
@@ -62,7 +61,7 @@ class GameHistoryHandler(Handler):
                 'game_time_list': game_time_list,
                 'topic_list': topic_list 
                 }
-            self.render("gamehistory.html", **template_values)
+            self.render("gamehistory.html", name = player.account, **template_values)
 
         else:
             self.redirect('/index')
