@@ -19,6 +19,7 @@ from quizapp.views.add_question import AddQuestionHandler
 from quizapp.views.add_topic import AddTopicHandler
 from quizapp.views.info import InfoHandler
 from quizapp.views.gamehistory import GameHistoryHandler
+from quizapp.views.password import PasswordHandler
 
 routes = [
     ('/', HomepageHandler),
@@ -37,9 +38,10 @@ routes = [
     ('/message', MessageHandler), # Deal with the messages, you can send and read messages 
     ('/info/(\w+)', InfoHandler),  # Show your personal information, maybe everyone can view other people's profile, /info/<account ID>
     ('/setting', SettingHandler), # Change your informations here, such as account, password, name, etc. 
-    ('/friend', FriendHandler), # Show your friends list, you can also add/delete friend here
+    # ('/friend', FriendHandler), # Show your friends list, you can also add/delete friend here
     ('/gamehistory', GameHistoryHandler), # Show your game history, just like result
     ('/add/questions', AddQuestionsHandler),
     ('/add/question', AddQuestionHandler),
     ('/add/topic', AddTopicHandler),
+    ('/password', PasswordHandler),
 ]
