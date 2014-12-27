@@ -12,25 +12,26 @@
 	{{ super() }}
 	<div class="col-md-10 main-inner">
 		<div class="content">
-		<h1 style="text-align:center">Friends</h1>
-		<form action="/friend" method="post">
-            Add a player as your friend by NAME: <input type="text" name="friend_name"><br>
-            Add a player as your friend by ACCOUNT: <input type="text" name="account"><br>
-            Delete a friend by NAME: <input type="text" name="friend_name_del"><br>
-            Delete a friend by ACCOUNT: <input type="text" name="friend_account_del"><br>
-            <input type="submit" value="Submit">
-        </form>
-        <hr>
-        {% for friend_name in friend_name_list %}
-		<ul>
-            <li>{{ friend_name }}</li>
-            <!-- Maybe we should add some features here -->
-            <!-- Click on the friend's name, and there comes out a list of things you can do -->
-            <!-- Such as send message to him, play game with him, view his game history, view his profile, etc. -->
-        </ul>
-        <hr>
-        {% endfor %}
-        </div>
+			<h1 style="text-align:center">Friends</h1>
+			<form action="/friend" method="post">
+				Add a player as your friend by NAME: <input type="text" name="friend_name"><br>
+				Add a player as your friend by ACCOUNT: <input type="text" name="account"><br>
+				Delete a friend by NAME: <input type="text" name="friend_name_del"><br>
+				Delete a friend by ACCOUNT: <input type="text" name="friend_account_del"><br>
+				<input type="submit" value="Submit">
+			</form>
+			
+			<hr>
+			{% for friend_name in friend_name_list %}
+			<ul>
+				<li>{{ friend_name }}</li>
+				<!-- Maybe we should add some features here -->
+				<!-- Click on the friend's name, and there comes out a list of things you can do -->
+				<!-- Such as send message to him, play game with him, view his game history, view his profile, etc. -->
+			</ul>
+			<hr>
+			{% endfor %}
+		</div>
 	</div>
 
 	<div class="col-md-2">
