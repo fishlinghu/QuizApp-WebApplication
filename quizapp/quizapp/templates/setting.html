@@ -11,52 +11,39 @@
 	{% block content %}
 	{{ super() }}
 	<div class="col-md-10 main-inner">
-        <div class="panel panel-default">
-		    <h1>{{ account }}</h1>
-            <a href="/password">Change password</a>
-            <hr>
-		    <form action="/setting" method="post">
-                <table>
-                    <tr>
-                        <td><label for="name">Name:</label></td>
-                        <td><input type="text" name="name" value="{{ name }}"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="Intro">Introduction:</label></td>
-                        <td><input type="text" name="intro" value="{{ intro }}"></td>
-                    </tr>
-                </table>
-               
-                <!--
-                Enter new account: <input type="text" name="account"><br>
-                Enter new name: <input type="text" name="name"><br>
-                Enter new personal introduction: <input type="text" name="intro"><br>
-                Modify password: Old password: <input type="text" name="old_password">, 
-                New password:<input type="text" name="new_password">, 
-                New password again:<input type="text" name="new_password_check"><br>
-                -->
-                <input type="submit" value="Change">
-            </form>
-        </div>
+		<div class="content">
+			<div class="panel panel-default">
+				<h1>{{ account }}</h1>
+				<a href="/password">Change password</a>
+				<hr>
+				<form action="/setting" method="post">
+					<table>
+						<tr>
+							<td><label for="name">Name:</label></td>
+							<td><input type="text" name="name" value="{{ name }}"></td>
+						</tr>
+						<tr>
+							<td><label for="Intro">Introduction:</label></td>
+							<td><input type="text" name="intro" value="{{ intro }}"></td>
+						</tr>
+					</table>
+					<!--
+					Enter new account: <input type="text" name="account"><br>
+					Enter new name: <input type="text" name="name"><br>
+					Enter new personal introduction: <input type="text" name="intro"><br>
+					Modify password: Old password: <input type="text" name="old_password">,
+					New password:<input type="text" name="new_password">,
+					New password again:<input type="text" name="new_password_check"><br>
+					-->
+					<input type="submit" value="Change">
+				</form>
+			</div>
+		</diV>
 	</div>
 
-	<div class="col-md-2">
-		<div class="well sidebar">
-			<ul class="nav nav-stacked">
-				<li class="active"><a>{{ name }}</a></li>
-				<li><a data-toggle="collapse" href="#collapseFriends">Friends</a></li>
-				<li id="collapseFriends" class="collapse" data-toggle="false" style="height:0px">
-					You have no friends
-				</li>
-				<li><a data-toggle="collapse" href="#collapseMessages">Messages</a></li>
-				<li id="collapseMessages" class="collapse" data-toggle="false" style="height:0px">
-					You have no new messages
-				</li>
-				<li><a href="#">Achievements <span class="badge">2</span></a></li>
-				<li><a href="#">Settings</a></li>
-			</ul>
-		</div>
-	</div>
+	{% endblock %}
+	{% block sidebar %}
+	{{ super() }}
 	{% endblock %}
 	{% block script %}
 	{{ super() }}
