@@ -22,7 +22,7 @@ class AddTopicHandler(Handler):
         topic = Topic(
             description = description,
             name = name,
-            topicID = topicID.replace(" ", "")
+            topicID = name.replace(" ", "")
         )
         topic.put()
         self.render_add_topic(success="New topic " + name + " added.")
