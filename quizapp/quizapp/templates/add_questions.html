@@ -10,63 +10,60 @@
 <body>
 	{% block content %}
     {{ super() }}
-	<div class="col-md-10 main-inner">
-		<div class="panel panel-default" style="text-align:center">
-            {% if error %}
-                <span style="color:red"><strong>{{ error }}</strong></span>
-            {% endif %}
-            <form action="/add/questions" method="post">
-                <table style="text-align: left;">
-                <tr>
-                    <td colspan="2"><label>Enter questions in JSON:</label></td>
-                </tr>
-                {% if topics %}
-                    <tr>
-                        <td><label for="topic">Topic:</label></td>
-                        <td><select name="topic">
-                        {% for topic in topics %}
-                            <option value="{{ topic.key().id() }}">{{ topic.name }}</option>
-                        {% endfor %}
-                        </select></td>
-                    </tr>
-                {% endif %}
-                <tr>
-                    <td colspan="2"><textarea name="questions" rows="3" cols="60"></textarea></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Submit"></td>
-                </tr>
-                </table>
-            </form>
-            {% if questions %}
-                {% for q in questions %}
-                    <h1>{{ q['question'] }}</h1>
-                    <center>
-                    <table style="border: 1px solid black; text-align:left; 
-                        border-collapse: collapse;">
-                    <tr>
-                        <th>Key</th> 
-                        <th>Value</th> 
-                    </tr>
-                    {% for k, v in q.items() %}
-                        <tr>
-                            <td><p><strong>{{ k }}</strong><p></td>
-                            <td><p>{{ v }}</p></td> 
-                        </tr>
-                    {% endfor %}
-                    </table>
-                    </center>
-                    <hr>
-                {% endfor %}
-            {% endif %}
-        </div>
+	<div class="col-md-12 main-inner">
+		<div class="content">
+			<div class="panel panel-default" style="text-align:center">
+				{% if error %}
+					<span style="color:red"><strong>{{ error }}</strong></span>
+				{% endif %}
+				<form action="/add/questions" method="post">
+					<table style="text-align: left;">
+					<tr>
+						<td colspan="2"><label>Enter questions in JSON:</label></td>
+					</tr>
+					{% if topics %}
+					<tr>
+						<td><label for="topic">Topic:</label></td>
+						<td><select name="topic">
+						{% for topic in topics %}
+							<option value="{{ topic.key().id() }}">{{ topic.name }}</option>
+						{% endfor %}
+						</select></td>
+					</tr>
+					{% endif %}
+					<tr>
+						<td colspan="2"><textarea name="questions" rows="3" cols="60"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" value="Submit"></td>
+					</tr>
+					</table>
+				</form>
+				{% if questions %}
+				{% for q in questions %}
+					<h1>{{ q['question'] }}</h1>
+					<center>
+						<table style="border: 1px solid black; text-align:left;border-collapse: collapse;">
+						<tr>
+							<th>Key</th>
+							<th>Value</th>
+						</tr>
+						{% for k, v in q.items() %}
+						<tr>
+							<td><p><strong>{{ k }}</strong><p></td>
+							<td><p>{{ v }}</p></td>
+						</tr>
+						{% endfor %}
+						</table>
+					</center>
+					<hr>
+				{% endfor %}
+				{% endif %}
+			</div>
+		</div>
 	</div>
 	{% endblock %}
-	
-	{% block sidebar %}
-	{{ super() }}
-	{% endblock %}
-	
+
 	{% block script %}
 	{{ super() }}
 	{% endblock %}
