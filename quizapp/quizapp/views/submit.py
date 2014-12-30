@@ -6,6 +6,7 @@ import json
 import random
 from google.appengine.ext import db
 from quizapp.models.game import Game
+from quizapp.models.player import Player
 from quizapp.models.question import Question
 from google.appengine.api import channel
 
@@ -87,4 +88,7 @@ class SubmitHandler(Handler):
                 channel.send_message(str(quiz.a_ID) + str(quiz_key), questionUpdate)
                 channel.send_message(str(quiz.b_ID) + str(quiz_key), questionUpdate)
             else:
+                player = Player.get_by_id(user)
+                player.game_history.append(quiz_key)
+                db.put(player)
                 self.redirect('/results')
