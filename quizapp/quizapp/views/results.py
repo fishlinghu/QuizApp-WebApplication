@@ -2,11 +2,13 @@
 # -*- coding: utf-8 -*-
 
 from views import Handler
+from google.appengine.ext import db
 from quizapp.models.player import Player
+from quizapp.models.question import Question
 from quizapp.models.game import Game
 
 def exp_calculator(score, w_o_l):
-	exp = score * 0.5 + w_o_l * 20
+	exp = score * 1 + w_o_l * 20
 	return exp
 
 class ResultsHandler(Handler):
@@ -49,11 +51,17 @@ class ResultsHandler(Handler):
 				w_o_l = 1
 
 			# Need a function of score/win/lose to calculate the experience an user get
-			exp = exp_calculator(score, w_o_l)
-			player.experience = player.experience + exp;
-			if player.experience >= player.exp_require[player.level]:
+			exp = exp_calculator(your_score, w_o_l)
+			if player.experience:
+				player.experience = player.experience + exp
+			else:
+				player.experience = 0
+				player.experience = player.experience + exp
+
+			# Can set how much experiences you need to level-up here
+			if player.experience >= 5000:
 				# level up
-				player.experience = player.experience - player.exp_require[player.level]
+				player.experience = player.experience - 5000
 				player.level = player.level + 1
 
 			# Update the player entity
@@ -72,9 +80,9 @@ class ResultsHandler(Handler):
 				player_b_score_breakdown.append(score)
 			
 			# Need to get the question number from html somehow
-			q = Question.all()
-			q.filter('question_ID = ', question_ID)
-			question = q.fetch(1)
+			#q = Question.all()
+			#q.filter('question_ID = ', question_ID)
+			#question = q.fetch(1)
 
 			template_values = {
 				'player_a_name': player_a.name, 
@@ -83,11 +91,11 @@ class ResultsHandler(Handler):
 				'player_b_score_breakdown': player_b_score_breakdown,
 				'win_or_lose': win_or_lose,
 				'level' : player.level,
-				'experience': player.experience,
-				'description': question.description,
-				'solution': question.solution,
-				'wiki_link': question.wiki_link,
-				'correct_ans': question.correct_ans 
+				'experience': player.experience
+				#'description': question.description,
+				#'solution': question.solution,
+				#'wiki_link': question.wiki_link,
+				#'correct_ans': question.correct_ans 
 				}
 			self.render("quiz.html", **template_values)
 
