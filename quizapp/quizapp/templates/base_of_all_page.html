@@ -63,11 +63,8 @@ This bar should appear in every page, so this is a base template for every html 
 	<div class="col-md-2">
 		<div class="content sidebar">
 			<ul class="nav nav-stacked">
-				{% if name %}
 				<li class="active"><a href="{{ '/info/' + name }}">{{ name }}</a></li>
-				{% else %}
 				<li class="active"><a href="#">Name</a></li>
-				{% endif %}
 				<li><a data-toggle="collapse" href="#collapseFriends">Friends</a></li>
 				<li id="collapseFriends" class="collapse" data-toggle="false" style="height:0px">
 					You have no friends
