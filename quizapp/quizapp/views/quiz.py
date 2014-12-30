@@ -4,10 +4,12 @@
 from views import Handler
 import random
 import json
+import logging
 from google.appengine.ext import db
 from quizapp.models.game import Game
 from quizapp.models.question import Question
 from quizapp.models.player import Player
+from quizapp.models.topic import Topic
 from google.appengine.api import channel
 
 class QuizHandler(Handler):
@@ -18,17 +20,22 @@ class QuizHandler(Handler):
         self.response.headers['Content-Type'] = 'text/html'
         user = self.session.get('QUIZAPP_USER')
         quiz_key = self.session.get('QUIZAPP_QUIZ')
+        
+        q = db.Query(Topic)
+        q.filter('topicID =', topic)
+        topicID = q.get().key().id()
+        
         if user:
             if not quiz_key:
                 q = db.Query(Game)
                 q.filter('b_ID =', None)
                 q.filter('a_ID !=', user)
-                q.filter('topic =', topic) 
+                q.filter('topic_ID =', topicID) 
                 quiz = q.get()
                 
                 if not quiz:
                     q = db.Query(Question)
-                    q.filter('topic =', topic)
+                    q.filter('topic_ID =', topicID)
         
                     questionRange = q.count()
                     questions = []
@@ -50,8 +57,7 @@ class QuizHandler(Handler):
                                 b_score = 0,
                                 a_score_list = [],
                                 b_score_list = [],
-                                topic_ID = 1,
-                                topic = topic
+                                topic_ID = topicID
                                 )
                     quiz.put()
                     quiz_key = quiz.key().id()
@@ -69,11 +75,7 @@ class QuizHandler(Handler):
                 token = channel.create_channel(str(user) + str(quiz_key))
                 
                 question = quiz.question_set[0]
-                
-                query = db.Query(Question)
-                query.filter('topic', topic)
-                query.filter('question_ID', question)
-                question = query.get()
+                question = Question.get_by_id(question)
                 
                 player1 = Player.get_by_id(quiz.a_ID)
                 player2 = None
@@ -92,6 +94,7 @@ class QuizHandler(Handler):
                 
                 template_values = {
                     'token': token,
+                    'user' : user,
                     'name': player.account,
                     'opponentName' : '' if not opponent else opponent.account,
                     'quiz_key': quiz_key,
@@ -99,7 +102,8 @@ class QuizHandler(Handler):
                     'answer1': question.correct_ans.title(),
                     'answer2' : question.wrong_ans[0].title(),
                     'answer3' : question.wrong_ans[1].title(),
-                    'answer4' : question.wrong_ans[2].title()
+                    'answer4' : question.wrong_ans[2].title(),
+                    'img_link' : question.img_link
                 }
                 self.render("quiz.html", **template_values)
             else:

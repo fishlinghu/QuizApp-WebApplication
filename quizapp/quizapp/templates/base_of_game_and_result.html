@@ -11,68 +11,23 @@
 <body>
 	{% block content %}
 	{{ super() }}
-	{% block left %}
+	{% block opponent %}
 	<div class="col-md-2">
-		<div class="well sidebar">
+		<div class="content sidebar">
 			<ul class="nav nav-stacked">
+				{% if opponentName %}
 				<li class="active"><a>{{ opponentName }}</a></li>
+				{% endif %}
 				<li><a href="#">Level</a></li>
 				<li><a href="#">Description</a></li>
 				<li><a href="#">Achievements</a></li>
 			</ul>
 		</div>
-		
-		<div class="progress">
-			<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-				<span class="sr-only">60% Complete</span>
-			</div>
-		</div>
 	</div>
 	{% endblock %}
-	
-	{%block middle %}
-	<div class="col-md-8 main-inner">
-		<div class="panel panel-default" style="text-align:center">
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-					<span class="sr-only">60% Complete</span>
-				</div>
-			</div>
-			<h1>Question</h1>
-			<br>
-			<div style="height:200px; background:grey">
-				<h1>Picture</h1>
-			</div>
-			
-			<div class="well well-menu">
-				<button type="button" class="btn btn-default btn-inner">Answer 1</button>
-				<button type="button" class="btn btn-default btn-inner">Answer 2</button>
-				<br>
-				<button type="button" class="btn btn-default btn-inner">Answer 3</button>
-				<button type="button" class="btn btn-default btn-inner">Answer 4</button>
-			</div>
-		</div>
-	</div>
 	{% endblock %}
-	
-	{% block right %}
-	<div class="col-md-2">
-		<div class="well sidebar">
-			<ul class="nav nav-stacked">
-				<li><a>{{ name }}</a></li>
-				<li><a href="#">Level</a></li>
-				<li><a href="#">Description</a></li>
-				<li><a href="#">Achievements</a></li>
-			</ul>
-		</div>
-		
-		<div class="progress">
-			<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-				<span class="sr-only">60% Complete</span>
-			</div>
-		</div>
-	</div>
-	{% endblock %}
+	{% block sidebar %}
+		{{ super () }}
 	{% endblock %}
 	{% block script %}
 	{{ super() }}

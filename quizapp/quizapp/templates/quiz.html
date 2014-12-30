@@ -9,23 +9,14 @@
 </head>
 
 <body>
-	{% block left %}
+	{% block content %}
 	{{ super() }}
-	{% endblock %}
-	
 	{% block middle %}
 	<div class="col-md-8 main-inner">
 		<div class="panel panel-default" style="text-align:center">
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-					<span class="sr-only">60% Complete</span>
-				</div>
-			</div>
-			<h1>{{ question }}</h1>
+			<h1 id="question">{{ question }}</h1>
 			<br>
-			<div style="height:200px; background:grey">
-				<h1>Picture</h1>
-			</div>
+			<img id="img" width="250" src="{{ img_link }}">
 			
 			<div class="well well-menu">
 				<button type="button" id="button1" class="btn btn-default btn-inner">{{ answer1 }}</button>
@@ -38,8 +29,8 @@
 		<div>{{ quiz_key }}</div>
 	</div>
 	{% endblock %}
-
-	{% block right %}
+	{% endblock %}
+	{% block sidebar %}
 	{{ super() }}
 	{% endblock %}
 	
@@ -55,6 +46,14 @@
 			var xhr = new XMLHttpRequest();
 			xhr.open('POST', path, true);
 			xhr.send();
+		};
+		var updateGame = function() {
+			$('#question').html(state.question);
+			$('#img').attr("src", state.img_link);
+			$('#button1').html(state.answers[0]);
+			$('#button2').html(state.answers[1]);
+			$('#button3').html(state.answers[2]);
+			$('#button4').html(state.answers[3]);
 		};		
 		var	submit = function(button) {
 			var source = document.getElementById(button);
@@ -63,6 +62,10 @@
 			sendMessage('/quiz/submit' + parameters);
 		};									
 		var	onMessage = function(m) {
+			newState = JSON.parse(m.data);
+			state.question = newState.question || state.question;
+			state.img_link = newState.img_link || state.img_link;
+			state.answers = newState.answers || state.answers;
 			updateGame();
 		};					
 		var	openChannel = function() {
@@ -75,7 +78,6 @@
 				'onclose': function() {}
 			};
 			var socket = channel.open(handler);
-			socket.onopen = onOpen;
 			socket.onmessage = onMessage;
 		};
 		

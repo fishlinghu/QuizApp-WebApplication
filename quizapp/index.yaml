@@ -15,3 +15,9 @@ indexes:
   - name: b_ID
   - name: topic
   - name: a_ID
+
+- kind: Game
+  properties:
+  - name: b_ID
+  - name: topic_ID
+  - name: a_ID

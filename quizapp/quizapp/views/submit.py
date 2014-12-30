@@ -3,6 +3,7 @@
 
 from views import Handler
 import json
+import random
 from google.appengine.ext import db
 from quizapp.models.game import Game
 from quizapp.models.question import Question
@@ -62,21 +63,28 @@ class SubmitHandler(Handler):
             
         #Check if a round has ended
         if len(quiz.a_ans_list) == len(quiz.b_ans_list):
-            #Send message containing next question
-            questionNumber = len(quiz.a_ans_list)
-            questionNumber = quiz.question_set[questionNumber]
+            if len(quiz.a_ans_list) != 5:
+                #Send message containing next question
+                questionNumber = len(quiz.a_ans_list)
+                questionNumber = quiz.question_set[questionNumber]
+                nextQuestion = Question.get_by_id(questionNumber)
             
-            query = db.Query(Question)
-            query.filter('topic_ID', quiz.topic_ID)
-            query.filter('question_ID', questionNumber)
-            nextQuestion = query.get()
+                #Shuffle answers to question
+                answers = nextQuestion.wrong_ans
+                answers.append(nextQuestion.correct_ans)
+                random.shuffle(answers)
+                
+                for answer in answers:
+                    answer = answer.title()
+                
+                questionUpdate = {
+                                  'question' : nextQuestion.question,
+                                  'img_link' : nextQuestion.img_link,
+                                  'answers' : answers
+                                  }
             
-            questionUpdate = {
-                              'description' : nextQuestion.description,
-                              'correctAns' : nextQuestion.correct_ans,
-                              'wrongAns' : nextQuestion.wrong_ans[0:3]
-                              }
-            
-            questionUpdate = json.dumps(questionUpdate)
-            channel.send_message(str(quiz.a_ID) + str(quiz_key), questionUpdate)
-            channel.send_message(str(quiz.b_ID) + str(quiz_key), questionUpdate)
+                questionUpdate = json.dumps(questionUpdate)
+                channel.send_message(str(quiz.a_ID) + str(quiz_key), questionUpdate)
+                channel.send_message(str(quiz.b_ID) + str(quiz_key), questionUpdate)
+            else:
+                self.redirect('/results')
