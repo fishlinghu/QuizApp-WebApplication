@@ -13,20 +13,22 @@
 	{{ super() }}
 	{% block middle %}
 	<div class="col-md-8 main-inner">
-		<div class="panel panel-default" style="text-align:center">
-			<h1 id="question">{{ question }}</h1>
-			<br>
-			<img id="img" width="250" src="{{ img_link }}">
-			
-			<div class="well well-menu">
-				<button type="button" id="button1" class="btn btn-default btn-inner">{{ answer1 }}</button>
-				<button type="button" id="button2" class="btn btn-default btn-inner">{{ answer2 }}</button>
+		<div class="content">
+			<div class="panel panel-default" align:center>
+				<h1 id="question">{{ question }}</h1>
 				<br>
-				<button type="button" id="button3" class="btn btn-default btn-inner">{{ answer3 }}</button>
-				<button type="button" id="button4" class="btn btn-default btn-inner">{{ answer4 }}</button>
+				<img id="img" width="350" height="300" src="{{ img_link }}">
+			
+				<div class="well well-menu">
+					<button type="button" id="button1" class="btn btn-default btn-inner">{{ answer1 }}</button>
+					<button type="button" id="button2" class="btn btn-default btn-inner">{{ answer2 }}</button>
+					<br>
+					<button type="button" id="button3" class="btn btn-default btn-inner">{{ answer3 }}</button>
+					<button type="button" id="button4" class="btn btn-default btn-inner">{{ answer4 }}</button>
+				</div>
 			</div>
+			<div>{{ quiz_key }}</div>
 		</div>
-		<div>{{ quiz_key }}</div>
 	</div>
 	{% endblock %}
 	{% endblock %}
