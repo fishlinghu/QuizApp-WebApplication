@@ -9,7 +9,7 @@ from google.appengine.ext import db
 
 class IndexHandler(Handler):
     topics = Topic.all()
-    def render_homepage(self, **kw):
+    def render_index(self, **kw):
         if (self.check_clearance()):
             self.render("index.html", **kw)
 
@@ -17,4 +17,4 @@ class IndexHandler(Handler):
         playerID = self.session['QUIZAPP_USER']
         player = Player.get_by_id(playerID)  
         self.response.headers['Content-Type'] = 'text/html'
-        self.render_homepage(name = player.account, topics=self.topics)
+        self.render_index(name = player.account, topics=self.topics)
