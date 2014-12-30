@@ -59,6 +59,7 @@ This bar should appear in every page, so this is a base template for every html 
 	{% endblock %}
 	{% endblock %}
 	{% block sidebar %}
+	{% if name %}
 	<div class="col-md-2">
 		<div class="content sidebar">
 			<ul class="nav nav-stacked">
@@ -80,6 +81,7 @@ This bar should appear in every page, so this is a base template for every html 
 			</ul>
 		</div>
 	</div>
+	{% endif %}
 	{% endblock %}
 	{% block script %}
 	<!-- Le javascript
