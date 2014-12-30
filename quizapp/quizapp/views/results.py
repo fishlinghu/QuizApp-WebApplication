@@ -16,7 +16,7 @@ class ResultsHandler(Handler):
 		self.render("result.html", **kw)
 
 	def get(self):
-		self.render_result()
+		# self.render_result()
 		user = self.session.get('QUIZAPP_USER')
 		if user: 
 			# Should add the game ID(key().id()) to the end of player's "game_history" list when a quiz start
@@ -97,7 +97,7 @@ class ResultsHandler(Handler):
 				#'wiki_link': question.wiki_link,
 				#'correct_ans': question.correct_ans 
 				}
-			self.render("quiz.html", **template_values)
+			self.render("result.html", **template_values)
 
 		else:
 			self.redirect('/index')
