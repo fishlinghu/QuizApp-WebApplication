@@ -63,7 +63,7 @@ class SubmitHandler(Handler):
             
         #Check if a round has ended
         if len(quiz.a_ans_list) == len(quiz.b_ans_list):
-            if len(quiz.a_ans_list) != 5:
+            if len(quiz.a_ans_list) < 5:
                 #Send message containing next question
                 questionNumber = len(quiz.a_ans_list)
                 questionNumber = quiz.question_set[questionNumber]
