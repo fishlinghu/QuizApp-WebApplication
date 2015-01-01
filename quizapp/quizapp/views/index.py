@@ -5,6 +5,7 @@ from views import Handler
 from quizapp.models.question import Question
 from quizapp.models.player import Player
 from quizapp.models.topic import Topic 
+from quizapp.models.game import Game
 from google.appengine.ext import db
 
 class IndexHandler(Handler):
@@ -17,4 +18,9 @@ class IndexHandler(Handler):
         playerID = self.session['QUIZAPP_USER']
         player = Player.get_by_id(playerID)  
         self.response.headers['Content-Type'] = 'text/html'
+        quiz_key = self.session['QUIZAPP_QUIZ']
+        
+        if quiz_key:
+            self.session['QUIZAPP_QUIZ'] = None
+            
         self.render_index(name = player.account, topics=self.topics)
