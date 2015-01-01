@@ -24,6 +24,7 @@ class WaitHandler(Handler):
         q = db.Query(Topic)
         q.filter('topicID =', topic)
         topicID = q.get().key().id()
+        topicName = q.get().name
         
         if user:
             playerID = self.session['QUIZAPP_USER']
@@ -68,7 +69,7 @@ class WaitHandler(Handler):
                     quiz.put()
                     quiz_key = quiz.key().id()
                     self.session['QUIZAPP_QUIZ'] = quiz_key
-                    self.render_wait(name = player.account, topic = topic)
+                    self.render_wait(name = player.account, topic = topicName)
                 
                 #if a game was found in the database, add user to the player b slot and play the game
                 else:
@@ -85,7 +86,7 @@ class WaitHandler(Handler):
                 
                 #if no opponant is found, stay on the wait page
                 if not opponent:
-                    self.render_wait(name = player.account, topic = topic)
+                    self.render_wait(name = player.account, topic = topicName)
                 
                 #if opponant is found then play the game
                 else:
