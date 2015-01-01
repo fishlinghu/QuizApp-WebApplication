@@ -17,7 +17,7 @@ class IndexHandler(Handler):
         playerID = self.session['QUIZAPP_USER']
         player = Player.get_by_id(playerID)  
         self.response.headers['Content-Type'] = 'text/html'
-        quiz_key = self.session['QUIZAPP_QUIZ']
+        quiz_key = self.session.get('QUIZAPP_QUIZ')
         
         if quiz_key:
             self.session['QUIZAPP_QUIZ'] = None
