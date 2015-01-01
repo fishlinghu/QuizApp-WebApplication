@@ -10,7 +10,6 @@ from quizapp.models.game import Game
 from quizapp.models.question import Question
 from quizapp.models.player import Player
 from quizapp.models.topic import Topic
-from google.appengine.api import channel
 
 class WaitHandler(Handler):
     def render_wait(self, **kw):
