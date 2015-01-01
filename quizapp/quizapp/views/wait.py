@@ -29,7 +29,7 @@ class WaitHandler(Handler):
             playerID = self.session['QUIZAPP_USER']
             player = Player.get_by_id(playerID)
             
-            #if no quiz_key (game) is assigned to the session then search the database
+            #if no quiz_key (game) is assigned to the session then search the database for a game with the chosen topic
             if not quiz_key:
                 q = db.Query(Game)
                 q.filter('b_ID =', None)
