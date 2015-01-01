@@ -20,6 +20,7 @@ from quizapp.views.add_topic import AddTopicHandler
 from quizapp.views.info import InfoHandler
 from quizapp.views.gamehistory import GameHistoryHandler
 from quizapp.views.password import PasswordHandler
+from quizapp.views.wait import WaitHandler
 
 routes = [
     ('/', HomepageHandler),
@@ -44,4 +45,5 @@ routes = [
     ('/add/question', AddQuestionHandler),
     ('/add/topic', AddTopicHandler),
     ('/password', PasswordHandler),
+    ('/wait/(\w+)/', WaitHandler)
 ]
