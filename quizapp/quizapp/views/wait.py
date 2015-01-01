@@ -56,6 +56,7 @@ class WaitHandler(Handler):
                         
                     quiz = Game(
                                 a_ID = user,
+                                b_ID = None,
                                 question_set = questions,
                                 a_ans_list = [],
                                 b_ans_list = [],
