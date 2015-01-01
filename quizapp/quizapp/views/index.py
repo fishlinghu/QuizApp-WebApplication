@@ -5,7 +5,6 @@ from views import Handler
 from quizapp.models.question import Question
 from quizapp.models.player import Player
 from quizapp.models.topic import Topic 
-from quizapp.models.game import Game
 from google.appengine.ext import db
 
 class IndexHandler(Handler):

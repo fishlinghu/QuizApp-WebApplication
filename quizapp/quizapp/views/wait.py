@@ -6,6 +6,7 @@ import random
 import json
 import logging
 from google.appengine.ext import db
+from quizapp.models.game import Game
 from quizapp.models.question import Question
 from quizapp.models.player import Player
 from quizapp.models.topic import Topic
