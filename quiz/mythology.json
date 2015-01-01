@@ -27,11 +27,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/b/b0/Pur_12_aracne.jpg"
         },
         {
-            "correct_ans": "nine",
+            "correct_ans": "Nine",
             "wrong_ans": [
-                "seven",
-                "three",
-                "twelve"
+                "Seven",
+                "Three",
+                "Twelve"
             ],
             "question": "In Greek mythology, how many heads did Hydra have?",
             "topic": "Mythology",
@@ -40,24 +40,24 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/6/61/Gustave_Moreau_003.jpg"
         },
         {
-            "correct_ans": "spider",
+            "correct_ans": "Spider",
             "wrong_ans": [
-                "bat",
-                "toad",
-                "mouse"
+                "Bat",
+                "Toad",
+                "Mouse"
             ],
-            "question": "In Greek mythology, into what did Athena turn Arachne?",
+            "question": "In Greek mythology, what did Athena turn Arachne into?",
             "topic": "Mythology",
             "wiki_link": "http://en.wikipedia.org/wiki/Lancelot",
             "description": "Sir Lancelot (or Launcelot) du Lac was one of the Knights of the Round Table in the Arthurian legend.",
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/9/95/Lancelot3344.jpg"
         },
         {
-            "correct_ans": "owl",
+            "correct_ans": "Owl",
             "wrong_ans": [
-                "peacock",
-                "pigeon",
-                "eagle"
+                "Peacock",
+                "Pigeon",
+                "Eagle"
             ],
             "question": "In Greek mythology, what animal is associated with Athena?",
             "topic": "Mythology",
@@ -66,11 +66,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/2/22/Mattei_Athena_Louvre_Ma530_n2.jpg"
         },
         {
-            "correct_ans": "labyrinth",
+            "correct_ans": "Labyrinth",
             "wrong_ans": [
-                "triangle",
-                "desk",
-                "necklace"
+                "Triangle",
+                "Desk",
+                "Necklace"
             ],
             "question": "In Greek mythology, what did Daedalus construct for Minos?",
             "topic": "Mythology",

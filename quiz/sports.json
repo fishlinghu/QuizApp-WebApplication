@@ -1,11 +1,11 @@
 {
     "questions": [
         {
-            "correct_ans": "fencing",
+            "correct_ans": "Fencing",
             "wrong_ans": [
-                "hockey",
-                "football",
-                "water polo"
+                "Hockey",
+                "Football",
+                "Water Polo"
             ],
             "question": "Other than skiing, which sport takes place on a piste?",
             "topic": "Sports",
@@ -27,11 +27,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/en/1/12/Worldcupdr96.png"
         },
         {
-            "correct_ans": "fourteen",
+            "correct_ans": "Fourteen",
             "wrong_ans": [
-                "seven",
-                "nine",
-                "twelve"
+                "Seven",
+                "Nine",
+                "Twelve"
             ],
             "question": "What is the maximum number of clubs a golfer may use in a round?",
             "topic": "Sports",
@@ -79,11 +79,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/4/4a/Pele200802FabioRodriguesPozzebomAgenciaBrasil.jpg"
         },
         {
-            "correct_ans": "butterfly",
+            "correct_ans": "Butterfly",
             "wrong_ans": [
-                "diving beetle",
-                "water strider",
-                "shark spin"
+                "Diving Beetle",
+                "Water Strider",
+                "Shark Spin"
             ],
             "question": "What swimming stroke is named after an insect?",
             "topic": "Sports",

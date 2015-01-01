@@ -1,10 +1,10 @@
 {
     "questions": [
         {
-            "correct_ans": "fortune cookies",
+            "correct_ans": "Fortune Cookies",
             "wrong_ans": [
                 "Pizza",
-                "Saussage",
+                "Sausage",
                 "Gum"
             ],
             "question": "What did Charles Jung invent?",
@@ -14,37 +14,37 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/f/f8/Fortune_cookie.jpg"
         },
         {
-            "correct_ans": "eleven",
+            "correct_ans": "Eleven",
             "wrong_ans": [
-                "ten",
-                "twelve",
-                "thirty"
+                "Ten",
+                "Twelve",
+                "Thirty"
             ],
-            "question": "How many herbs and spices are used in Kentucky Fried Chicken?",
+            "question": "How many different herbs and spices are used in Kentucky Fried Chicken?",
             "topic": "Food",
             "wiki_link": "http://en.wikipedia.org/wiki/KFC",
             "description": "KFC (the name was originally an initialism for Kentucky Fried Chicken) is a fast food restaurant chain that specializes in fried chicken and is headquartered in Louisville, Kentucky, in the United States.",
             "img_link": "http://upload.wikimedia.org/wikipedia/en/b/bf/KFC_logo.svg"
         },
         {
-            "correct_ans": "salt",
+            "correct_ans": "Salt",
             "wrong_ans": [
-                "black pepper",
-                "sugar",
-                "chili powder"
+                "Black pepper",
+                "Sugar",
+                "Chili powder"
             ],
-            "question": "What is the most widely used seasoning?",
+            "question": "What is the most commonly used seasoning?",
             "topic": "Food",
             "wiki_link": "http://en.wikipedia.org/wiki/Salt",
             "description": "Common salt is a mineral substance composed primarily of sodium chloride (NaCl), a chemical compound belonging to the larger class of ionic salts; salt in its natural form as a crystalline mineral is known as rock salt or halite.",
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/f/fd/DeadSeaIsrael5.jpg"
         },
         {
-            "correct_ans": "pea",
+            "correct_ans": "Pea",
             "wrong_ans": [
-                "carrot",
-                "cabage",
-                "cucumber"
+                "Carrot",
+                "Cabbage",
+                "Cucumber"
             ],
             "question": "What is the oldest known vegetable?",
             "topic": "Food",
@@ -85,7 +85,7 @@
                 "Pea flakes",
                 "Snow flakes"
             ],
-            "question": "What breakfast cereal was invented at Battle Creek Sanitarium?",
+            "question": "What breakfast item was invented at Battle Creek Sanitarium?",
             "topic": "Food",
             "wiki_link": "http://en.wikipedia.org/wiki/Corn_flakes",
             "description": "Corn flakes are a popular breakfast cereal originally manufactured by Kellogg's through the treatment of maize. A patent for the product was filed on May 31, 1895, and issued on April 14, 1896.",

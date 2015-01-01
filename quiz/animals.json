@@ -1,37 +1,37 @@
 {
     "questions": [
         {
-            "correct_ans": "giraffe",
+            "correct_ans": "Giraffe",
             "wrong_ans": [
-                "lion",
-                "monkey",
-                "pig"
+                "Lion",
+                "Monkey",
+                "Pig"
             ],
-            "question": "As what is a camelopard also known?",
+            "question": "What is a camelopard also known as?",
             "topic": "Animal Kingdom",
             "wiki_link": "http://en.wikipedia.org/wiki/Giraffe",
             "description": "The giraffe (Giraffa camelopardalis) is an African even-toed ungulate mammal, the tallest living terrestrial animal and the largest ruminant. Its species name refers to its camel-like appearance and the patches of color on its fur.",
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/9/9e/Giraffe_Mikumi_National_Park.jpg"
         },
         {
-            "correct_ans": "shark",
+            "correct_ans": "Shark",
             "wrong_ans": [
-                "tiger",
-                "dog",
-                "cat"
+                "Tiger",
+                "Dog",
+                "Cat"
             ],
-            "question": "Some animals always grow new teeth to replace the old. Name one of them!",
+            "question": "Some animals always grow new teeth to replace the old ones. Name one of them!",
             "topic": "Animal Kingdom",
             "wiki_link": "http://en.wikipedia.org/wiki/Shark",
             "description": "Sharks are a group of fish characterized by a cartilaginous skeleton, five to seven gill slits on the sides of the head, and pectoral fins that are not fused to the head.",
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/b/bb/Tibur%C3%B3n.jpg"
         },
         {
-            "correct_ans": "horse",
+            "correct_ans": "Horse",
             "wrong_ans": [
-                "hippo",
-                "leonpard",
-                "monkey"
+                "Hippo",
+                "Leopard",
+                "Monkey"
             ],
             "question": "What animal can get the disease 'heaves'?",
             "topic": "Animal Kingdom",
@@ -40,11 +40,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/d/de/Nokota_Horses_cropped.jpg"
         },
         {
-            "correct_ans": "kangaroo",
+            "correct_ans": "Kangaroo",
             "wrong_ans": [
-                "horse",
-                "rabbit",
-                "deer"
+                "Horse",
+                "Rabbit",
+                "Deer"
             ],
             "question": "What animal can hop as fast as 40 mph?",
             "topic": "Animal Kingdom",
@@ -53,11 +53,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/0/0d/Kangaroo_and_joey03.jpg"
         },
         {
-            "correct_ans": "mandrill",
+            "correct_ans": "Mandrill",
             "wrong_ans": [
-                "deer",
-                "pig",
-                "bulls"
+                "Deer",
+                "Pig",
+                "Bulls"
             ],
             "question": "What animal has red patches on its rear?",
             "topic": "Animal Kingdom",
@@ -66,11 +66,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/7/75/Mandrill_at_san_francisco_zoo.jpg"
         },
         {
-            "correct_ans": "rabbit",
+            "correct_ans": "Rabbit",
             "wrong_ans": [
-                "fox",
-                "cat",
-                "racoon"
+                "Fox",
+                "Cat",
+                "Racoon"
             ],
             "question": "What animal lives in a warren?",
             "topic": "Animal Kingdom",
@@ -79,11 +79,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/3/3b/Rabbit_in_montana.jpg"
         },
         {
-            "correct_ans": "hare",
+            "correct_ans": "Hare",
             "wrong_ans": [
-                "wolf",
-                "bear",
-                "turtle"
+                "Wolf",
+                "Bear",
+                "Turtle"
             ],
             "question": "What animal lives in a form?",
             "topic": "Animal Kingdom",

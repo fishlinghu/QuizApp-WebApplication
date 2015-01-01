@@ -16,9 +16,9 @@
         {
             "correct_ans": "X-rays",
             "wrong_ans": [
-                "infrared rays",
-                "magnetic resonance imaging",
-                "ultrasound"
+                "Infrared rays",
+                "Magnetic resonance imaging",
+                "Ultrasound"
             ],
             "question": "What did Wilhelm Roentgen discover in 1895?",
             "topic": "Science",
@@ -27,11 +27,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/b/b7/X-ray_applications.svg"
         },
         {
-            "correct_ans": "temperature",
+            "correct_ans": "Temperature",
             "wrong_ans": [
-                "mass",
-                "density",
-                "longitude"
+                "Mass",
+                "Density",
+                "Longitude"
             ],
             "question": "What does the Rankine scale measure?",
             "topic": "Science",
@@ -40,11 +40,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/8/8f/Carnot-engine-1824.png"
         },
         {
-            "correct_ans": "paedology",
+            "correct_ans": "Paedology",
             "wrong_ans": [
-                "morphics",
-                "astronomy",
-                "archeology"
+                "Morphics",
+                "Astronomy",
+                "Archeology"
             ],
             "question": "What is name applied to the study of soil?",
             "topic": "Science",
@@ -53,11 +53,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/1/10/Calcareous_Soil_Profile%2C_Seven_Sisters_Country_Park_-_geograph.org.uk_-_1280181.jpg"
         },
         {
-            "correct_ans": "gillette",
+            "correct_ans": "Gillette",
             "wrong_ans": [
-                "venus",
-                "schick",
-                "xperia"
+                "Venus",
+                "Schick",
+                "Xperia"
             ],
             "question": "What is the number of blue razor blades a given beam can puncture?",
             "topic": "Science",
@@ -66,11 +66,11 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/a/a0/Military_laser_experiment.jpg"
         },
         {
-            "correct_ans": "chemistry",
+            "correct_ans": "Chemistry",
             "wrong_ans": [
-                "archeology",
-                "anthropology",
-                "ethnography"
+                "Archeology",
+                "Anthropology",
+                "Ethnography"
             ],
             "question": "What is the study of the composition of substances and the changes they undergo?",
             "topic": "Science",
@@ -79,10 +79,10 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/e/e1/Chemicals_in_flasks.jpg"
         },
         {
-            "correct_ans": "Sonic boom",
+            "correct_ans": "Sonic Boom",
             "wrong_ans": [
-                "Vibration shock",
-                "Hurricane bomb",
+                "Vibration Shock",
+                "Hurricane Bomb",
                 "Boom Boom Pow"
             ],
             "question": "What does breaking the sound barrier cause?",

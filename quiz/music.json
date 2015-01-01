@@ -14,13 +14,13 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/1/14/Buddy_Holly_cropped.JPG"
         },
         {
-            "correct_ans": "servant",
+            "correct_ans": "A servant",
             "wrong_ans": [
-                "student",
-                "nanny",
-                "soldier"
+                "A student",
+                "A nanny",
+                "A soldier"
             ],
-            "question": "In the opera 'Don Giovanni', what was Leporello?",
+            "question": "In the opera 'Don Giovanni', who was Leporello?",
             "topic": "Music",
             "wiki_link": "http://en.wikipedia.org/wiki/Don_Giovanni",
             "description": "Don Giovanni (K. 527; complete title: Il dissoluto punito, ossia il Don Giovanni, literally The Rake Punished, or Don Giovanni) is an opera in two acts with music by Wolfgang Amadeus Mozart and Italian libretto by Lorenzo Da Ponte.",

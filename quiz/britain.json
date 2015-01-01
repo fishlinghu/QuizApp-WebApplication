@@ -1,26 +1,26 @@
 {
     "questions": [
         {
-            "correct_ans": "Regents Park",
+            "correct_ans": "Regent's Park",
             "wrong_ans": [
                 "Holland Park",
-                "Gladston Park",
+                "Gladstone Park",
                 "Waterlow Park"
             ],
-            "question": "In which park are Queen Mary's gardens?",
+            "question": "Which park would you find Queen Mary's gardens?",
             "topic": "Britain",
             "wiki_link": "http://en.wikipedia.org/wiki/Regent%27s_Park",
             "description": "Regent's Park (officially The Regent's Park) is one of the Royal Parks of London. It lies within inner North West London, partly in the City of Westminster and partly in the London Borough of Camden.",
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/5/59/Regent%27s_Park_bandstand.jpg"
         },
         {
-            "correct_ans": "twenty",
+            "correct_ans": "Twenty",
             "wrong_ans": [
-                "ten",
-                "thirty",
-                "fourty"
+                "Ten",
+                "Thirty",
+                "Fourty"
             ],
-            "question": "How many inches tall are the bearskins worn by the guards at Buckingham Palace?",
+            "question": "In inches, how tall are the bearskins worn by the guards at Buckingham Palace?",
             "topic": "Britain",
             "wiki_link": "http://en.wikipedia.org/wiki/Bearskin",
             "description": "A bearskin is a tall fur cap, usually worn as part of a ceremonial military uniform. Traditionally, the bearskin was the headgear of grenadiers and it is still worn by grenadier and guards regiments in various armies.",
@@ -29,9 +29,9 @@
         {
             "correct_ans": "Great Fire of London",
             "wrong_ans": [
-                "Great time of Lodon",
-                "Great mood of London",
-                "Great hero of Lodon"
+                "Great Time of London",
+                "Great Mood of London",
+                "Great Hero of London"
             ],
             "question": "What does 'The Monument' in London commemorate?",
             "topic": "Britain",
@@ -42,8 +42,8 @@
         {
             "correct_ans": "Westminster Bridge",
             "wrong_ans": [
-                "Bettersea Bridge",
-                "Lodon Bridge",
+                "Battersea Bridge",
+                "London Bridge",
                 "New Bridge"
             ],
             "question": "What was the second bridge built across the Thames?",
@@ -68,7 +68,7 @@
         {
             "correct_ans": "Monument",
             "wrong_ans": [
-                "London eye",
+                "London Eye",
                 "Buckingham Palace",
                 "Big Ben"
             ],
@@ -79,13 +79,13 @@
             "img_link": "http://upload.wikimedia.org/wikipedia/commons/7/7f/The_Monument_to_the_Great_Fire_of_London.JPG"
         },
         {
-            "correct_ans": "guards",
+            "correct_ans": "Guards",
             "wrong_ans": [
                 "Queen Elizabeth",
                 "Crown",
-                "King Athor"
+                "King Arthur"
             ],
-            "question": "Who at Buckingham Palace wears bearskins?",
+            "question": "Who wears bearskins at Buckingham Palace?",
             "topic": "Britain",
             "wiki_link": "http://en.wikipedia.org/wiki/Guard",
             "description": "Person who is paid to protect property, assets, or people. They are usually privately and formally employed civilian personnel.",
