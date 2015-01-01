@@ -1,0 +1,29 @@
+{% extends "base_of_all_page.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+	{{ super() }}
+	<meta http-equiv="refresh" content="1"/>
+	{% endblock %}	
+</head>
+
+<body onLoad="refreshTimer()">
+	{% block content %}
+	{{ super() }}
+	<div class="col-md-10 main-inner">
+		<div class="content">
+			<div class="panel panel-default">
+				<h1>{{ counter }} Searching for an opponant for {{ name }} to play for the topic {{ topic }}</h1>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+	{% block sidebar %}
+	{{ super() }}
+	{% endblock %}
+	{% block script %}
+	{{ super() }}
+	{% endblock %}
+</body>
+</html>
