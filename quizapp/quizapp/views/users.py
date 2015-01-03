@@ -75,7 +75,8 @@ class RegisterHandler(Handler):
                 #Create new Player object
                 player = Player(account = username,
                                 password = security.hash_password(password, method='sha512', pepper=secretPepper),
-                                name = displayName)
+                                name = displayName,
+                                level = 1)
                 player.put()
                 self.redirect('/')
         else:

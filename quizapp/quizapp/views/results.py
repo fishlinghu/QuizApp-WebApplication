@@ -65,7 +65,7 @@ class ResultsHandler(Handler):
 				player.level = player.level + 1
 
 			# Update the player entity
-			db.put(player)
+			player.put()
 
 			player_a = Player.get_by_id(game.a_ID)
 			player_b = Player.get_by_id(game.b_ID)

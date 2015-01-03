@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	{% block title %}Match vs. Someone{% endblock %}
 	{% block head %}
 	{{ super() }}
 	{% endblock %}
@@ -14,7 +13,7 @@
 	{% block middle %}
 	<div class="col-md-8 main-inner">
 		<div class="content">
-			<div class="panel panel-default" align:center>
+			<div class="panel panel-default" style="align:center">
 				<h1 id="question">{{ question }}</h1>
 				<br>
 				<img id="img" width="350" height="300" src="{{ img_link }}">
@@ -27,7 +26,6 @@
 					<button type="button" id="button4" class="btn btn-default btn-inner">{{ answer4 }}</button>
 				</div>
 			</div>
-			<div>{{ quiz_key }}</div>
 		</div>
 	</div>
 	{% endblock %}
@@ -52,19 +50,23 @@
 		var updateGame = function() {
 			$('#question').html(state.question);
 			$('#img').attr("src", state.img_link);
-			$('#button1').html(state.answers[0]);
-			$('#button2').html(state.answers[1]);
-			$('#button3').html(state.answers[2]);
-			$('#button4').html(state.answers[3]);
+			$.each(state.answers, function( index, value ) {
+				$('#button' + (index + 1)).html(value);
+			});
+			$('.btn-inner').prop('disabled', false);
 		};		
 		var	submit = function(button) {
 			var source = document.getElementById(button);
 			var answer = source.innerHTML;
 			var parameters = '?user=' + state.user + '&quiz_key=' + state.quiz_key + '&answer=' + answer + '&score=' + 100;
 			sendMessage('/quiz/submit' + parameters);
+			$('.btn-inner').prop('disabled', true);
 		};									
 		var	onMessage = function(m) {
 			newState = JSON.parse(m.data);
+			if(newState.redirect_link != null) {
+				location.href = newState.redirect_link;
+			}
 			state.question = newState.question || state.question;
 			state.img_link = newState.img_link || state.img_link;
 			state.answers = newState.answers || state.answers;
@@ -83,10 +85,9 @@
 			socket.onmessage = onMessage;
 		};
 		
-		$('#button1').click(function(){ submit("button1"); });
-		$('#button2').click(function(){ submit("button2"); });
-		$('#button3').click(function(){ submit("button3"); });
-		$('#button4').click(function(){ submit("button4"); });
+		$('.btn-inner').each(function( index, element ) {
+			$(element).click(function(){ submit($(element).prop('id')); });
+		});
 		
 		$(function(){ openChannel(); });
 	</script>
