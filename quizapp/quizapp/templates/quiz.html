@@ -40,8 +40,8 @@
 	<script type="text/javascript">		
 		var state = {
 			user : "{{ user }}",
-			quiz_key : "{{ quiz_key }}"
-		};			
+			quiz_key : "{{ quiz_key }}",
+		};
 		var	sendMessage = function(path) {
 			var xhr = new XMLHttpRequest();
 			xhr.open('POST', path, true);
@@ -58,7 +58,7 @@
 		var	submit = function(button) {
 			var source = document.getElementById(button);
 			var answer = source.innerHTML;
-			var parameters = '?user=' + state.user + '&quiz_key=' + state.quiz_key + '&answer=' + answer + '&score=' + 100;
+			var parameters = '?user=' + state.user + '&quiz_key=' + state.quiz_key + '&answer=' + answer;
 			sendMessage('/quiz/submit' + parameters);
 			$('.btn-inner').prop('disabled', true);
 		};									

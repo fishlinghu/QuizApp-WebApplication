@@ -15,21 +15,31 @@ class SubmitHandler(Handler):
         self.response.headers['Content-Type'] = 'text/html'
         user = int(self.request.get('user'))
         quiz_key = int(self.request.get('quiz_key'))  
-        answer = True
-        score = int(self.request.get('score'))
+        answer = self.request.get('answer')
+        score = 100
             
         #Get the quiz being played by the player
         quiz = Game.get_by_id(quiz_key)
         
         #Update quiz based on player
         if user == quiz.a_ID:
-            quiz.a_ans_list.append(answer)
-            quiz.a_score_list.append(score)
-            quiz.a_score += score
+            question = Question.get_by_id(quiz.question_set[len(quiz.a_ans_list)])
+            if question.correct_ans.lower() == answer.lower():
+                quiz.a_ans_list.append(True)
+                quiz.a_score_list.append(score)
+                quiz.a_score += score
+            else:
+                quiz.a_ans_list.append(False)
+                quiz.a_score_list.append(0)
         elif user == quiz.b_ID:
-            quiz.b_ans_list.append(answer)
-            quiz.b_score_list.append(score)
-            quiz.b_score += score
+            question = Question.get_by_id(quiz.question_set[len(quiz.b_ans_list)])
+            if question.correct_ans.lower() == answer.lower():
+                quiz.b_ans_list.append(True)
+                quiz.b_score_list.append(score)
+                quiz.b_score += score
+            else:
+                quiz.b_ans_list.append(False)
+                quiz.b_score_list.append(0)
             
         quiz.put()
             

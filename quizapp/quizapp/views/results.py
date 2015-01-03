@@ -24,6 +24,7 @@ class ResultsHandler(Handler):
 
 			# get the user
 			player = Player.get_by_id(user)
+			opponent = None
 
 			game = Game.get_by_id(player.game_history[-1])
 			
@@ -31,10 +32,12 @@ class ResultsHandler(Handler):
 				# user's ID == a_ID
 				your_score = game.a_score
 				opp_score = game.b_score
+				opponent = Player.get_by_id(game.b_ID)
 			else:
 				# user's ID == b_ID
 				your_score = game.b_score
 				opp_score = game.a_score
+				opponent = Player.get_by_id(game.a_ID)
 
 			# Check who wins
 			if your_score > opp_score:
@@ -85,6 +88,8 @@ class ResultsHandler(Handler):
 			#question = q.fetch(1)
 
 			template_values = {
+				'name': player.name,
+				'opponentName': opponent.name,
 				'player_a_name': player_a.name, 
 				'player_b_name': player_b.name,
 				'player_a_score_breakdown': player_a_score_breakdown,
