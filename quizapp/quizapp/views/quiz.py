@@ -56,7 +56,7 @@ class QuizHandler(Handler):
                     'opponentName' : '' if not opponent else opponent.account,
                     'quiz_key': quiz_key,
                     'question': question.question,
-                    'answer1': question.correct_ans.title(),
+                    'answer1' : question.correct_ans.title(),
                     'answer2' : question.wrong_ans[0].title(),
                     'answer3' : question.wrong_ans[1].title(),
                     'answer4' : question.wrong_ans[2].title(),
