@@ -10,34 +10,6 @@ from quizapp.models.player import Player
 from quizapp.models.question import Question
 from google.appengine.api import channel
 
-class QuizUpdater(Game):
-    quiz = None
-    
-    def __init__(self, quiz):
-        self.quiz  = quiz
-        
-    def get_quiz(self):
-        return quiz
-    
-    def get_quiz_message(self):
-        quizUpdate = {
-                      'a_ID' : self.quiz.a_ID,
-                      'b_ID' : self.quiz.b_ID,
-                      'question_set' : self.quiz.question_set,
-                      'a_ans_list' : self.quiz.a_ans_list,
-                      'b_ans_list' : self.quiz.b_ans_list,
-                      'a_score' : self.quiz.a_score,
-                      'b_score' : self.quiz.b_score,
-                      'a_score_list' : self.quiz.a_score_list,
-                      'b_score_list' : self.quiz.b_score_list
-                      }
-        return json.dumps(quizUpdate)
-    
-    def send_update(self):
-        channel.send_message(self.quiz.a_ID + self.game.key().id(), self.get_game_message())
-        if self.quiz.b_ID:
-            channel.send_message(self.quiz.b_ID + self.game.key().id(), self.get_game_message())
-
 class SubmitHandler(Handler):
     def post(self):
         self.response.headers['Content-Type'] = 'text/html'
@@ -45,8 +17,7 @@ class SubmitHandler(Handler):
         quiz_key = int(self.request.get('quiz_key'))  
         answer = True
         score = int(self.request.get('score'))
-        
-        
+            
         #Get the quiz being played by the player
         quiz = Game.get_by_id(quiz_key)
         
@@ -88,7 +59,16 @@ class SubmitHandler(Handler):
                 channel.send_message(str(quiz.a_ID) + str(quiz_key), questionUpdate)
                 channel.send_message(str(quiz.b_ID) + str(quiz_key), questionUpdate)
             else:
-                player = Player.get_by_id(user)
-                player.game_history.append(quiz_key)
-                db.put(player)
-                self.redirect('/results')
+                player1 = Player.get_by_id(quiz.a_ID)
+                player1.game_history.append(quiz.key().id())
+                player1.put()
+                player2 = Player.get_by_id(quiz.b_ID)
+                player2.game_history.append(quiz.key().id())
+                player2.put()
+                questionUpdate = {
+                                  'redirect_link' : '/results'
+                                  }
+            
+                questionUpdate = json.dumps(questionUpdate)
+                channel.send_message(str(quiz.a_ID) + str(quiz_key), questionUpdate)
+                channel.send_message(str(quiz.b_ID) + str(quiz_key), questionUpdate)
