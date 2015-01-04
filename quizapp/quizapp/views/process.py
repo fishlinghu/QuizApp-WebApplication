@@ -64,17 +64,14 @@ class ProcessHandler(Handler):
                     player.experience = exp
                     playerEXP = exp
                     
-                
-                # Update the player entity and add game history
-                player.game_history.append(quiz_key)
-                player.put()
-                
                 # Can set how much experiences you need to level-up here               
                 if playerEXP >= 5000:
                     # level up
                     playerLevel = player.level + 1
                     player.level = playerLevel
-                    player.put()
+                # Update the player entity and add game history
+                player.game_history.append(quiz_key)
+                player.put()
                 
                 self.session['QUIZAPP_FINISHED'] = True
                 self.render_process(name = player.name, opponentName = opponentName)
