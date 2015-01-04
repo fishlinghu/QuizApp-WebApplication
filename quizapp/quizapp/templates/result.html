@@ -13,26 +13,40 @@
 	{{ super() }}
 	{% block middle %}
 	<div class="col-md-8 main-inner">
-		<div class="panel panel-default" style="text-align:center">
-			<h1>6-1</h1>
-		
-			<button type="button" class="btn btn-default btn-inner">Challenge</button>
-			<button type="button" class="btn btn-default btn-inner">Play Another</button>
-			<br>
-			<button type="button" class="btn btn-default btn-inner">Chat</button>
-			<button type="button" class="btn btn-default btn-inner">Ranking</button>
-		
-			<h1>Question 1</h1>
-			<h3>Description</h3>
-			<h3>Wiki Link</h3>
-		</div>
+			<h1>{{ win_or_lose }}</h1>		
+			<div class="col-md-6">
+				<div class="panel panel-default panel-topic" style="text-align:center">
+					<h2>{{ player_a_name }}</h2>
+					{% for score in player_a_score_breakdown %}
+						{{ score }}
+						<br>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-default panel-topic" style="text-align:center">
+					<h2>{{ player_b_name }}</h2>
+					{% for score in player_b_score_breakdown %}
+						{{ score }}
+						<br>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="panel panel-default panel-topic" style="text-align:center">
+					<h2>Experience Gained:</h2>
+					{{ experience }}
+					<br>
+					<h2>Player Level:</h2>
+					{{ level }}
+				</div>
+			</div>
 	</div>
 	{% endblock %}
 	{% endblock %}
 	{% block sidebar %}
 	{{ super() }}
 	{% endblock %}
-
 	{% block script %}
 	{{ super() }}
 	{% endblock %}
