@@ -55,14 +55,14 @@
 				$('#button' + (index + 1)).html(value);
 			});
 			$('.btn-inner').prop('disabled', false);
-		};		
+		};
 		var	submit = function(button) {
 			var source = document.getElementById(button);
 			var answer = source.innerHTML;
 			var parameters = '?user=' + state.user + '&quiz_key=' + state.quiz_key + '&answer=' + answer;
 			sendMessage('/quiz/submit' + parameters);
 			$('.btn-inner').prop('disabled', true);
-		};									
+		};
 		var	onMessage = function(m) {
 			newState = JSON.parse(m.data);
 			if(newState.redirect_link != null) {
@@ -72,7 +72,7 @@
 			state.img_link = newState.img_link || state.img_link;
 			state.answers = newState.answers || state.answers;
 			updateGame();
-		};					
+		};
 		var	openChannel = function() {
 			var token = '{{ token }}';
 			var channel = new goog.appengine.Channel(token);
