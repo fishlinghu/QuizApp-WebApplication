@@ -28,40 +28,14 @@ class ResultsHandler(Handler):
 			player = Player.get_by_id(user)
 			game = Game.get_by_id(int(quiz_key))     
 			
-			gameAnswers = game.question_answers
-			playerAAnswers = game.a_ans_list
-			playerBAnswers = game.b_ans_list
-			playerAScore = 0
-			playerBScore = 0
-			
-			for i in range(5):
-				answerPosition = i-1
-				correctAnswer = gameAnswers[answerPosition]
-				aAnswer = playerAAnswers[answerPosition]
-				bAnswer = playerBAnswers[answerPosition]
-				
-				if aAnswer == correctAnswer:
-					playerAScore = playerAScore + 100
-					game.a_score_list.append(100)
-				else:
-					game.a_score_list.append(0)
-				
-				if bAnswer == correctAnswer:
-					playerBScore = playerBScore + 100
-					game.b_score_list.append(100)
-				else:
-					game.b_score_list.append(0)
-				
-				game.put()
-			
 			if game.a_ID == player.key().id():
 				# user's ID == a_ID
-				your_score = playerAScore
-				opp_score = playerBScore
+				your_score = game.a_score
+				opp_score = game.b_score
 			else:
 				# user's ID == b_ID
-				your_score = playerBScore
-				opp_score = playerAScore
+				your_score = game.b_score
+				opp_score = game.a_score
 
 			# Check who wins
 			if your_score > opp_score:
@@ -92,7 +66,8 @@ class ResultsHandler(Handler):
 				playerLevel = player.level + 1
 				player.level = playerLevel
 
-			# Update the player entity
+			# Update the player entity and add game history
+			player.game_history.append(quiz_key)
 			player.put()
 
 			player_a = Player.get_by_id(game.a_ID)
@@ -107,11 +82,6 @@ class ResultsHandler(Handler):
 			for score in game.b_score_list:
 				player_b_score_breakdown.append(score)
 			
-			# Need to get the question number from html somehow
-			#q = Question.all()
-			#q.filter('question_ID = ', question_ID)
-			#question = q.fetch(1)
-
 			template_values = {
 				'player_a_name': player_a.name, 
 				'player_b_name': player_b.name,
@@ -120,10 +90,6 @@ class ResultsHandler(Handler):
 				'win_or_lose': win_or_lose,
 				'level' : player.level,
 				'experience': player.experience
-				#'description': question.description,
-				#'solution': question.solution,
-				#'wiki_link': question.wiki_link,
-				#'correct_ans': question.correct_ans 
 				}
 			self.render("result.html", **template_values)
 

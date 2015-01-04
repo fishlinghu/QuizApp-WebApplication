@@ -9,34 +9,6 @@ from quizapp.models.game import Game
 from quizapp.models.question import Question
 from google.appengine.api import channel
 
-class QuizUpdater(Game):
-    quiz = None
-    
-    def __init__(self, quiz):
-        self.quiz = quiz
-        
-    def get_quiz(self):
-        return quiz
-    
-    def get_quiz_message(self):
-        quizUpdate = {
-                      'a_ID' : self.quiz.a_ID,
-                      'b_ID' : self.quiz.b_ID,
-                      'question_set' : self.quiz.question_set,
-                      'a_ans_list' : self.quiz.a_ans_list,
-                      'b_ans_list' : self.quiz.b_ans_list,
-                      'a_score' : self.quiz.a_score,
-                      'b_score' : self.quiz.b_score,
-                      'a_score_list' : self.quiz.a_score_list,
-                      'b_score_list' : self.quiz.b_score_list
-                      }
-        return json.dumps(quizUpdate)
-    
-    def send_update(self):
-        channel.send_message(self.quiz.a_ID + self.game.key().id(), self.get_game_message())
-        if self.quiz.b_ID:
-            channel.send_message(self.quiz.b_ID + self.game.key().id(), self.get_game_message())
-
 class SubmitHandler(Handler):
     def post(self):
         self.response.headers['Content-Type'] = 'text/html'
@@ -46,11 +18,19 @@ class SubmitHandler(Handler):
 
         #Get the quiz being played by the player
         quiz = Game.get_by_id(quiz_key)
-            
+        gameAnswers = quiz.question_answers
+        
         #Update quiz based on player
         if user == quiz.a_ID:
             quiz.a_ans_list.append(answer)
+            if gameAnswers[len(quiz.a_ans_list) - 1].lower() == answer.lower():
+                quiz.a_score_list.append(100)
+                quiz.a_score += 100
+            else:
+                quiz.a_score_list.append(0)
+            
             quiz.put()
+            
             #Check if a round has ended for the player
             if len(quiz.a_ans_list) < 5:
                 #Send message containing next question
@@ -76,7 +56,14 @@ class SubmitHandler(Handler):
                 channel.send_message(str(quiz.a_ID) + str(quiz_key), questionUpdate)
         elif user == quiz.b_ID:
             quiz.b_ans_list.append(answer)
+            if gameAnswers[len(quiz.b_ans_list) - 1].lower() == answer.lower():
+                quiz.b_score_list.append(100)
+                quiz.b_score += 100
+            else:
+                quiz.b_score_list.append(0)
+            
             quiz.put()
+            
             #Check if a round has ended for the player
             if len(quiz.b_ans_list) < 5:
                 #Send message containing next question
@@ -101,7 +88,12 @@ class SubmitHandler(Handler):
                 questionUpdate = json.dumps(questionUpdate)
                 channel.send_message(str(quiz.b_ID) + str(quiz_key), questionUpdate)
         
-        #Check if quiz has ended
-        #if len(quiz.a_ans_list) == len(quiz.b_ans_list):
-            #if len(quiz.a_ans_list) == 5:
-        self.redirect('/results')
+        if len(quiz.a_ans_list) >= 5:
+            if len(quiz.b_ans_list) >= 5:
+                questionUpdate = {
+                                  'redirect_link' : '/results'
+                                  }
+                questionUpdate = json.dumps(questionUpdate)
+                channel.send_message(str(quiz.a_ID) + str(quiz_key), questionUpdate)
+                channel.send_message(str(quiz.b_ID) + str(quiz_key), questionUpdate)
+                
