@@ -89,11 +89,18 @@ class SubmitHandler(Handler):
                 channel.send_message(str(quiz.b_ID) + str(quiz_key), questionUpdate)
         
         if len(quiz.a_ans_list) >= 5:
-            if len(quiz.b_ans_list) >= 5:
-                questionUpdate = {
-                                  'redirect_link' : '/results'
-                                  }
-                questionUpdate = json.dumps(questionUpdate)
-                channel.send_message(str(quiz.a_ID) + str(quiz_key), questionUpdate)
-                channel.send_message(str(quiz.b_ID) + str(quiz_key), questionUpdate)
+            questionUpdate = {
+                              'redirect_link' : '/process'
+            }
+            
+            questionUpdate = json.dumps(questionUpdate)
+            channel.send_message(str(quiz.a_ID) + str(quiz_key), questionUpdate)
+            
+        if len(quiz.b_ans_list) >= 5:
+            questionUpdate = {
+                              'redirect_link' : '/process'
+            }
+            
+            questionUpdate = json.dumps(questionUpdate)
+            channel.send_message(str(quiz.b_ID) + str(quiz_key), questionUpdate)
                 
