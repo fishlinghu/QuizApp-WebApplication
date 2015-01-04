@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+{%- block head %}
 <head>
-	{% block head %}
+	{%- block meta %}
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
-	<meta name="author" content="Julian Yon">
+	{%- endblock %}
 
 	<!-- Le styles -->
+	{%- block style %}
 	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/static/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/static/css/quizapp.css" rel="stylesheet">
+	{%- endblock %}
+	
 	<title>{% block title %}QuizApp{% endblock %}</title>
 
 	<!-- Fav and touch icons -->
@@ -19,10 +23,10 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/assets/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="/static/assets/ico/apple-touch-icon-57-precomposed.png">
 	<link rel="shortcut icon" href="/static/assets/ico/favicon.png">
-	{% endblock %}
 </head>
+{% endblock %}
 <body>
-	{% block page %}
+	{%- block page %}
 	<nav class="navbar navbar-default navbar-static-top" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
@@ -35,51 +39,46 @@
 			<a class="navbar-brand" href="/">QuizApp</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
-			{% block user %}
+			{%- block user %}
 			<form class="nav navbar-nav navbar-right" name="logoutForm" action="/logout" method="POST">
 				<li><a href="/logout">Logout</a></li>
 			</form>
-			{% endblock %}
+			{%- endblock %}
 		</div>
 	</div>
 	</nav>
-	{% block content %}
-		{% if message %}
-		<div class="col-md-12 main-inner">
-			<div class="alert {{ message_type }} alert-dismissible" role="alert">{{ message }}
-			  	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span>
-		  		<span class="sr-only">Close</span></button>
+		{%- block content %}
+			{%- if message %}
+			<div class="col-md-12 main-inner">
+				<div class="alert {{ message_type }} alert-dismissible" role="alert">{{ message }}
+			  		<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span>
+		  			<span class="sr-only">Close</span></button>
+				</div>
 			</div>
-		</div>
-		{% endif %}
-	{% endblock %}
-	{% endblock %}
-	{% block sidebar %}
-	{% if name %}
+			{%- endif %}
+		{%- endblock %}
+	{%- endblock %}
+	{%- block sidebar %}
+	{%- if name %}
 	<div class="col-md-2">
 		<div class="content sidebar">
 			<ul class="nav nav-stacked">
 				<li class="active"><a href="{{ '/info/' + name }}">{{ name }}</a></li>
 				<li><a href="/friend">Friends</a></li>
-				<li id="collapseFriends" class="collapse" data-toggle="false" style="height:0px">
-					You have no friends
-				</li>
 				<li><a href="/message">Messages</a></li>
-				<li id="collapseMessages" class="collapse" data-toggle="false" style="height:0px">
-					You have no new messages
-				</li>
 				<li><a href="/gamehistory">Games' Histories</a></li>
 				<li><a href="/setting">Settings</a></li>
 			</ul>
 		</div>
 	</div>
-	{% endif %}
-	{% endblock %}
-	{% block script %}
+	{%- endif %}
+	{%- endblock %}	
+	{%- block script %}
 	<!-- Le javascript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="/static/js/jquery-2.1.1.min.js"></script>
 	<script src="/static/js/bootstrap.min.js"></script>
-	{% endblock %}
+	{%- endblock %}
 </body>
+</html>

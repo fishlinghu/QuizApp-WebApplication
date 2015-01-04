@@ -1,12 +1,10 @@
 {% extends "base_of_game_and_result.html" %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	{% block head %}
+	{% block meta %}
 	{{ super() }}
 	<meta http-equiv="refresh" content="1"/>
 	{% endblock %}	
-</head>
 
 <body>
 	{% block content %}
@@ -21,12 +19,6 @@
 			</div>
 		</div>
 	</div>
-	{% endblock %}
-	{% block sidebar %}
-	{{ super() }}
-	{% endblock %}
-	{% block script %}
-	{{ super() }}
 	{% endblock %}
 </body>
 </html>

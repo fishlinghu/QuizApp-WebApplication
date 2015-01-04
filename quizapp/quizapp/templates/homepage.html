@@ -1,46 +1,38 @@
 {% extends "base_of_all_page.html" %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	{% block head %}
-	{{ super() }}
-	{% endblock %}	
-</head>
 
 <body>
-	{% block user %}
-		<ul class="nav navbar-nav navbar-right">
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Register</a>
-				<form class="dropdown-menu" role="menu" action="/register" method="POST" style="padding:20px">
-					<div><input type="text" name="username" placeholder="Username" required></div>
-					<div class="divider"></div>
-					<div><input type="text" name="displayName" placeholder="Display Name" required></div>
-					<div class="divider"></div>
-					<div><input type="password" name="password" placeholder="Password" required></div>
-					<div class="divider"></div>
-					<div><input type="password" name="password2" placeholder="Retype Password" required></div>
-					<div class="divider"></div>
-					<div><input class="btn btn-default" style="width:100%" name="login" type="submit" value="Register"></div>
-				</form>
-			</li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login</a>
-				<form class="dropdown-menu" role="menu" action="/login" method="POST" style="padding:20px">
-					<div><input type="text" name="username" placeholder="Username" required></div>
-					<div class="divider"></div>
-					<div><input type="password" name="password" placeholder="Password" required></div>
-					<div class="divider"></div>
-					<div><input class="btn btn-default" style="width:100%" name="login" type="submit" value="Login"></div>
-					<div class="divider"></div>
-					<div><a href="#">Password Reset</a></div>
-				</form>
-			</li>
-		</ul>
-	{% endblock %}  
-	{% block content %}
+	{%- block user %}
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Register</a>
+					<form class="dropdown-menu" role="menu" action="/register" method="POST" style="padding:20px">
+						<div><input type="text" name="username" placeholder="Username" required></div>
+						<div class="divider"></div>
+						<div><input type="text" name="displayName" placeholder="Display Name" required></div>
+						<div class="divider"></div>
+						<div><input type="password" name="password" placeholder="Password" required></div>
+						<div class="divider"></div>
+						<div><input type="password" name="password2" placeholder="Retype Password" required></div>
+						<div class="divider"></div>
+						<div><input class="btn btn-default" style="width:100%" name="login" type="submit" value="Register"></div>
+					</form>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login</a>
+					<form class="dropdown-menu" role="menu" action="/login" method="POST" style="padding:20px">
+						<div><input type="text" name="username" placeholder="Username" required></div>
+						<div class="divider"></div>
+						<div><input type="password" name="password" placeholder="Password" required></div>
+						<div class="divider"></div>
+						<div><input class="btn btn-default" style="width:100%" name="login" type="submit" value="Login"></div>
+					</form>
+				</li>
+			</ul>
+	{%- endblock %}  
+	{%- block content %}
 	{{ super() }}
-
 	<div class="col-md-12 main-inner">
 		<div class="content">
 			<h1 style="margin-bottom:20px">Welcome to Quizapp</h1>
@@ -53,15 +45,15 @@
 			</p>
 		</div>
 	</div>
-	{% endblock %}
-	{% block script %}
+	{%- endblock %}
+	{%- block script %}
 	{{ super() }}
-		<script type="text/javascript">
-			$('.dropdown-toggle').dropdown();
-			$('.dropdown-menu').find('form').click(function (e) {
-				e.stopPropagation();
-			});
-		</script>
-	{% endblock %}
+	<script type="text/javascript">
+		$('.dropdown-toggle').dropdown();
+		$('.dropdown-menu').find('form').click(function (e) {
+			e.stopPropagation();
+		});
+	</script>
+	{%- endblock %}
 	</body>
 </html>
