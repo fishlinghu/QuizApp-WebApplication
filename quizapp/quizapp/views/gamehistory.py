@@ -67,6 +67,8 @@ class GameHistoryHandler(Handler):
         else:
             self.redirect('/index')
     def post(self):
+        user = self.session.get('QUIZAPP_USER')
+        player = Player.get_by_id(user)
         # You can also find a player's game history by keying in his name
         player_name = self.request.get('player_name')
         player = checkPlayerName(player_name)
@@ -110,6 +112,7 @@ class GameHistoryHandler(Handler):
                     topic_list.append(game.topic)
             
             template_values = {
+                'name': player.name,
                 'player_a_name_list': player_a_name_list,
                 'player_b_name_list' : player_b_name_list,
                 'player_a_score_list': player_a_score_list,
