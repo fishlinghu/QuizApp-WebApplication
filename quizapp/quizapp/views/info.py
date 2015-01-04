@@ -17,14 +17,15 @@ class InfoHandler(Handler):
         profile = q.get()
 
         if user: 
-            # player = Player.get_by_id(user)
+            player = Player.get_by_id(user)
 
             template_values = {
-                'account': profile.account,
-                'name' : profile.name,
-                'experience': profile.experience,
-                'level': profile.level,
-                'intro': profile.intro
+                'name' : player.name,
+                'player_account': profile.account,
+                'player_name' : profile.name,
+                'player_experience': profile.experience,
+                'player_level': profile.level,
+                'player_intro': profile.intro
                 }
             self.render_info(**template_values)
         else:
