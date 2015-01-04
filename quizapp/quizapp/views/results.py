@@ -36,15 +36,12 @@ class ResultsHandler(Handler):
 			if your_score > opp_score:
 				# Show you win
 				win_or_lose = "You Win!"
-				w_o_l = 2
 			elif your_score < opp_score:
 				# Show you lose
 				win_or_lose = "You Lose!"
-				w_o_l = 0
 			else:
 				# Even
 				win_or_lose = "The game is a tie!"
-				w_o_l = 1
 
 			player_a = Player.get_by_id(game.a_ID)
 			player_b = Player.get_by_id(game.b_ID)
