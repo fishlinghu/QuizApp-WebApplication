@@ -23,9 +23,10 @@ class IndexHandler(Handler):
         # prevent dangling game bug
         q = db.Query(Game)
         q.filter('b_ID =', None)
-        q.filter('a_ID =', user) 
+        q.filter('a_ID =', player) 
         quiz = q.get()
-        quiz.delete()
+        if quiz:
+            quiz.delete()
         
         if quiz_key:
             self.session['QUIZAPP_QUIZ'] = None
