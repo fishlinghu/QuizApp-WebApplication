@@ -54,6 +54,7 @@ class QuizHandler(Handler):
                     'user' : user,
                     'name': player.account,
                     'opponentName' : '' if not opponent else opponent.account,
+                    'opponentLevel' : '' if not opponent else opponent.level,
                     'quiz_key': quiz_key,
                     'question': question.question,
                     'answer1' : question.correct_ans.title(),
