@@ -21,9 +21,6 @@ class ResultsHandler(Handler):
 		quiz_key = self.session.get('QUIZAPP_QUIZ')
 		
 		if user: 
-			# Should add the game ID(key().id()) to the end of player's "game_history" list when a quiz start
-			# So this should be done in quiz.py
-
 			# get the user
 			player = Player.get_by_id(user)
 			game = Game.get_by_id(int(quiz_key))     
