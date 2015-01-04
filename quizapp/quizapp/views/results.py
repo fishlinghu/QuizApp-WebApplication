@@ -58,8 +58,23 @@ class ResultsHandler(Handler):
 			player_b = Player.get_by_id(game.b_ID)
 
 			# Scoring breakdown for both players
-			player_a_score_breakdown = game.a_score_list
-			player_b_score_breakdown = game.b_score_list
+			a_breakdown = game.a_score_list
+			b_breakdown = game.b_score_list
+			player_a_score_breakdown = []
+			player_b_score_breakdown = []
+			i = 1
+			
+			for score in a_breakdown:
+				infoA = str(i) + ": " + str(score)
+				player_a_score_breakdown.append(infoA)
+				i = i + 1
+			
+			i = 1
+			
+			for score in b_breakdown:
+				infoB = str(i) + ": " + str(score)
+				player_b_score_breakdown.append(infoB)
+				i = i + 1
 			
 			template_values = {
 							'name' : player.account,
