@@ -45,14 +45,16 @@ class WaitHandler(Handler):
         
                     questionRange = q.count()
                     questions = []
+                    questionAnswers = []
                     
                     for i in range(5):
                         #Generate a random integer which dictates the question at that position
                         questionNumber = random.randint(0, questionRange - 1)
                         #Get the question from the datastore using the randomly generated integer
                         question = q.get(offset = questionNumber)
-                        #Append question ID
+                        #Append question ID and answer list
                         questions.append(question.key().id())
+                        questionAnswers.append(question.correct_ans)
                         
                     quiz = Game(
                                 a_ID = user,
@@ -64,7 +66,8 @@ class WaitHandler(Handler):
                                 b_score = 0,
                                 a_score_list = [],
                                 b_score_list = [],
-                                topic_ID = topicID
+                                topic_ID = topicID,
+                                question_answers = questionAnswers
                                 )
                     quiz.put()
                     quiz_key = quiz.key().id()
