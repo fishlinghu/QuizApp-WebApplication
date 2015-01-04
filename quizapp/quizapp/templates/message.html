@@ -50,7 +50,7 @@
 	        <hr>
 	        {% for friend_name in friend_name_list %}
 	        <ul>
-	            <li>{{ friend_name }}</li>
+	            <li><a href="{{ '/info/' + friend_name }}">{{ friend_name }}</a></li>
 	        </ul>
 	        {% endfor %}
 		</div>
