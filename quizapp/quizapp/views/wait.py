@@ -66,6 +66,7 @@ class WaitHandler(Handler):
                                 b_score = 0,
                                 a_score_list = [],
                                 b_score_list = [],
+                                topic = topicName,
                                 topic_ID = topicID,
                                 question_answers = questionAnswers
                                 )

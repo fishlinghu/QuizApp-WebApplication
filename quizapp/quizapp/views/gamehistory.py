@@ -80,32 +80,33 @@ class GameHistoryHandler(Handler):
 
             for game_ID in player.game_history:
                 game = Game.get_by_id(game_ID)
-                player_a = Player.get_by_id(a_ID)
-                player_b = Player.get_by_id(b_ID)
+                if game:
+                    player_a = Player.get_by_id(game.a_ID)
+                    player_b = Player.get_by_id(game.b_ID)
                 
-                # Get player's name
-                player_a_name_list.append(player_a.name)
-                player_b_name_list.append(player_b.name)
+                    # Get player's name
+                    player_a_name_list.append(player_a.name)
+                    player_b_name_list.append(player_b.name)
 
-                # Get both player's scores
-                player_a_score_list.append(game.a_score)
-                player_b_score_list.append(game.b_score)
+                    # Get both player's scores
+                    player_a_score_list.append(game.a_score)
+                    player_b_score_list.append(game.b_score)
 
-                # Get winning message
-                if game.who_win == 0:
-                    win_message = player_a.name + ' wins!'
-                    who_win_list.append(win_message)
-                elif game.who_win == 1:
-                    win_message = player_b.name + ' wins!'
-                    who_win_list.append(win_message)
-                else: 
-                    who_win_list.append('Even')
+                    # Get winning message
+                    if game.who_win == 0:
+                        win_message = player_a.name + ' wins!'
+                        who_win_list.append(win_message)
+                    elif game.who_win == 1:
+                        win_message = player_b.name + ' wins!'
+                        who_win_list.append(win_message)
+                    else: 
+                        who_win_list.append('Even')
 
-                # Get game created time
-                game_time_list.append(game.create_time)
+                    # Get game created time
+                    game_time_list.append(game.create_time)
 
-                # Get topics
-                topic_list.append(game.topic)
+                    # Get topics
+                    topic_list.append(game.topic)
             
             template_values = {
                 'player_a_name_list': player_a_name_list,
