@@ -46,10 +46,6 @@ class ResultsHandler(Handler):
 				win_or_lose = "The game is a tie!"
 				w_o_l = 1
 
-			# Update the player entity and add game history
-			player.game_history.append(quiz_key)
-			player.put()
-
 			player_a = Player.get_by_id(game.a_ID)
 			player_b = Player.get_by_id(game.b_ID)
 
