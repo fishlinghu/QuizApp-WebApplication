@@ -39,6 +39,10 @@ class ProcessHandler(Handler):
                 else:
                     player.experience = exp
                 
+                # Update the player entity and add game history
+                player.game_history.append(quiz_key)
+                player.put()
+
                 player.put()     
                 
                 # Can set how much experiences you need to level-up here
