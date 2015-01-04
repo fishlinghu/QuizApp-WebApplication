@@ -32,6 +32,26 @@ class ProcessHandler(Handler):
                 opponentName = Player.get_by_id(game.a_ID).name
 
             if not waiting:           
+                if game.a_ID == player.key().id():
+                    # user's ID == a_ID
+                    your_score = game.a_score
+                    opp_score = game.b_score
+                else:
+                    # user's ID == b_ID
+                    your_score = game.b_score
+                    opp_score = game.a_score
+
+                # Check who wins
+                if your_score > opp_score:
+                    # Show you win
+                    w_o_l = 2
+                elif your_score < opp_score:
+                    # Show you lose
+                    w_o_l = 0
+                else:
+                    # Even
+                    w_o_l = 1
+
                 # Need a function of score/win/lose to calculate the experience an user get
                 exp = exp_calculator(your_score, w_o_l)
                 if player.experience:
