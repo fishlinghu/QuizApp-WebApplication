@@ -60,7 +60,7 @@ class MessageHandler(Handler):
                 sent_message_topic_list.append(sent_message.topic)
                 sent_message_content_list.append(sent_message.content)
                 sent_message_time_list.append(sent_message.create_time)
-                receiver = Player.get_by_id(sent_message.receiver)
+                receiver = Player.get_by_id(sent_message.receiver_ID)
                 receiver_name_list.append(receiver.name)
 
             template_values = {

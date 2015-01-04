@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from google.appengine.ext import db
 from views import Handler
 from quizapp.models.player import Player
 # from users import checkPlayer
@@ -8,7 +9,7 @@ def checkPlayerName(name):
     #Query Datastore for player
     q = db.Query(Player)
     q.filter('name =', name)
-    results = q.fetch(1)
+    results = q.get()
         
     #Check if no such player exists
     if results:
