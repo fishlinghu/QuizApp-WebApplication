@@ -53,6 +53,7 @@ class ResultsHandler(Handler):
 			experienceToNextLevel = 5000 - player.experience
 			
 			template_values = {
+							'name' : player.account,
 							'opponentName' : opponentName,
 							'player_a_name': player_a.name, 
 							'player_b_name': player_b.name,
