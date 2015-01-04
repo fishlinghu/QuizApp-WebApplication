@@ -18,8 +18,12 @@ class IndexHandler(Handler):
         player = Player.get_by_id(playerID)  
         self.response.headers['Content-Type'] = 'text/html'
         quiz_key = self.session.get('QUIZAPP_QUIZ')
+        waiting = self.session.get('QUIZAPP_FINISHED')
         
         if quiz_key:
             self.session['QUIZAPP_QUIZ'] = None
+        
+        if waiting:
+            self.session['QUIZAPP_FINISHED'] = None
             
         self.render_index(name = player.account, topics = topics)
