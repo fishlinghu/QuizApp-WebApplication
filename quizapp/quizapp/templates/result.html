@@ -16,7 +16,7 @@
 			<h1>{{ win_or_lose }}</h1>		
 			<div class="col-md-6">
 				<div class="panel panel-default panel-topic" style="text-align:center">
-					<h2>{{ player_a_name }}</h2>
+					<h2>{{ player_a_name }}'s scoring breakdown</h2>
 					{% for score in player_a_score_breakdown %}
 						{{ score }}
 						<br>
@@ -25,7 +25,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="panel panel-default panel-topic" style="text-align:center">
-					<h2>{{ player_b_name }}</h2>
+					<h2>{{ player_b_name }}'s scoring breakdown</h2>
 					{% for score in player_b_score_breakdown %}
 						{{ score }}
 						<br>
@@ -34,11 +34,11 @@
 			</div>
 			<div class="col-md-12">
 				<div class="panel panel-default panel-topic" style="text-align:center">
-					<h2>Experience Gained:</h2>
-					{{ experience }}
+					<h3>Experience Gained:</h3>
+					<h2>{{ experience }}</h2>
 					<br>
-					<h2>Player Level:</h2>
-					{{ level }}
+					<h3>Player Level:</h3>
+					<h2>{{ level }}</h2>
 				</div>
 			</div>
 	</div>

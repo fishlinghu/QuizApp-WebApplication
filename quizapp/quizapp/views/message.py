@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from views import Handler
+from quizapp.models.message import Message
 from quizapp.models.player import Player
-import datetime
+from datetime import datetime
 
 class MessageHandler(Handler):
     def render_homepage(self, **kw):
@@ -27,12 +28,12 @@ class MessageHandler(Handler):
             # Get all inbox message, ordered as the newest first 
             q = Message.all()
             q.filter('receiver_ID = ', user).order('-create_time')
-            in_message_list = q.fetchAll()
+            in_message_list = q
 
             # Get all sent message, ordered as the newest first 
             q = Message.all()
             q.filter('sender_ID = ', user).order('-create_time')
-            sent_message_list = q.fetchAll()
+            sent_message_list = q
 
             # Get the list of inbox messages' topics and contents 
             in_message_topic_list = []
@@ -85,7 +86,7 @@ class MessageHandler(Handler):
             receiver_name = self.request.get('receiver_name')
             q = Player.all()
             q.filter('name = ', receiver_name)
-            receiver = q
+            receiver = q.get()
             if receiver:
                 topic = self.request.get('topic')
                 content = self.request.get('content')

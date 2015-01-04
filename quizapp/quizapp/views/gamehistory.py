@@ -25,8 +25,8 @@ class GameHistoryHandler(Handler):
 
             for game_ID in player.game_history:
                 game = Game.get_by_id(game_ID)
-                player_a = Player.get_by_id(a_ID)
-                player_b = Player.get_by_id(b_ID)
+                player_a = Player.get_by_id(game.a_ID)
+                player_b = Player.get_by_id(game.b_ID)
                 
                 # Get player's name
                 player_a_name_list.append(player_a.name)

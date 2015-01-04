@@ -39,7 +39,7 @@ routes = [
     ('/message', MessageHandler), # Deal with the messages, you can send and read messages 
     ('/info/(\w+)', InfoHandler),  # Show your personal information, maybe everyone can view other people's profile, /info/<account ID>
     ('/setting', SettingHandler), # Change your informations here, such as account, password, name, etc. 
-    # ('/friend', FriendHandler), # Show your friends list, you can also add/delete friend here
+    ('/friend', FriendHandler), # Show your friends list, you can also add/delete friend here
     ('/gamehistory', GameHistoryHandler), # Show your game history, just like result
     ('/add/questions', AddQuestionsHandler),
     ('/add/question', AddQuestionHandler),

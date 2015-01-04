@@ -1,7 +1,7 @@
 from google.appengine.ext import db
-import datetime
+from datetime import datetime
 
-class Message(db.model):
+class Message(db.Model):
 	message_ID = db.IntegerProperty()
 	topic = db.StringProperty()
 	content = db.TextProperty()

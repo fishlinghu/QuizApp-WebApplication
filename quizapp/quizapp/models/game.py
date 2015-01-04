@@ -1,5 +1,5 @@
 from google.appengine.ext import db
-import datetime
+from datetime import datetime
 
 #the result page's information can base on the information in game model and question model
 class Game(db.Model):

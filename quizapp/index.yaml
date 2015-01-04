@@ -21,3 +21,15 @@ indexes:
   - name: b_ID
   - name: topic_ID
   - name: a_ID
+
+- kind: Message
+  properties:
+  - name: receiver_ID
+  - name: create_time
+    direction: desc
+
+- kind: Message
+  properties:
+  - name: sender_ID
+  - name: create_time
+    direction: desc
