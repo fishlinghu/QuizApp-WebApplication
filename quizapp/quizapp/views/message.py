@@ -64,16 +64,17 @@ class MessageHandler(Handler):
                 receiver_name_list.append(receiver.name)
 
             template_values = {
-                'friend_name_list': friend_name_list,
-                'receiver_name_list': receiver_name_list,
-                'sent_message_topic_list': sent_message_topic_list,
-                'sent_message_content_list': sent_message_content_list,
-                'sent_message_time_list': sent_message_time_list,
-                'sender_name_list': sender_name_list,
-                'in_message_topic_list': in_message_topic_list,
-                'in_message_content_list': in_message_content_list,
-                'in_message_time_list': in_message_time_list
-                }
+                               'name' : player.account,
+                               'friend_name_list': friend_name_list,
+                               'receiver_name_list': receiver_name_list,
+                               'sent_message_topic_list': sent_message_topic_list,
+                               'sent_message_content_list': sent_message_content_list,
+                               'sent_message_time_list': sent_message_time_list,
+                               'sender_name_list': sender_name_list,
+                               'in_message_topic_list': in_message_topic_list,
+                               'in_message_content_list': in_message_content_list,
+                               'in_message_time_list': in_message_time_list
+                               }
 
             self.render("message.html", **template_values)
         else:

@@ -11,52 +11,54 @@
 	{% block content %}
 	{{ super() }}
 	<div class="col-md-10 main-inner">
-		<h1 style="text-align:center">Messages</h1>
-        <hr>
-		<h2>Write to someone</h2>
-        <form action="/message" method="post">
-            Topic:<br>
-            <input type="text" name="topic"><br>
-            Receiver's name:<br>
-            <input type="text" name="receiver_name"><br>
-            Content:<br>
-            <textarea name="content" cols="50" rows="5"></textarea>
-            <input type="submit" value="Submit">
-        </form>
-        <!-- It will be better if the user can choose to go to Inbox or Sent Items by clicking on a button or something -->
-        <!-- Just like Gmail -->
-        <hr>
-        <h2>Inbox</h2>
-        <hr>
-        {% for sender in sender_name_list %}
-        <ul>
-            <li>Sender: {{ sender_name_list[loop.revindex0] }}</li>
-            <li>Topic: {{ in_message_topic_list[loop.revindex0] }}</li>
-            <li>{{ in_message_time_list[loop.revindex0] }}</li>
-            <li>{{ in_message_content_list[loop.revindex0] }}</li>
-        </ul>
-        <hr>
-        {% endfor %}
-        
-        <h2>Sent Items</h2>
-        <hr>
-        {% for receiver in receiver_name_list %}
-        <ul>
-            <li>Receiver: {{ receiver_name_list[loop.revindex0] }}</li>
-            <li>Topic: {{ sent_message_topic_list[loop.revindex0] }}</li>
-            <li>{{ sent_message_time_list[loop.revindex0] }}</li>
-            <li>{{ sent_message_content_list[loop.revindex0] }}</li>
-        </ul>
-        <hr>
-        {% endfor %}
-        
-        <h2>Your friend list:</h2>
-        <hr>
-        {% for friend_name in friend_name_list %}
-        <ul>
-            <li>{{ friend_name }}</li>
-        </ul>
-        {% endfor %}
+		<div class="content">
+			<h1 style="text-align:center">Messages</h1>
+	        <hr>
+			<h2>Write to someone</h2>
+	        <form action="/message" method="post">
+	            Topic:<br>
+	            <input type="text" name="topic"><br>
+	            Receiver's name:<br>
+	            <input type="text" name="receiver_name"><br>
+	            Content:<br>
+	            <textarea name="content" cols="50" rows="5"></textarea>
+	            <input type="submit" value="Submit">
+	        </form>
+	        <!-- It will be better if the user can choose to go to Inbox or Sent Items by clicking on a button or something -->
+	        <!-- Just like Gmail -->
+	        <hr>
+	        <h2>Inbox</h2>
+	        <hr>
+	        {% for sender in sender_name_list %}
+	        <ul>
+	            <li>Sender: {{ sender_name_list[loop.revindex0] }}</li>
+	            <li>Topic: {{ in_message_topic_list[loop.revindex0] }}</li>
+	            <li>{{ in_message_time_list[loop.revindex0] }}</li>
+	            <li>{{ in_message_content_list[loop.revindex0] }}</li>
+	        </ul>
+	        <hr>
+	        {% endfor %}
+	        
+	        <h2>Sent Items</h2>
+	        <hr>
+	        {% for receiver in receiver_name_list %}
+	        <ul>
+	            <li>Receiver: {{ receiver_name_list[loop.revindex0] }}</li>
+	            <li>Topic: {{ sent_message_topic_list[loop.revindex0] }}</li>
+	            <li>{{ sent_message_time_list[loop.revindex0] }}</li>
+	            <li>{{ sent_message_content_list[loop.revindex0] }}</li>
+	        </ul>
+	        <hr>
+	        {% endfor %}
+	        
+	        <h2>Your friend list:</h2>
+	        <hr>
+	        {% for friend_name in friend_name_list %}
+	        <ul>
+	            <li>{{ friend_name }}</li>
+	        </ul>
+	        {% endfor %}
+		</div>
 	</div>
 	{% endblock %}
 	{% block sidebar %}
