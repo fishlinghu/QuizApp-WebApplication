@@ -26,6 +26,7 @@
 					<button type="button" id="button3" class="btn btn-default btn-inner">{{ answer3 }}</button>
 					<button type="button" id="button4" class="btn btn-default btn-inner">{{ answer4 }}</button>
 				</div>
+				
 			</div>
 			<div>{{ quiz_key }}</div>
 		</div>
@@ -60,7 +61,7 @@
 		var	submit = function(button) {
 			var source = document.getElementById(button);
 			var answer = source.innerHTML;
-			var parameters = '?user=' + state.user + '&quiz_key=' + state.quiz_key + '&answer=' + answer + '&score=' + 100;
+			var parameters = '?user=' + state.user + '&quiz_key=' + state.quiz_key + '&answer=' + answer;
 			sendMessage('/quiz/submit' + parameters);
 		};									
 		var	onMessage = function(m) {
