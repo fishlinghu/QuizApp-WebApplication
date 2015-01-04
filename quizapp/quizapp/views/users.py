@@ -81,6 +81,7 @@ class RegisterHandler(Handler):
                                 experience = 0
                                 )
                 player.put()
-                self.redirect('/')
+                self.session['QUIZAPP_USER'] = player.key().id()
+                self.redirect('index')
         else:
             self.render("homepage.html", message="Passwords do not match. Please try again", message_type="alert-danger")
