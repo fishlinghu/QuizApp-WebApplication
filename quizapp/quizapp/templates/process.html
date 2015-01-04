@@ -1,0 +1,31 @@
+{% extends "base_of_game_and_result.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+	{{ super() }}
+	<meta http-equiv="refresh" content="1"/>
+	{% endblock %}	
+</head>
+
+<body>
+	{% block content %}
+	{{ super() }}
+	<div class="col-md-8 main-inner">
+		<div class="content">
+			<h1>Processing results</h1>
+			<div class="panel panel-default">
+				<p>Please wait while we prcess your results</p>
+				<p>You may have to wait for your opponent to finish the quiz</p>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+	{% block sidebar %}
+	{{ super() }}
+	{% endblock %}
+	{% block script %}
+	{{ super() }}
+	{% endblock %}
+</body>
+</html>
