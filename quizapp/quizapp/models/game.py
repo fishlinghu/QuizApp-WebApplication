@@ -13,8 +13,8 @@ class Game(db.Model):
 	#used to save a list of question ID for the questions that should appear in this game 
 	question_set = db.ListProperty(int)
 	#record the answers of each player every round
-	a_ans_list = db.ListProperty(bool)
-	b_ans_list = db.ListProperty(bool)
+	a_ans_list = db.ListProperty(str)
+	b_ans_list = db.ListProperty(str)
 	#total scores of two players
 	a_score = db.IntegerProperty()
 	b_score = db.IntegerProperty()
@@ -24,6 +24,8 @@ class Game(db.Model):
 	#topic of quiz
 	topic = db.StringProperty()
 	topic_ID = db.IntegerProperty()
+	#correct answers to questions
+	question_answers = db.ListProperty(str)
 	# record who win or lose, so we can look up in the gamehistory
 	# 0=player a win;1=player b win;2=even
 	who_win = db.IntegerProperty()
