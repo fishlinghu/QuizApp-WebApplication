@@ -53,25 +53,28 @@ class ProcessHandler(Handler):
                     w_o_l = 1
 
                 # Need a function of score/win/lose to calculate the experience an user get
+                playerEXP = 0
                 exp = exp_calculator(your_score, w_o_l)
+                
                 if player.experience:
+                    playerEXP = player.experience % 5000
                     player.experience = player.experience + exp
+                    playerEXP = playerEXP + exp
                 else:
                     player.experience = exp
+                    playerEXP = exp
+                    
                 
                 # Update the player entity and add game history
                 player.game_history.append(quiz_key)
                 player.put()
-
-                player.put()     
                 
-                # Can set how much experiences you need to level-up here
-                if player.experience >= 5000:
+                # Can set how much experiences you need to level-up here               
+                if playerEXP >= 5000:
                     # level up
-                    playerEXP = player.experience - 5000
-                    player.experience = playerEXP
                     playerLevel = player.level + 1
                     player.level = playerLevel
+                    player.put()
                 
                 self.session['QUIZAPP_FINISHED'] = True
                 self.render_process(name = player.name, opponentName = opponentName)

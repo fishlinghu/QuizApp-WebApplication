@@ -50,8 +50,6 @@ class ResultsHandler(Handler):
 			player_a_score_breakdown = game.a_score_list
 			player_b_score_breakdown = game.b_score_list
 			
-			experienceToNextLevel = 5000 - player.experience
-			
 			template_values = {
 							'name' : player.account,
 							'opponentName' : opponentName,
@@ -61,7 +59,7 @@ class ResultsHandler(Handler):
 							'player_b_score_breakdown': player_b_score_breakdown,
 							'win_or_lose': win_or_lose,
 							'level' : player.level,
-							'experience': experienceToNextLevel
+							'experience': player.experience
 							}
 			
 			self.session['QUIZAPP_FINISHED'] = None
