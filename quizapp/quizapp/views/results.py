@@ -27,14 +27,12 @@ class ResultsHandler(Handler):
 				opp_score = game.b_score
 				opponentName = Player.get_by_id(game.b_ID).name
 				opponentLevel = Player.get_by_id(game.b_ID).level
-				opponentIntro = Player.get_by_id(game.b_ID).intro
 			else:
 				# user's ID == b_ID
 				your_score = game.b_score
 				opp_score = game.a_score
 				opponentName = Player.get_by_id(game.a_ID).name
 				opponentLevel = Player.get_by_id(game.a_ID).level
-				opponentIntro = Player.get_by_id(game.a_ID).intro
 
 			# record who win the game
 			if game.a_score > game.b_score:
@@ -67,7 +65,6 @@ class ResultsHandler(Handler):
 							'name' : player.account,
 							'opponentName' : opponentName,
 							'opponentLevel': opponentLevel,
-							'opponentIntro': opponentIntro,
 							'player_a_name': player_a.name, 
 							'player_b_name': player_b.name,
 							'player_a_score_breakdown': player_a_score_breakdown,
