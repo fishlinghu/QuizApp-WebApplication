@@ -1,0 +1,296 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\graphicspath{{D:/abc/comp3207/}}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName} % Top left header
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center head
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \protect\pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	CODE INCLUSION CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+\definecolor{MyDarkGreen}{rgb}{0.0,0.4,0.0} % This is the color used for comments
+\lstloadlanguages{Perl} % Load Perl syntax for listings, for a list of other languages supported see: ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
+\lstset{language=Perl, % Use Perl in this example
+        frame=single, % Single frame around code
+        basicstyle=\small\ttfamily, % Use small true type font
+        keywordstyle=[1]\color{Blue}\bf, % Perl functions bold and blue
+        keywordstyle=[2]\color{Purple}, % Perl function arguments purple
+        keywordstyle=[3]\color{Blue}\underbar, % Custom functions underlined and blue
+        identifierstyle=, % Nothing special about identifiers                                         
+        commentstyle=\usefont{T1}{pcr}{m}{sl}\color{MyDarkGreen}\small, % Comments small dark green courier font
+        stringstyle=\color{Purple}, % Strings are purple
+        showstringspaces=false, % Don't put marks in string spaces
+        tabsize=5, % 5 spaces per tab
+        %
+        % Put standard Perl functions not included in the default language here
+        morekeywords={rand},
+        %
+        % Put Perl function parameters here
+        morekeywords=[2]{on, off, interp},
+        %
+        % Put user defined functions here
+        morekeywords=[3]{test},
+       	%
+        morecomment=[l][\color{Blue}]{...}, % Line continuation (...) like blue comment
+        numbers=left, % Line numbers on left
+        firstnumber=1, % Line numbers start with line 1
+        numberstyle=\tiny\color{Blue}, % Line numbers are blue and small
+        stepnumber=5 % Line numbers go in steps of 5
+}
+
+% Creates a new command to include a perl script, the first parameter is the filename of the script (without .pl), the second parameter is the caption
+\newcommand{\perlscript}[2]{
+\begin{itemize}
+\item[]\lstinputlisting[caption=#2,label=#1]{#1.pl}
+\end{itemize}
+}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1}{}\nobreak
+}
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+\newcommand{\homeworkProblemName}{}
+\newenvironment{homeworkProblem}[1][\arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
+\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
+\section{\homeworkProblemName} % Make a section in the document with the custom problem count
+\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+}{
+\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+}
+
+\newcommand{\homeworkSectionName}{}
+\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+}{
+\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{Assignment\ \#2} % Assignment title
+\newcommand{\hmwkDueDate}{Monday,\ January\ 5,\ 2015} % Due date
+\newcommand{\hmwkClass}{COMP\ 3207} % Course/class
+\newcommand{\hmwkClassTime}{Cloud Application Development} % Class/lecture time
+\newcommand{\hmwkClassInstructor}{} % Teacher/lecturer
+\newcommand{\hmwkAuthorName}{Team N} % Your name
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+% To have just one problem per page, simply put a \clearpage after each problem
+
+\section{1. Description of prototype functionality}
+
+1.1	Introduction
+
+The application we have developed is based on a mobile app called “QuizUp” (https://www.quizup.com/en). The main function of this game is to randomly let two online players compete against each other in a quiz game. They will be asked a set of questions from a specific topic they choose and each player will be awarded a score for each correct answer they provide. Each correct answer will award the player 100 points which will contribute towards their final score at the end of the quiz. There are also some other features in the game, such as friend system, offline messaging and game history checking. \\
+
+1.2	Flow of the game 
+
+See the following figure
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{flow}
+    \caption{Flow diagram}
+\end{figure}
+
+1.3	Main function and features
+\begin{itemize}
+\item Main page: Link to all main functions’ pages.
+\item Friends: You can view your friends list and add/delete a friend. 
+\item Messages: You can view your received messages and sent messages. You can also send messages to others by their accounts or names. 
+\item Setting: Used to modify all of your personal information, including account, password, name, etc. 
+\item Info: Show all your personal information. You can also search for other players’ information after you have played them in a quiz. 
+\item Game history: Show the results of past games. 
+\item Topics: You can choose the field you would like to play against others. 
+\item Quiz game: Each player will answer a range of 5 questions (may have repeated questions) from their chosen topic. The 5 questions are predetermined before the game starts so both players answer the same questions. Once a player has finished the quiz they will be sent to the processing page where they will wait for their opponent to finish the quiz. Each correct answer awards the player 100 points while and incorrect answer gives them 0 points.
+\item Game result: Shows the following results at the end of the game:
+\begin{enumerate}
+\item Outcome of the game, whether you have won, lost or drawn.
+\item A player’s current experience after playing the game.
+\item A score breakdown where each player is shown where they were awards points for which question. 
+\item A player’s current game level.
+
+\end{enumerate}
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+
+\section{2. List of tools and techniques used}
+
+2.1	List of tools
+\begin{itemize}
+\item GitHub: It is a great platform for collaborating. Everyone can see the update of files instantly. It also has a great feature which is version control. So it is easy to recover previous versions from any mistake. All you need to do is to go back to the previous commit.
+\item Vim / Sublime Text3 / Notepad++/Aptana Studio 3: Everyone has their favorite text editor, and no editor is definitely better than the other. Vim has many hotkeys but is accompanied with a steep learning curve. Sublime text, Notepad++ and Aptana is easier to use and look fancier. 
+\item Chrome / Firefox / Internet Explorer: When developing the app, we need to test our app frequently with the browser. One important point is that we have to make sure our app will work correctly in every kind of browsers.
+\item Google App Engine
+\end{itemize}
+2.2	Languages
+\begin{itemize}
+\item Python: We use Python2.7 in the back-end development. It is used to implement functions which handle all the database queries and data operations.  
+\item HTML: We use HTML in the front-end development. It is used to show the layout of web pages. The user will interact directly with it, such as filling forms, clicking on buttons, etc.
+\item CSS: It is a style sheet language used for describing the appearance of web pages. We use CSS with HTML for the design of our application. 
+\item JavaScript: We use JavaScript in the front-end development. It is used to dynamically interact with the user. In our application, it is used to work with the Google channel API. 
+\item YAML: It is used for Python app configuration file. The content will specify how URLs correspond to request handlers, and other information, such as application ID, versions, libraries, etc. 
+\end{itemize}
+2.3	How we co-work
+\begin{itemize}
+\item All the codes are stored in a GitHub repository. 
+\item We created a Facebook group for posting announcement such as everyone’s progress and meeting time. 
+\item We had regular meetings on campus during the semester. 
+\item A Skype group was created for co-working over the winter holiday.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 3
+%----------------------------------------------------------------------------------------
+\section{3. Relevant statistics}
+
+3.1	Line of codes (Use the tool LOC)
+3.2	Commitments daily progress (Can get it from GitHub)
+
+The following graph shows the commitment progress throughout the project. It shows that the development peaked in late November before dipping in early December (most likely due to the holidays) and finally rising in late December when the deadline was drawing nearer.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{progress}
+    \caption{Progress chart}
+\end{figure}
+
+3.3	External libraries (Name + Link)
+
+\begin{center}
+    \begin{tabular}{| l | l | l | l |}
+    \hline
+    Tool & Source \\ \hline
+    Jinja2 & http://jinja.pocoo.org/docs/dev/\\ \hline
+    Webapp2 & https://webapp-improved.appspot.com/\\ \hline
+    \end{tabular}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 4
+%----------------------------------------------------------------------------------------
+
+\section{4. Brief overview of design and implementation, including key design decisions}
+
+4.1 Overview of design
+
+We use webapp2 as our main framework. Our application is mainly constructed with three parts:
+\begin{itemize}
+\item Views: Include all the handlers' Python codes, which deal with database queries and all other back end functions. 
+\item Models: All classes of different objects are declared here. They will be used by the handlers when storing data, accessing data, or modifying data. 
+\item Templates: All HTML codes are written here. These template files are used for the layout of web pages. They communicate with the handler. Some web pages return the information inputted by the users to the handlers. Other web pages receive the parameter from handler functions and output the correct information to users.  
+\end{itemize}
+Besides these three parts, a file called “urls.py” specifies the corresponding relationships between view and templates. So it is clear that which template every function should handle. \\
+
+4.2 Implementation of each part
+
+\begin{itemize}
+\item Jinja2: 
+Jinja2 is like a bridge between handler functions and HTML. As stated above, some web pages need to receive the parameter from handler functions. But there is no way for a pure HTML webpage to receive information from handler functions. Jinja2 can help HTML to do this by setting some variables, and the handler functions are able to send parameters to those variables. Then HTML can make use of these variables to output information. Jinja2 also has another great feature: inheritance. With this technique, we wrote some general templates, and they can be used by many other templates as bases. This reduced repetitive coding where some elements of the application were present on multiple web pages. 
+
+\item Google DB Datastore:
+This application mainly functions by manipulating data a database. Since we are going to deploy the application on the GAE, it is very convenient to use Google Datastore as our database. Datastore is different from traditional relational databases. All queries are served by entities’ auto-built indexes. So some traditional queries can’t be done, such as JOIN. The classes for objects save data as the properties provided by Datastore, such as integer, string, datetime, etc. When creating an entity, we will specify the entity’s property values, e.g. name=Tom, password=12345. Then we can access an entity by filtering with property values or by specifying its index. After accessing an entity, we can use the method as creating entities to update an entity. 
+
+\item Google channel API
+We use Google channel API to implement the main function of our app, which is the player-matching part. This technique can connect JavaScript clients and keep every user updated without polling. In our application, different players interact with JavaScript clients in their webpages. Then the JavaScript clients will connect to the channel created by the server. If two players are waiting for a game with the same topic, their JavaScript clients will link to the same channel and the game will start. While the game processes, the JavaScript clients listen to the channel for real-time updates. 
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 5
+%----------------------------------------------------------------------------------------
+
+\section{5. Critical evaluation of the prototype submitted}
+
+5.1 Achievements
+\begin{itemize}
+\item Main function – The main function of this application is well implemented. We use Google channel API to implement it. Players can match with remote players and get the results of game simultaneously. This part is the main technical aspect and bugs occurred frequently. So a lot of time was spent implementing and testing it. Now the application is very robust and works well.
+\item Statistic functions – This includes game results, game histories, and experience systems. Though this part is not hard to implement, it is one of the most important part in every game application. People always gain the feeling of achievements by viewing these statistics.
+\item Social functions – This includes friends and messages. These functions let you socialize with other people. And the interfaces are simple and easy to use. We believe this kind of functions can make the application more interesting, not just answering questions with unknown people. What’s more, you can also view other people’s profiles and game histories by searching their accounts or names.
+\item Hidden functions – This includes web pages not accessible by direct links in our application such as add/topic and add/questions. These web pages allow us to populate the Google DB Datastore to fill it with topics and questions. More topics and questions can be added in a future update with ease from these hidden web pages
+\end{itemize}
+
+5.2 Further works
+\begin{itemize}
+\item Timer – A timer in the quiz could make the game more exciting, and could also prevent a player from taking too long to answer. This part should be our first priority if we still have time to improve our work.
+\item Appearance – Although we already used many CSS to make buttons and pull-down lists in the application, there are still some pages that look a little simple. Some parts are just plain text. If it is a real commercial product, appearance should be a very important part. Due to time constraints, the design of the product was completed in a shorter time span while the main functions of the application were focused on more was allocated more time to develop. 
+\item Other function – We think it will be more interesting if a user can add topic and question by themselves. However, implementing this feature would require checks to the questions and topics submitted by a user. One such check would be that the questions submitted are correct and are appropriate for the application.
+\end{itemize}
+
+5.3 Conclusion
+
+We have successfully implemented the main application that was discussed at the beginning of the project with slight alterations. Additional features to the game were included in attempts to make the application more appealing and interesting. After developing the application, a lot of time was spent testing the game and fixing bugs, so it is quite a robust application. Further development may have allowed for a better theme/design of the application.
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
