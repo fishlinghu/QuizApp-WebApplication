@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (Web2C 2011) (format=pdflatex 2015.1.5)  5 JAN 2015 04:04
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (Web2C 2011) (format=pdflatex 2015.1.5)  5 JAN 2015 09:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -297,9 +297,6 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -331,7 +328,7 @@ Here is how much of TeX's memory you used:
 sfonts/cm/cmbx12.pfb><c:/usr/texlive/2011/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr10.pfb><c:/usr/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb>
-Output written on assignment_2.pdf (5 pages, 102843 bytes).
+Output written on assignment_2.pdf (5 pages, 102926 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
